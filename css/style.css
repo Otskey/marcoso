@@ -269,16 +269,6 @@ header h1 {
   color: red;
 }
 
-
-header button {
-  grid-column: 3;
-  height: 50px;
-  width: 100px;
-  margin: auto;
-  color: white;
-  background-color: white
-}
-
 /*hero layout */
 
 .hero {
@@ -531,7 +521,7 @@ header button {
   margin-right: 200px;
   margin-left: 200px;
   background-color: rgb(245 245 245);
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .contact-us .contact-us-content {
@@ -545,7 +535,7 @@ header button {
 }
 
 .contact-us-content h3 {
-  font-family: 'PT Serif', serif
+  font-family: 'PT Serif', serif;
   font-size: 24px;
 }
 
@@ -571,16 +561,19 @@ header button {
 footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
 
+/* no address righ
 .address {
   grid-column: 1;
   align-content: start;
   margin-left: 20px
 }
+*/
+
+/* no links right now
 
 .footer-links {
   text-align: center;
@@ -605,17 +598,37 @@ footer {
   text-decoration: underline;
 }
 
+ */
+
+.footer-logo {
+  grid-column: 2;
+  justify-items: center;
+}
+
+.footer-logo img {
+  height: 200px;
+  width: 400px;
+  border: white;
+  background-color: white;
+  filter: brightness(1) contrast(2);
+  align-content: center;
+  align-items: center;
+}
+
 .footer-social {
-  grid-column: 3;
-  align-items: end;
-  margin-left: 250px;
+  grid-column: 2;
+  margin-bottom: 30px;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 120px;
+  width: auto;
+
 }
 
 .footer-social img {
-  margin-top: 35px;
-  height: 50px;
-  width: 50px;
-  filter: invert(100%);
+  height: 30px;
+  width: 30px;
+  margin: 10px;
 }
 
 
