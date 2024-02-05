@@ -1,0 +1,621 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+/* body layout */
+
+/* header layout */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 150px;
+  background-color: white;
+}
+
+header h1 {
+  grid-column: 1;
+  font-family: 'Kalnia', serif;
+  font-size: 50px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.red-dot {
+  color: red;
+}
+
+
+header button {
+  grid-column: 3;
+  height: 50px;
+  width: 100px;
+  margin: auto;
+  color: white;
+  background-color: white
+}
+
+/*hero layout */
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: minmax(auto, max-content);
+  font-family: 'Playfair Display', serif;
+  background-color: antiquewhite;
+  height: 800px;
+}
+
+@keyframes cycleWords {
+  0%, 100% { content: 'Global'; }
+  14% { content: 'Shipping & Storage'; }
+  29% { content: 'Steel Markets'; }
+  43% { content: 'Quality Steel'; }
+  57% { content: 'Hot Rolled Coils'; }
+  71% { content: 'Cold Rolled Coils'; }
+  86% { content: 'General Purpose Steel'; }
+
+}
+
+/* Styling for the cycling word */
+.hero h1 .word-cycle::after {
+  content: 'Steel Trading.'; /* Initial word */
+  animation: cycleWords 4s steps(1, end) 1; /*infinite (use if you want to cycle infinite */; /* 3 seconds duration, infinite loop */
+}
+
+.hero h1 {
+  display: inline-block; /* Ensures proper alignment and animation */
+  font-size: 90px;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  margin-top: 80px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+
+.hero h2 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+/* hero form styling */
+
+.hero form {
+  grid-column: 4 / 6;
+  grid-row: 1 / 4;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 80px;
+  margin-right: 50px;
+  max-height: 600px;
+  max-width: 500px;
+}
+
+/* Input and Textarea Styling */
+.hero input[type="text"],
+.hero input[type="email"],
+.hero select,
+.hero textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Makes sure padding doesn't affect overall width */
+}
+
+/* Label Styling */
+.hero label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Button Styling */
+.hero button {
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button Hover Effect */
+.hero button:hover {
+  background-color: rosybrown;
+}
+
+/* Helper Text */
+.hero p {
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* about us */
+
+.what-we-do {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 30px;
+  margin-left: 200px;
+}
+
+.what-we-do .what-we-do-content{
+  grid-column: 1 / 4; /* Text content in the first column */
+}
+
+.what-we-do h2 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 34px;
+}
+
+.what-we-do p {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 24px;
+}
+
+.who-we-are {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 2px solid rgb(245 245 245); /* Add a border */
+  align-items: center; /* Center the content vertically */
+  margin-right: 200px;
+  margin-left: 200px;
+  background-color: rgb(245 245 245);
+}
+
+.who-we-are .who-we-are-content {
+  grid-column: 1 / 4; /* Text content in the first column */
+}
+
+.who-we-are h2 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 34px;
+}
+
+.who-we-are p {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 24px;
+}
+
+.who-we-are img {
+  grid-column: 4 / 7; /* Image in the second column */
+  width: 100%; /* Full width of the grid cell */
+  height: 800px; /* Maintain aspect ratio */
+}
+
+/*our expertise layout */
+
+.our-expertise {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 30px;
+  margin-left: 200px;
+}
+
+.our-expertise .our-expertise-content{
+  grid-column: 1 / -1; /* Text content in the first column */
+  grid-row: 1;
+}
+
+.our-expertise h2 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 34px;
+}
+
+.our-expertise p {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 24px;
+}
+
+/* Our products layout */
+
+.areas-of-expertise {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.expertise-1 {
+  grid-column: 2;
+
+}
+
+.expertise-2 {
+  grid-column: 3;
+}
+
+.expertise-3 {
+  grid-column: 4;
+}
+
+.expertise-4 {
+  grid-column: 5;
+}
+
+.expertise-1,
+.expertise-2,
+.expertise-3,
+.expertise-4 {
+  border: 2px solid rgb(245 245 245);
+  padding: 20px; /* Add some padding */
+  margin: 10px; /* Add some margin */
+  background-color: rgb(245 245 245);
+  width: 310px;
+  text-align: left;
+  font-family: 'PT Serif', serif;
+}
+
+
+/* map layout */
+
+.where-we-are {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 30px;
+  margin-left: 200px;
+}
+
+.where-we-are .where-we-are-content{
+  grid-column: 1 / 4; /* Text content in the first column */
+}
+
+.where-we-are h2 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 34px;
+}
+
+.where-we-are p {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 24px;
+}
+
+.contact-us {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 2px solid rgb(245 245 245); /* Add a border */
+  margin-right: 200px;
+  margin-left: 200px;
+  background-color: rgb(245 245 245);
+  margin-bottom: 30px;
+}
+
+.contact-us .contact-us-content {
+  grid-column: 1 / 3;
+
+}
+
+.contact-us-content h2 {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 34px;
+}
+
+.contact-us-content h3 {
+  font-family: 'PT Serif', serif
+  font-size: 24px;
+}
+
+.contact-us-content p {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 18px;
+  line-height: 0.8;
+}
+
+.map {
+  grid-column: 3 / 7;
+}
+
+.map #mapid {
+  height: 600px;
+  width: 100%;
+  margin-top: 50px;
+  grid-column: 3 / 7;
+}
+
+/*footer layout */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  color: white;
+  background-color: black;
+}
+
+.address {
+  grid-column: 1;
+  align-content: start;
+  margin-left: 20px
+}
+
+.footer-links {
+  text-align: center;
+  grid-column: 2;
+}
+
+.footer-links ul {
+  list-style-type: none;
+}
+
+.footer-links ul li {
+  display: block;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-links ul li a:hover {
+  color: #00a0c6;
+  text-decoration: underline;
+}
+
+.footer-social {
+  grid-column: 3;
+  align-items: end;
+  margin-left: 250px;
+}
+
+.footer-social img {
+  margin-top: 35px;
+  height: 50px;
+  width: 50px;
+  filter: invert(100%);
+}
+
+

@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <!-- Google Fonts -->
+
+  <!-- Playfair display (logo) -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Kalnia (H1) -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalnia&display=swap" rel="stylesheet">
+
+  <!-- Noto Sans Hong Kong (H2) -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet">
+
+  <!-- Noto Sans (P) -->
+
+  <!-- PT Serif (H3) -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+  <!-- leaflet maps -->
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+
+  <!-- Leaflet JavaScript with async attribute -->
+  <script async src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+<header>
+  <h1>MARCOSO<span class="red-dot">.</span></h1>
+  <button>Sign Up</button>
+</header>
+
+<section class="hero">
+  <h1><span class="word-cycle"></span> </h1>
+  <h2>With over fifty years in the international steel markets and industries. Think Steel - Think Marcoso</h2>
+  <form>
+    <div>
+      <label for="cust-name">Name *</label>
+      <input id="cust-name" name="name" required type="text" placeholder="Your name">
+    </div>
+
+    <div>
+      <label for="cust-email">Email *</label>
+      <input id="cust-email" name="email" required type="email" placeholder="Your Email">
+    </div>
+
+    <div>
+      <label for="cust-contact_no">Contact number *</label>
+      <input id="cust-contact_no" name="contact_no" type="text" placeholder="Your number">
+    </div>
+
+    <div>
+      <label for="cust-budget">What is your rough budget? *</label>
+      <select id="cust-budget" name="budget" required>
+        <option value="">Select your budget</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="cust-message">Tell us about your business or project requirements *</label>
+      <textarea id="cust-message" name="message" rows="4" required></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<section class="what-we-do">
+  <div class="what-we-do-content">
+    <h2>What we do</h2>
+    <p>We source good quality and specific grades of special steels from our internationally recognised and renowned steel producing partners to supply and service our selected clientele base</p>
+  </div>
+</section>
+
+
+<section class="who-we-are">
+  <div class="who-we-are-content">
+    <h2>Who we are</h2>
+    <p>We are a professionally managed specialised steel trading organisation with a combined team experience of over fifty years in the international steel markets and industries covering (mainly) a combination of the SAMENA regions (South Asia, Middle East and North Africa)</p>
+  </div>
+  <img src="img/aboutus.jpg" alt="About Us">
+</section>
+
+<section class="our-expertise">
+  <div class="our-expertise-content">
+  <h2>Products</h2>
+  <p>Our range of steel products cover a selection of premium quality grades and specifications</p>
+  </div>
+</section>
+
+<section class="products">
+  <div class="areas-of-expertise">
+    <div class="expertise-1">
+      <h3>Electrolytic Tinplate in coils/sheets</h3>
+    </div>
+    <div class="expertise-2">
+      <h3>Protact (Ferrolite) (PVC, Laminated, Polymer coated) Steel in coils/sheets</h3>
+    </div>
+    <div class="expertise-3">
+      <h3>Pre-painted and Galvanised steel in coils/sheets</h3>
+    </div>
+    <div class="expertise-4">
+      <h3>Tin Free Steel in coils/sheets</h3>
+    </div>
+  </div>
+</section>
+
+<section class="where-we-are">
+  <div class="where-we-are-content">
+  <h2>Where we are</h2>
+  <p>Our head office is located in the heart of London, United Kingdom. We also have a regional office in Dubai, United Arab Emirates</p>
+  </div>
+</section>
+
+<section class="contact-us">
+  <div class="contact-us-content">
+    <h2>Our Locations</h2>
+    <h3>London Office</h3>
+    <p>Marcoso Global Resources Limited</p>
+    <p>70 Gracechurch Street</p>
+    <p>Suite 228</p>
+    <p>London, EC3V 0HR</p>
+    <p>United Kingdom</p>
+    <p>Tel : + 44 203 9688 021</p>
+    <h3>Dubai Office</h3>
+    <p>Marcoso Trading DMCC</P>
+    <p>Level 29 – Unit A AU Tower (Gold) Cluster I</p>
+    <p>Jumeirah Lakes Towers</p>
+    <p>P.O. Box 283287</p>
+    <p>Dubai, UAE</p>
+    <p>Tel : +971 (4) 551 5160</p>
+    <p>Fax : +971 (4) 551 5145</p>
+    <p>Email : info@marcosotrade.com</p>
+  </div>
+  <div class="map">
+    <div id="mapid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="address">
+    <p>wedo global</p>
+    <p>1234 Street Name, City Name, United Kingdom</p>
+    <p>01234 567890</p>
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Terms of use</a></li>
+      <li><a href="#">Privacy policy</a></li>
+    </ul>
+  </div>
+  <div class="footer-social">
+    <a href="#"><img src="img/facebook.svg"></a>
+    <a href="#"><img src="img/X.svg"></a>
+    <a href="#"><img src="img/instagram.svg"></a>
+  </div>
+</footer>
+
+  <script src="js/map.js"></script>
+</body>
+
+
+</html>
