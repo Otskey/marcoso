@@ -376,7 +376,44 @@ header h1 {
   color: #666;
 }
 
+/* Media Query for smaller screens - Example: for screens narrower than 768px */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    grid-template-rows: auto auto auto; /* Adjust grid rows to accommodate stacked content */
+    height: auto; /* Adjust height to accommodate stacked content */
+  }
+
+  .hero h1 {
+    grid-column: 1;/* Span the heading across the single column */
+    grid-row: 1;
+    font-size: 50px; /* Optionally adjust font size */
+    margin-top: 20px; /* Reduce top margin */
+    margin-left: 20px; /* Adjust left margin */
+    margin-bottom: 0; /* Reduce space below h1 */
+  }
+
+  .hero h2 {
+    grid-column: 1; /* Span subheading across the single column */
+    grid-row: 2; /* Position subheading below the heading */
+    margin-left: 20px; /* Adjust left margin */
+    margin-top: 20px; /* Move h2 text up to avoid overlap */
+    margin-bottom: 0; /* Reduce space below h2 */
+  }
+
+  .hero form {
+    grid-column: 1; /* Place the form in the first column */
+    grid-row: 3; /* Position the form below the text */
+    grid
+    margin-top: 0; /* Add some space above the form */
+    margin-right: 20px; /* Adjust right margin */
+    max-width: 100%; /* Allow the form to take full width */
+  }
+}
+
 /* about us */
+
+/* what we do layout */
 
 .what-we-do {
   display: grid;
@@ -398,6 +435,24 @@ header h1 {
   font-family: 'Noto Sans HK', sans-serif;
   font-size: 24px;
 }
+
+/* Media Query for smaller screens - Example: for screens narrower than 768px */
+@media (max-width: 768px) {
+  .what-we-do {
+    grid-template-columns: 1fr; /* Use a single column layout on smaller screens */
+    margin-left: 20px; /* Adjust left margin for smaller screens */
+  }
+
+  .what-we-do .what-we-do-content {
+    grid-column: 1; /* Make content span the full width of the single column */
+  }
+
+  .what-we-do h2, .what-we-do p {
+    font-size: 20px; /* Optionally, adjust font sizes for smaller screens */
+  }
+}
+
+/* who we are layout */
 
 .who-we-are {
   display: grid;
@@ -429,6 +484,28 @@ header h1 {
   height: 800px; /* Maintain aspect ratio */
 }
 
+/* Media Query for smaller screens - Example: for screens narrower than 768px */
+
+@media (max-width: 768px) {
+  .who-we-are {
+    grid-template-columns: 1fr; /* Switch to a single column layout on smaller screens */
+    margin-right: 20px; /* Adjust right margin for smaller screens */
+    margin-left: 20px; /* Adjust left margin for smaller screens */
+  }
+
+  .who-we-are .who-we-are-content, .who-we-are img {
+    grid-column: 1; /* Make content and image span the full width of the single column */
+  }
+
+  .who-we-are img {
+    height: auto; /* Adjust image height to maintain aspect ratio */
+  }
+
+  .who-we-are h2, .who-we-are p {
+    font-size: 20px; /* Optionally, adjust font sizes for smaller screens */
+  }
+}
+
 /*our expertise layout */
 
 .our-expertise {
@@ -451,6 +528,19 @@ header h1 {
 .our-expertise p {
   font-family: 'Noto Sans HK', sans-serif;
   font-size: 24px;
+}
+
+/* Media Query for smaller screens - Example: for screens narrower than 768px */
+@media (max-width: 768px) {
+  .our-expertise {
+    grid-template-columns: 1fr; /* Switch to a single column layout on smaller screens */
+    margin-left: 20px; /* Adjust left margin for smaller screens */
+    margin-bottom: 20px; /* Optionally adjust bottom margin for spacing */
+  }
+
+  .our-expertise h2, .our-expertise p {
+    font-size: 20px; /* Optionally, adjust font sizes for smaller screens */
+  }
 }
 
 /* Our products layout */
@@ -490,8 +580,23 @@ header h1 {
   font-family: 'PT Serif', serif;
 }
 
+/* Media Query for smaller screens - Example: for screens narrower than 768px */
+@media (max-width: 768px) {
+  .areas-of-expertise {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust columns for smaller screens */
+  }
 
-/* map layout */
+  .expertise-1,
+  .expertise-2,
+  .expertise-3,
+  .expertise-4 {
+    grid-column: auto; /* Allow items to flow naturally in the grid */
+    width: auto; /* Adjust width to fit within the grid */
+    margin: 10px; /* Adjust margin for consistent spacing */
+  }
+}
+
+/*contact us layout */
 
 .where-we-are {
   display: grid;
@@ -554,6 +659,33 @@ header h1 {
   width: 100%;
   margin-top: 50px;
   grid-column: 3 / 7;
+}
+
+/* Media Query for smaller screens - Example: for screens narrower than 768px */
+@media (max-width: 768px) {
+  .where-we-are, .contact-us {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    margin-left: 20px; /* Adjust left margin */
+    margin-right: 20px; /* Adjust right margin */
+  }
+
+  .where-we-are .where-we-are-content, .contact-us .contact-us-content {
+    grid-column: 1; /* Make content span the full width */
+  }
+
+  .map {
+    grid-column: 1; /* Place the map in the first column */
+  }
+
+  .map #mapid {
+    height: 400px; /* Optionally adjust the map's height */
+    margin-top: 20px; /* Adjust the top margin */
+  }
+
+  /* Adjust font sizes for smaller screens if necessary */
+  .where-we-are h2, .where-we-are p, .contact-us-content h2, .contact-us-content h3, .contact-us-content p {
+    font-size: 20px;
+  }
 }
 
 /*footer layout */
