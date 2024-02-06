@@ -404,7 +404,6 @@ header h1 {
   .hero form {
     grid-column: 1; /* Place the form in the first column */
     grid-row: 3; /* Position the form below the text */
-    grid
     margin-top: 0; /* Add some space above the form */
     margin-right: 20px; /* Adjust right margin */
     max-width: 100%; /* Allow the form to take full width */
