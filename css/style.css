@@ -289,7 +289,10 @@ header h1 {
   grid-template-rows: repeat(3, 1fr);
   grid-auto-rows: minmax(auto, max-content);
   font-family: 'Playfair Display', serif;
+  /* original background color
   background-color: antiquewhite;
+   */
+
   height: 800px;
 }
 
