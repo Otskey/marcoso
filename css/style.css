@@ -257,6 +257,16 @@ header {
   background-color: white;
 }
 
+header img {
+  grid-column: 1;
+  height: 62px;
+  width: 307px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+/* header 1 logo sub
+
 header h1 {
   grid-column: 1;
   font-family: 'Kalnia', serif;
@@ -268,6 +278,8 @@ header h1 {
 .red-dot {
   color: red;
 }
+*/
+
 
 /*hero layout */
 
