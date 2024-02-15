@@ -483,6 +483,7 @@ header h1 {
   margin-right: 200px;
   margin-left: 200px;
   background-color: rgb(245 245 245);
+  margin-bottom: 60px;
 }
 
 .who-we-are .who-we-are-content {
@@ -537,13 +538,29 @@ header h1 {
 }
 
 .our-expertise .our-expertise-content{
-  grid-column: 1 / -1; /* Text content in the first column */
+  grid-column: 3 / 5; /* Text content in the first column */
   grid-row: 1;
 }
 
 .our-expertise h2 {
   font-family: 'Noto Sans HK', sans-serif;
-  font-size: 34px;
+  font-size: 26px;
+  border-radius: 10px;
+  width: 310px;
+  text-align: center;
+  position: relative;
+}
+
+.our-expertise h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust the position of the divider */
+  left: 50%; /* Center the divider horizontally */
+  transform: translateX(-50%); /* Center the divider horizontally */
+  width: 100px; /* Adjust the width of the divider */
+  height: 2px; /* Adjust the height of the divider */
+  background-color: darkred; /* Color of the divider */
+  border-radius: 5px; /* Optional: Add rounded corners to the divider */
 }
 
 .our-expertise p {
@@ -576,6 +593,13 @@ header h1 {
 
 }
 
+.expertise-1 img {
+  grid-column: 2;
+  width: 250px;
+  height: 250px;
+}
+
+
 .expertise-2 {
   grid-column: 3;
 }
@@ -588,17 +612,41 @@ header h1 {
   grid-column: 5;
 }
 
-.expertise-1,
-.expertise-2,
-.expertise-3,
-.expertise-4 {
-  border: 2px solid rgb(245 245 245);
+.expertise-1 {
   padding: 20px; /* Add some padding */
-  margin: 10px; /* Add some margin */
-  background-color: rgb(245 245 245);
+  margin: 15px; /* Add some margin */
+  background-color: white;
   width: 310px;
   text-align: left;
   font-family: 'PT Serif', serif;
+}
+
+.expertise-2,
+.expertise-3,
+.expertise-4 {
+  border: 2px hidden rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px; /* Add some padding */
+  margin: 15px; /* Add some margin */
+  background-color: rgba(139, 0, 0, 0.06);
+  width: 310px;
+  text-align: left;
+  font-family: 'PT Serif', serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-2:hover,
+.expertise-3:hover,
+.expertise-4:hover {
+  background-color: rgba(139, 0, 0, 0.2); /* Darker red background on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Apply font to the list */
+.expertise-2 ul,
+.expertise-3 ul,
+.expertise-4 ul {
+  font-family: 'noto sans', sans-serif;
 }
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
