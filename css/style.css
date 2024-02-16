@@ -252,9 +252,9 @@ textarea {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.02);
   position: fixed;
   top: 0;
   left: 0;
@@ -284,6 +284,54 @@ header h1 {
   color: red;
 }
 */
+
+/* Header Navigation Styling */
+
+nav {
+  grid-column: 3; /* Positioned in the middle */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: flex-end; /* Align navigation links to the right */
+  align-items: center; /* Center vertically within the header */
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact-button {
+  background-color: darkred;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.contact-button:hover {
+  background-color: rosybrown;
+}
 
 
 /*hero layout */
