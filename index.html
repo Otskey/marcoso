@@ -90,7 +90,7 @@
 <section class="hero">
   <h1><span class="word-cycle"></span> </h1>
   <h2>With over fifty years in the international steel markets and industries. Think Steel - Think Marcoso</h2>
-  <form>
+  <!-- commenting our original contact us design <form>
     <div>
       <label for="cust-name">Name *</label>
       <input id="cust-name" name="name" required type="text" placeholder="Your name">
@@ -123,6 +123,7 @@
 
     <button type="submit">Submit</button>
   </form>
+  -->
 </section>
 
 <!-- commenting out what we do original for now
@@ -204,16 +205,47 @@
   </div>
 </section>
 
-<section class="where-we-are">
-  <div class="where-we-are-content">
-  <h2>Where we are</h2>
-  <p>Our head office is located in the heart of London, United Kingdom. We also have a regional office in Dubai, United Arab Emirates</p>
+<section class="contact-us">
+  <div class="contact-us-content">
+    <h2>Start your journey with Marcoso today</h2>
+    <form>
+      <div>
+        <label for="cust-name">Name *</label>
+        <input id="cust-name" name="name" required type="text" placeholder="Your name">
+      </div>
+
+      <div>
+        <label for="cust-email">Email *</label>
+        <input id="cust-email" name="email" required type="email" placeholder="Your Email">
+      </div>
+
+      <div>
+        <label for="cust-contact_no">Contact number *</label>
+        <input id="cust-contact_no" name="contact_no" type="text" placeholder="Your number">
+      </div>
+
+      <div>
+        <label for="cust-budget">What is your rough budget? *</label>
+        <select id="cust-budget" name="budget" required>
+          <option value="">Select your budget</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="cust-message">Tell us about your business or project requirements *</label>
+        <textarea id="cust-message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </section>
 
-<section class="contact-us">
-  <div class="contact-us-content">
-    <h2>Our Locations</h2>
+<section class="our-locations">
+  <div class="our-locations-content">
     <h3>London Office</h3>
     <p>Marcoso Global Resources Limited</p>
     <p>70 Gracechurch Street</p>
@@ -237,9 +269,6 @@
 </section>
 
 <footer>
-  <div class="footer-logo">
-    <img src="img/marcoso.svg"/>
-  </div>
   <div class="footer-social">
     <a href="#"><img src="img/facebook.svg"></a>
     <a href="#"><img src="img/X.svg"></a>
