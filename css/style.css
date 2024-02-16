@@ -300,7 +300,7 @@ header h1 {
   background-image: url('../img/london.jpg');
   background-size: cover;
   height: 950px;
-  margin-bottom: 110px;
+  margin-bottom: 60px;
 }
 
 @keyframes cycleWords {
@@ -444,18 +444,40 @@ header h1 {
 }
 
 .what-we-do .what-we-do-content{
-  grid-column: 1 / 4; /* Text content in the first column */
+  grid-column: 3 / 5; /* Text content in the first column */
+  margin-bottom: 30px;
 }
 
+/* commenting out to save
 .what-we-do h2 {
   font-family: 'Noto Sans HK', sans-serif;
-  font-size: 34px;
+  font-size: 26px;
+  border-radius: 10px;
+  width: 310px;
+  text-align: center;
+  position: relative;
+}
+  */
+
+.what-we-do h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust the position of the divider */
+  left: 50%; /* Center the divider horizontally */
+  transform: translateX(-50%); /* Center the divider horizontally */
+  width: 100px; /* Adjust the width of the divider */
+  height: 2px; /* Adjust the height of the divider */
+  background-color: darkred; /* Color of the divider */
+  border-radius: 5px; /* Optional: Add rounded corners to the divider */
 }
 
+/* commenting out to save
 .what-we-do p {
   font-family: 'Noto Sans HK', sans-serif;
   font-size: 24px;
 }
+*/
+
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media (max-width: 768px) {
@@ -475,36 +497,161 @@ header h1 {
 
 /* who we are layout */
 
+/* the box for services if i wan to add it back in
 .who-we-are {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  border: 2px solid rgb(245 245 245); /* Add a border */
-  align-items: center; /* Center the content vertically */
+  border: 2px solid rgb(245 245 245);
+  align-items: center;
   margin-right: 200px;
   margin-left: 200px;
-  background-color: rgb(245 245 245);
+  background-color: darkred;
   margin-bottom: 60px;
 }
+*/
 
-.who-we-are .who-we-are-content {
-  grid-column: 1 / 4; /* Text content in the first column */
+.who-we-are .service-blurb h2  {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.who-we-are h2 {
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 34px;
+.who-we-are .service-1 h2,
+.who-we-are .service-2 h2,
+.who-we-are .service-3 h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
 }
 
+.who-we-are p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.who-we-are-content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 80px;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+}
+
+.who-we-are-content img {
+  grid-column: 3 / 8;
+  grid-row: 1 / 4;
+  width: 100%;
+  height: 790px;
+}
+
+.service-blurb {
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+  padding-top: 24px;
+  position: relative;
+}
+
+.service-1 {
+  grid-column: 5 / 7;
+  padding-top: 24px;
+  position: relative;
+}
+
+.service-1 .material-symbols-outlined {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-2 {
+  grid-column: 5 / 7;
+  padding-top: 24px;
+  position: relative;
+}
+
+.service-2 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-3 {
+  grid-column: 5 / 7;
+  padding-top: 24px;
+  position: relative;
+}
+
+.service-3 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Service Box Styling */
+.service-blurb {
+  border: 2px hidden rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px; /* Add some padding */
+  margin: 50px 15px; /* Add some margin */
+  width: 600px;
+  text-align: center;
+}
+
+
+.service-1,
+.service-2,
+.service-3 {
+  border: 2px hidden rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px; /* Add some padding */
+  margin: 5px 0; /* Add some margin */
+  width: 400px;
+  text-align: left;
+}
+
+/* commenting out to save
 .who-we-are p {
   font-family: 'Noto Sans HK', sans-serif;
   font-size: 24px;
 }
 
 .who-we-are img {
-  grid-column: 4 / 7; /* Image in the second column */
-  width: 100%; /* Full width of the grid cell */
-  height: 800px; /* Maintain aspect ratio */
+  grid-column: 4 / 7;
+  width: 100%;
+  height: 800px;
 }
+*/
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 
@@ -543,8 +690,10 @@ header h1 {
 }
 
 .our-expertise h2 {
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
   border-radius: 10px;
   width: 310px;
   text-align: center;
@@ -564,8 +713,10 @@ header h1 {
 }
 
 .our-expertise p {
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
@@ -618,7 +769,10 @@ header h1 {
   background-color: white;
   width: 310px;
   text-align: left;
-  font-family: 'PT Serif', serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .expertise-2,
@@ -631,7 +785,10 @@ header h1 {
   background-color: rgba(139, 0, 0, 0.06);
   width: 310px;
   text-align: left;
-  font-family: 'PT Serif', serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -646,7 +803,11 @@ header h1 {
 .expertise-2 ul,
 .expertise-3 ul,
 .expertise-4 ul {
-  font-family: 'noto sans', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: square;
 }
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
