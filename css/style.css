@@ -333,6 +333,46 @@ nav a {
   background-color: rosybrown;
 }
 
+@media (max-width: 768px) {
+  header {
+    height: 80px; /* Adjust the header height for smaller screens */
+  }
+
+  header img {
+    height: auto; /* Maintain aspect ratio */
+    width: 80%; /* Reduce logo width */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Center the logo */
+  }
+
+  nav {
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .contact-button {
+    padding: 12px 24px; /* Increase button padding for easier tapping */
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
 
 /*hero layout */
 
@@ -449,38 +489,50 @@ nav a {
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media (max-width: 768px) {
   .hero {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    grid-template-rows: auto auto auto; /* Adjust grid rows to accommodate stacked content */
-    height: auto; /* Adjust height to accommodate stacked content */
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto; /* Rows adjust to content size */
+    height: auto; /* Height adjusts to content */
+    background-size: contain; /* Adjust background image to fit within the container */
+    padding: 20px; /* Add padding around the content */
   }
 
   .hero h1 {
-    grid-column: 1;/* Span the heading across the single column */
-    grid-row: 1;
-    font-size: 50px; /* Optionally adjust font size */
-    margin-top: 20px; /* Reduce top margin */
-    margin-left: 20px; /* Adjust left margin */
-    margin-bottom: 0; /* Reduce space below h1 */
+    font-size: 40px; /* Reduce font size for smaller screens */
+    margin-top: 20px; /* Adjust top margin */
+    margin-bottom: 10px; /* Adjust bottom margin */
+    text-align: center; /* Center align the text */
+  }
+
+  .hero h1 .word-cycle::after {
+    font-size: 40px; /* Match font size of the main heading */
   }
 
   .hero h2 {
-    grid-column: 1; /* Span subheading across the single column */
-    grid-row: 2; /* Position subheading below the heading */
-    margin-left: 20px; /* Adjust left margin */
-    margin-top: 20px; /* Move h2 text up to avoid overlap */
-    margin-bottom: 0; /* Reduce space below h2 */
+    font-size: 24px; /* Reduce font size for subheading */
+    margin-top: 10px; /* Adjust top margin */
+    margin-bottom: 20px; /* Adjust bottom margin */
+    text-align: center; /* Center align the text */
   }
 
   .hero form {
-    grid-column: 1; /* Place the form in the first column */
-    grid-row: 3; /* Position the form below the text */
-    margin-top: 0; /* Add some space above the form */
-    margin-right: 20px; /* Adjust right margin */
-    max-width: 100%; /* Allow the form to take full width */
+    max-width: 100%; /* Form takes full width of the column */
+    margin-top: 0; /* Remove top margin */
+    margin-right: 0; /* Remove right margin */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .hero input[type="text"],
+  .hero input[type="email"],
+  .hero select,
+  .hero textarea {
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  .hero button {
+    width: 100%; /* Button takes full width */
+    padding: 12px; /* Increase padding for easier interaction */
   }
 }
-
-/* about us */
 
 /* what we do layout */
 
@@ -543,20 +595,36 @@ nav a {
   }
 }
 
-/* who we are layout */
+.what-we-do {
+  grid-template-columns: 1fr; /* Single column layout */
+  margin: 0 20px 30px 20px; /* Adjust margins to fit smaller screens */
+  padding: 0 15px; /* Add padding for better spacing */
+}
 
-/* the box for services if i wan to add it back in
-.who-we-are {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  border: 2px solid rgb(245 245 245);
-  align-items: center;
-  margin-right: 200px;
-  margin-left: 200px;
-  background-color: darkred;
-  margin-bottom: 60px;
+.what-we-do .what-we-do-content {
+  grid-column: 1; /* Span content across the single column */
+  margin-bottom: 20px; /* Adjust bottom margin */
+}
+
+.what-we-do h2 {
+  font-size: 24px; /* Reduce font size for headings */
+  text-align: center; /* Center-align the headings for better visual balance */
+}
+
+.what-we-do h2::after {
+  bottom: -15px; /* Adjust position of the divider */
+  width: 80px; /* Reduce width of the divider */
+}
+
+/* Uncomment and adjust the paragraph styles as needed */
+/*
+.what-we-do p {
+  font-size: 18px; /* Reduce font size for paragraphs */
 }
 */
+}
+
+/* who we are layout */
 
 .who-we-are .service-blurb h2  {
   font-family: "Roboto", sans-serif;
@@ -704,22 +772,46 @@ nav a {
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 
 @media (max-width: 768px) {
-  .who-we-are {
-    grid-template-columns: 1fr; /* Switch to a single column layout on smaller screens */
-    margin-right: 20px; /* Adjust right margin for smaller screens */
-    margin-left: 20px; /* Adjust left margin for smaller screens */
+  .who-we-are-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-gap: 15px; /* Adjust grid gap for better spacing */
+    margin-bottom: 40px; /* Adjust bottom margin */
   }
 
-  .who-we-are .who-we-are-content, .who-we-are img {
-    grid-column: 1; /* Make content and image span the full width of the single column */
+  .who-we-are-content img {
+    grid-column: 1; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't overflow the screen */
   }
 
-  .who-we-are img {
-    height: auto; /* Adjust image height to maintain aspect ratio */
+  .service-blurb,
+  .service-1,
+  .service-2,
+  .service-3 {
+    grid-column: 1; /* Full width for each service */
+    margin: 20px 0; /* Uniform margin for top and bottom */
+    width: auto; /* Adjust width to fit container */
+    text-align: center; /* Center align the text */
+    padding: 15px; /* Adjust padding */
   }
 
-  .who-we-are h2, .who-we-are p {
-    font-size: 20px; /* Optionally, adjust font sizes for smaller screens */
+  .service-1 .material-symbols-outlined,
+  .service-2 .material-symbols-outlined,
+  .service-3 .material-symbols-outlined {
+    position: relative; /* Change position */
+    left: 0; /* Reset left alignment */
+    top: 0; /* Reset top alignment */
+    transform: none; /* Remove transform */
+    margin-bottom: 10px; /* Add margin below the icon */
+  }
+
+  .who-we-are h2 {
+    font-size: 28px; /* Adjust heading font size */
+  }
+
+  .who-we-are p {
+    font-size: 16px; /* Adjust paragraph font size */
   }
 }
 
@@ -770,13 +862,30 @@ nav a {
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media (max-width: 768px) {
   .our-expertise {
-    grid-template-columns: 1fr; /* Switch to a single column layout on smaller screens */
-    margin-left: 20px; /* Adjust left margin for smaller screens */
-    margin-bottom: 20px; /* Optionally adjust bottom margin for spacing */
+    grid-template-columns: 1fr; /* Single column layout */
+    margin: 0 20px 30px 20px; /* Adjust margins to fit smaller screens */
   }
 
-  .our-expertise h2, .our-expertise p {
-    font-size: 20px; /* Optionally, adjust font sizes for smaller screens */
+  .our-expertise .our-expertise-content {
+    grid-column: 1; /* Full width of the column */
+  }
+
+  .our-expertise h2 {
+    font-size: 24px; /* Slightly larger font size for heading */
+    width: auto; /* Adjust width to fit content */
+    margin: 0 auto 10px; /* Center the heading and adjust margin */
+    text-align: center; /* Center-align the heading */
+  }
+
+  .our-expertise h2::after {
+    bottom: -15px; /* Adjust position of the divider */
+    width: 80px; /* Adjust width of the divider */
+  }
+
+  .our-expertise p {
+    font-size: 16px; /* Adjust font size for better readability */
+    text-align: justify; /* Justify the text for better alignment */
+    margin-top: 10px; /* Add some space above paragraph */
   }
 }
 
@@ -861,16 +970,35 @@ nav a {
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media (max-width: 768px) {
   .areas-of-expertise {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust columns for smaller screens */
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    grid-gap: 15px; /* Adjust grid gap for consistent spacing */
+  }
+
+  .expertise-1 img,
+  .expertise-2 img,
+  .expertise-3 img,
+  .expertise-4 img {
+    width: 100%; /* Full width of the column */
+    height: auto; /* Maintain aspect ratio of the images */
+    max-width: 250px; /* Limit the maximum width of the image */
+    margin: 0 auto; /* Center the images */
   }
 
   .expertise-1,
   .expertise-2,
   .expertise-3,
   .expertise-4 {
-    grid-column: auto; /* Allow items to flow naturally in the grid */
-    width: auto; /* Adjust width to fit within the grid */
-    margin: 10px; /* Adjust margin for consistent spacing */
+    grid-column: 1; /* Span across the full width of the column */
+    margin: 10px auto; /* Center the items with automatic margin */
+    width: calc(100% - 20px); /* Full width minus the margin */
+    padding: 15px; /* Adjust padding */
+    box-shadow: none; /* Optionally, remove box-shadow for a cleaner look */
+  }
+
+  .expertise-2 ul,
+  .expertise-3 ul,
+  .expertise-4 ul {
+    font-size: 16px; /* Adjust font size for smaller screens */
   }
 }
 
@@ -895,7 +1023,25 @@ nav a {
   color: white;
 }
 
-/* hero form styling */
+@media (max-width: 768px) {
+  .contact-us-content {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    margin-top: 30px; /* Adjust the top margin */
+    margin-bottom: 30px; /* Adjust the bottom margin */
+    height: auto; /* Adjust height to fit content */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .contact-us-content h2 {
+    grid-column: 1; /* Full width of the column */
+    font-size: 28px; /* Adjust font size for smaller screens */
+    margin-top: 40px; /* Adjust top margin */
+    text-align: left; /* Align text to the left for better readability */
+    padding: 0 10px; /* Add padding for text alignment */
+  }
+}
+
+/*Contact us form styling */
 
 .contact-us-content form {
   grid-column: 4 / 6;
@@ -955,6 +1101,40 @@ nav a {
   color: #666;
 }
 
+@media (max-width: 768px) {
+  .contact-us-content form {
+    grid-column: 1; /* Span the form across the full width of the single column */
+    margin-left: 20px; /* Adjust left margin for smaller screens */
+    margin-right: 20px; /* Adjust right margin for smaller screens */
+    margin-top: 30px; /* Adjust top margin for smaller screens */
+    max-width: 100%; /* Allow the form to take full width of the column */
+    padding: 15px; /* Adjust padding for better spacing */
+    box-shadow: none; /* Optionally, remove box-shadow for a cleaner look */
+  }
+
+  /* Input and Textarea Styling */
+  .contact-us-content input[type="text"],
+  .contact-us-content input[type="email"],
+  .contact-us-content select,
+  .contact-us-content textarea {
+    padding: 12px; /* Slightly larger padding for easier interaction on touch devices */
+  }
+
+  /* Button Styling */
+  .contact-us-content button {
+    width: 100%; /* Button takes full width of the form */
+    padding: 12px 0; /* Adjust padding for better touch interaction */
+  }
+
+  /* Adjusting font sizes if necessary */
+  .contact-us-content label,
+  .contact-us-content p {
+    font-size: 1em; /* Adjust font size for readability */
+  }
+}
+
+/* our locations styling */
+
 .our-locations {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -997,28 +1177,36 @@ nav a {
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media (max-width: 768px) {
-  .where-we-are, .contact-us {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-left: 20px; /* Adjust left margin */
-    margin-right: 20px; /* Adjust right margin */
+  .our-locations {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    margin: 0 20px 30px 20px; /* Adjust margins to fit smaller screens */
   }
 
-  .where-we-are .where-we-are-content, .contact-us .contact-us-content {
-    grid-column: 1; /* Make content span the full width */
+  .our-locations .our-locations-content {
+    grid-column: 1; /* Full width of the column */
+    margin-bottom: 20px; /* Adjust bottom margin for spacing */
+  }
+
+  .our-locations-content h2 {
+    font-size: 28px; /* Adjust font size for heading */
+  }
+
+  .our-locations-content h3 {
+    font-size: 22px; /* Adjust font size for subheading */
+  }
+
+  .our-locations-content p {
+    font-size: 16px; /* Adjust font size for paragraph */
+    line-height: 1.2; /* Adjust line height for better readability */
   }
 
   .map {
-    grid-column: 1; /* Place the map in the first column */
+    grid-column: 1; /* Full width of the column */
   }
 
   .map #mapid {
-    height: 400px; /* Optionally adjust the map's height */
-    margin-top: 20px; /* Adjust the top margin */
-  }
-
-  /* Adjust font sizes for smaller screens if necessary */
-  .where-we-are h2, .where-we-are p, .contact-us-content h2, .contact-us-content h3, .contact-us-content p {
-    font-size: 20px;
+    height: 400px; /* Adjust height of the map */
+    margin-top: 10px; /* Adjust top margin for the map */
   }
 }
 
