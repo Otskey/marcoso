@@ -285,6 +285,15 @@ header h1 {
 }
 */
 
+/* Hamburger menu styling */
+
+nav .material-symbols-outlined {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  font-size: 36px; /* Adjust size as needed */
+  margin-right: 20px; /* Add margin to push it to the right */
+}
+
 /* Header Navigation Styling */
 
 nav {
@@ -334,6 +343,7 @@ nav a {
 }
 
 @media (max-width: 768px) {
+  /* Header adjustments */
   header {
     height: 80px; /* Adjust the header height for smaller screens */
   }
@@ -346,9 +356,10 @@ nav a {
     display: block; /* Center the logo */
   }
 
+  /* Navigation adjustments */
   nav {
     grid-column: 1 / -1;
-    justify-content: center;
+    justify-content: flex-end; /* Align items to the end (right) of the container */
     margin-right: 0;
   }
 
@@ -372,6 +383,31 @@ nav a {
     margin-left: 0;
     margin-top: 20px;
   }
+
+  /* Hamburger menu adjustments */
+  nav .material-symbols-outlined {
+    display: block; /* Show hamburger icon on smaller screens */
+    cursor: pointer;
+    font-size: 36px; /* Adjust size as needed */
+    margin-right: 20px; /* Add margin to push it to the right */
+  }
+
+  nav ul {
+    display: none; /* Hide the menu initially on smaller screens */
+  }
+
+  nav ul.show {
+    display: flex; /* Show menu when 'show' class is added */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Hide other nav content on smaller screens except for the hamburger icon */
+  nav > *:not(.material-symbols-outlined) {
+    display: none;
+  }
+
+
 }
 
 /*hero layout */
@@ -426,7 +462,7 @@ nav a {
   margin-left: 20px;
 }
 
-/* hero form styling */
+/* hero form styling commenting out
 
 .hero form {
   grid-column: 4 / 6;
@@ -440,8 +476,9 @@ nav a {
   max-height: 600px;
   max-width: 500px;
 }
+*/
 
-/* Input and Textarea Styling */
+/* Input and Textarea Styling commenting out
 .hero input[type="text"],
 .hero input[type="email"],
 .hero select,
@@ -453,15 +490,18 @@ nav a {
   border-radius: 4px;
   box-sizing: border-box; /* Makes sure padding doesn't affect overall width */
 }
+/*
 
-/* Label Styling */
+/* Label Styling commenting out
 .hero label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-/* Button Styling */
+*/
+
+/* Button Styling commenting out
 .hero button {
   background-color: darkred;
   color: white;
@@ -475,62 +515,73 @@ nav a {
   transition: background-color 0.3s;
 }
 
-/* Button Hover Effect */
+ */
+
+/* Button Hover Effect commenting out
 .hero button:hover {
   background-color: rosybrown;
 }
+*/
 
-/* Helper Text */
+
+/* Helper Text commenting out
 .hero p {
   font-size: 0.85em;
   color: #666;
 }
+*/
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero {
-    grid-template-columns: 1fr; /* Single column layout */
-    grid-template-rows: auto; /* Rows adjust to content size */
-    height: auto; /* Height adjusts to content */
-    background-size: contain; /* Adjust background image to fit within the container */
-    padding: 20px; /* Add padding around the content */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    height: auto; /* Adjust height */
+    background-size: contain; /* Adjust background image */
   }
 
   .hero h1 {
-    font-size: 40px; /* Reduce font size for smaller screens */
-    margin-top: 20px; /* Adjust top margin */
-    margin-bottom: 10px; /* Adjust bottom margin */
-    text-align: center; /* Center align the text */
-  }
-
-  .hero h1 .word-cycle::after {
-    font-size: 40px; /* Match font size of the main heading */
+    font-size: 50px; /* Adjust font size */
+    margin-bottom: 20px; /* Space between h1 and h2 */
   }
 
   .hero h2 {
-    font-size: 24px; /* Reduce font size for subheading */
-    margin-top: 10px; /* Adjust top margin */
-    margin-bottom: 20px; /* Adjust bottom margin */
-    text-align: center; /* Center align the text */
+    font-size: 30px; /* Adjust font size */
   }
+}
 
+  /*form styling
+
+  /* Adjust form styling */
   .hero form {
-    max-width: 100%; /* Form takes full width of the column */
-    margin-top: 0; /* Remove top margin */
-    margin-right: 0; /* Remove right margin */
-    padding: 15px; /* Adjust padding */
+    grid-column: 1 / -1; /* Span full width */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 20px; /* Adjust margin */
+    margin-bottom: 20px; /* Adjust margin */
   }
 
+  /* Adjust input and textarea styling */
   .hero input[type="text"],
   .hero input[type="email"],
   .hero select,
   .hero textarea {
-    font-size: 16px; /* Adjust font size for better readability */
+    width: calc(100% - 40px); /* Adjust width */
+    margin-bottom: 15px;
   }
 
+  /* Adjust button styling */
   .hero button {
-    width: 100%; /* Button takes full width */
-    padding: 12px; /* Increase padding for easier interaction */
+    width: 100%;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
 }
 
