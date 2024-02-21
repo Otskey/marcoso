@@ -291,7 +291,7 @@ nav .material-symbols-outlined {
   display: none; /* Hide by default */
   cursor: pointer;
   font-size: 36px; /* Adjust size as needed */
-  margin-right: 20px; /* Add margin to push it to the right */
+  margin-right: 20px; /* Add margin to push it to the right */;
 }
 
 /* Header Navigation Styling */
@@ -462,6 +462,43 @@ nav a {
   margin-left: 20px;
 }
 
+
+/* Media Query for smaller screens - Example: for screens narrower than 768px */
+@media screen and (max-width: 768px)
+{
+.hero {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-template-rows: auto auto; /* Auto-adjusting rows */
+  background-size: cover; /* Adjust background image to fit the screen */
+  height: auto; /* Adjust height to content */
+  padding: 20px; /* Add some padding for smaller screens */
+}
+
+/* Adjust the font size and margins for h1 */
+.hero h1 {
+  font-size: 50px; /* Smaller font size for smaller screens */
+  grid-column: 1; /* Span the single column */
+  grid-row: 1; /* Place in the first row */
+  margin-top: 30px; /* Adjust top margin */
+  margin-left: 10px; /* Adjust left margin */
+  margin-bottom: 20px; /* Add bottom margin to create space between h1 and h2 */
+}
+
+/* Adjust the font size and margins for h2 */
+.hero h2 {
+  font-size: 30px; /* Smaller font size for smaller screens */
+  grid-column: 1; /* Span the single column */
+  grid-row: 2; /* Place in the second row */
+  margin-top: 20px; /* Adjust top margin */
+  margin-left: 10px; /* Adjust left margin */
+}
+
+/* Adjust the cycling word animation for smaller screens if necessary */
+.hero h1 .word-cycle::after {
+  /* Adjust font size, animation speed, etc., as needed */
+}
+
 /* hero form styling commenting out
 
 .hero form {
@@ -531,48 +568,33 @@ nav a {
 }
 */
 
-/* Media Query for smaller screens - Example: for screens narrower than 768px */
-@media screen and (max-width: 768px) {
-  .hero {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    height: auto; /* Adjust height */
-    background-size: contain; /* Adjust background image */
-  }
+/*form styling
 
-  .hero h1 {
-    font-size: 50px; /* Adjust font size */
-    margin-bottom: 20px; /* Space between h1 and h2 */
-  }
-
-  .hero h2 {
-    font-size: 30px; /* Adjust font size */
-  }
-}
-
-  /*form styling
-
-  /* Adjust form styling */
+/* Adjust form styling (commenting out)
   .hero form {
-    grid-column: 1 / -1; /* Span full width */
+    grid-column: 1 / -1;
     background: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-top: 20px; /* Adjust margin */
-    margin-bottom: 20px; /* Adjust margin */
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
-  /* Adjust input and textarea styling */
+ */
+
+  /* Adjust input and textarea styling (commenting out)
   .hero input[type="text"],
   .hero input[type="email"],
   .hero select,
   .hero textarea {
-    width: calc(100% - 40px); /* Adjust width */
+    width: calc(100% - 40px);
     margin-bottom: 15px;
   }
 
-  /* Adjust button styling */
+   */
+
+  /* Adjust button styling (commenting out)
   .hero button {
     width: 100%;
     padding: 10px 20px;
@@ -584,6 +606,8 @@ nav a {
     transition: background-color 0.3s;
   }
 }
+
+   */
 
 /* what we do layout */
 
