@@ -270,6 +270,10 @@ header img {
   margin-top: 30px;
 }
 
+.white-logo {
+  color: white;
+}
+
 /* header 1 logo sub
 
 header h1 {
@@ -366,43 +370,42 @@ nav a {
     justify-content: flex-end; /* Push to the end */
   }
 
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  nav a {
-    font-size: 14px; /* Reduce font size for smaller screens */
-  }
-
-  .contact-button {
-    padding: 12px 24px; /* Increase button padding for easier tapping */
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  /* Hamburger menu adjustments */
+  /* Style for both icons */
   nav .material-symbols-outlined {
-    display: block; /* Show hamburger icon */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
     cursor: pointer;
-    font-size: 30px; /* Adjust size as needed */
-    margin-right: 20px; /* Right margin for spacing */
-    transtion: transform 0.3s; /* Add smooth transition for the icon */
+    z-index: 1010;
   }
 
+  /* Initially display only the menu icon */
+  nav .material-symbols-outlined:first-of-type {
+    display: block; /* Show menu icon */
+  }
+
+  /* Initially hide the close icon */
+  nav .material-symbols-outlined:nth-of-type(2) {
+    display: none; /* Hide close icon */
+  }
+
+  /* When menu is open, hide the menu icon and show the close icon */
+  nav ul.show + .material-symbols-outlined:first-of-type {
+    display: none;
+  }
+  nav ul.show + .material-symbols-outlined:nth-of-type(2) {
+    display: block;
+  }
+
+  /* Menu styling */
   nav ul {
     display: none; /* Hide the menu initially on smaller screens */
     position: fixed;
     top: 0px;
     left: -100%; /* Start off-screen */
     width: 100%; /* Adjust width as needed */
-    height: 100vh; /* Full viewport height */
+    height: 50vh; /* Full viewport height */
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     display: flex;
     flex-direction: column;
@@ -420,12 +423,24 @@ nav a {
     left: 0; /* Bring the menu into view */
   }
 
+  nav ul li {
+    margin-right: 0;
+  }
+
   /* Hide other nav content on smaller screens except for the hamburger icon */
   nav > *:not(.material-symbols-outlined) {
     display: none;
   }
 
+  nav a, .contact-button {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
 
+  .contact-button {
+    padding: 12px 24px; /* Increase button padding for easier tapping */
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 /*hero layout */
