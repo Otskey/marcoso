@@ -477,20 +477,20 @@ nav a {
 
 /* Adjust the font size and margins for h1 */
 .hero h1 {
-  font-size: 50px; /* Smaller font size for smaller screens */
+  font-size: 30px; /* Smaller font size for smaller screens */
   grid-column: 1; /* Span the single column */
   grid-row: 1; /* Place in the first row */
   margin-top: 30px; /* Adjust top margin */
   margin-left: 10px; /* Adjust left margin */
-  margin-bottom: 20px; /* Add bottom margin to create space between h1 and h2 */
+  margin-bottom: 10px; /* Add bottom margin to create space between h1 and h2 */
 }
 
 /* Adjust the font size and margins for h2 */
 .hero h2 {
-  font-size: 30px; /* Smaller font size for smaller screens */
+  font-size: 10px; /* Smaller font size for smaller screens */
   grid-column: 1; /* Span the single column */
   grid-row: 2; /* Place in the second row */
-  margin-top: 20px; /* Adjust top margin */
+  margin-top: 10px; /* Adjust top margin */
   margin-left: 10px; /* Adjust left margin */
 }
 
