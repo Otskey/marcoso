@@ -343,24 +343,27 @@ nav a {
 }
 
 @media (max-width: 768px) {
-  /* Header adjustments */
+  /* Header adjustments with flexbox */
   header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out logo and hamburger menu */
+    align-items: center; /* Align items vertically center */
     height: 80px; /* Adjust the header height for smaller screens */
   }
 
+  /* Adjust logo size and alignment */
   header img {
+    margin-top: 0;
     height: auto; /* Maintain aspect ratio */
-    width: 80%; /* Reduce logo width */
-    margin-left: auto;
-    margin-right: auto;
-    display: block; /* Center the logo */
+    width: 30%; /* Adjust the width as needed */
+    margin-left: 20px; /* Adjust left margin for padding */
   }
 
   /* Navigation adjustments */
   nav {
-    grid-column: 1 / -1;
-    justify-content: flex-end; /* Align items to the end (right) of the container */
-    margin-right: 0;
+    display: flex; /* Apply flex layout */
+    align-items: center; /* Align vertically */
+    justify-content: flex-end; /* Push to the end */
   }
 
   nav ul {
@@ -386,10 +389,10 @@ nav a {
 
   /* Hamburger menu adjustments */
   nav .material-symbols-outlined {
-    display: block; /* Show hamburger icon on smaller screens */
+    display: block; /* Show hamburger icon */
     cursor: pointer;
-    font-size: 36px; /* Adjust size as needed */
-    margin-right: 20px; /* Add margin to push it to the right */
+    font-size: 30px; /* Adjust size as needed */
+    margin-right: 20px; /* Right margin for spacing */
   }
 
   nav ul {
@@ -477,7 +480,7 @@ nav a {
 
 /* Adjust the font size and margins for h1 */
 .hero h1 {
-  font-size: 30px; /* Smaller font size for smaller screens */
+  font-size: 50px; /* Smaller font size for smaller screens */
   grid-column: 1; /* Span the single column */
   grid-row: 1; /* Place in the first row */
   margin-top: 30px; /* Adjust top margin */
@@ -854,6 +857,9 @@ nav a {
   }
 
   .who-we-are-content img {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
     grid-column: 1; /* Full width */
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Ensure it doesn't overflow the screen */
