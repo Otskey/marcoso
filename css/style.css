@@ -1302,6 +1302,7 @@ nav a {
   .map #mapid {
     height: 400px; /* Adjust height of the map */
     margin-top: 10px; /* Adjust top margin for the map */
+    margin-bottom: 20px;
   }
 }
 
