@@ -876,14 +876,23 @@ nav a {
     padding: 15px; /* Adjust padding */
   }
 
+  /* Adjust the service blocks to center content, including the icons */
+  .service-1, .service-2, .service-3 {
+    text-align: center; /* Center align the text and content */
+    position: relative; /* Ensure relative positioning */
+    padding-top: 50px; /* Add padding to top to make space for the icon */
+  }
+
   .service-1 .material-symbols-outlined,
   .service-2 .material-symbols-outlined,
   .service-3 .material-symbols-outlined {
-    position: relative; /* Change position */
-    left: 0; /* Reset left alignment */
-    top: 0; /* Reset top alignment */
-    transform: none; /* Remove transform */
-    margin-bottom: 10px; /* Add margin below the icon */
+    position: absolute; /* Keep the icons absolutely positioned */
+    top: 10px; /* Position icons near the top of the service block */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+    width: 40px; /* Maintain icon width */
+    height: 40px; /* Maintain icon height */
+    margin-bottom: 10px; /* Adjust as needed */
   }
 
   .who-we-are h2 {
@@ -1062,6 +1071,7 @@ nav a {
     height: auto; /* Maintain aspect ratio of the images */
     max-width: 250px; /* Limit the maximum width of the image */
     margin: 0 auto; /* Center the images */
+    display: block;
   }
 
   .expertise-1,
@@ -1071,6 +1081,7 @@ nav a {
     grid-column: 1; /* Span across the full width of the column */
     margin: 10px auto; /* Center the items with automatic margin */
     width: calc(100% - 20px); /* Full width minus the margin */
+    text-align: center;
     padding: 15px; /* Adjust padding */
     box-shadow: none; /* Optionally, remove box-shadow for a cleaner look */
   }
@@ -1078,7 +1089,11 @@ nav a {
   .expertise-2 ul,
   .expertise-3 ul,
   .expertise-4 ul {
+    grid-column: 1;
     font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 0; /* Remove padding if present */
+    margin: 0; /* Adjust margin as needed */
+    list-style-position: inside; /* Adjust list bullet position */
   }
 }
 
