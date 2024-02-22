@@ -393,16 +393,31 @@ nav a {
     cursor: pointer;
     font-size: 30px; /* Adjust size as needed */
     margin-right: 20px; /* Right margin for spacing */
+    transtion: transform 0.3s; /* Add smooth transition for the icon */
   }
 
   nav ul {
     display: none; /* Hide the menu initially on smaller screens */
+    position: fixed;
+    top: 0px;
+    left: -100%; /* Start off-screen */
+    width: 100%; /* Adjust width as needed */
+    height: 100vh; /* Full viewport height */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease; /* Smooth transition for sliding in */
+    z-index: 1000; /* Ensure it's above other content */
+    padding-top: 0; /* Adjust padding to avoid overlapping the header */
   }
 
   nav ul.show {
     display: flex; /* Show menu when 'show' class is added */
     flex-direction: column;
     align-items: center;
+    left: 0; /* Bring the menu into view */
   }
 
   /* Hide other nav content on smaller screens except for the hamburger icon */

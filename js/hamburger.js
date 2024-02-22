@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.material-symbols-outlined').addEventListener('click', function() {
-    var menu = document.querySelector('nav ul');
+  let hamburgerIcon = document.querySelector('.material-symbols-outlined');
+  let menu = document.querySelector('nav ul');
+
+  hamburgerIcon.addEventListener('click', function() {
+    // Log to the console when the hamburger icon is clicked
+    console.log("Hamburger icon clicked");
+
     menu.classList.toggle('show');
+    hamburgerIcon.classList.toggle('active');
   });
 });
-
