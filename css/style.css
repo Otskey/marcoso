@@ -254,7 +254,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(255, 255, 255, 1);
   position: fixed;
   top: 0;
   left: 0;
@@ -347,12 +347,20 @@ nav a {
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
+  nav ul {
+    flex-wrap: nowrap; /* Prevent navigation links from wrapping */
+    overflow-x: auto; /* Add horizontal scrollbar if necessary */
+  }
+
   nav ul li {
-    margin-right: 10px; /* Adjust margin between navigation links */
+    margin-right: 20px; /* Adjust margin between navigation links */
+    white-space: nowrap; /* Prevent navigation links from breaking into multiple lines */
+    font-size: 16px; /* Maintain font size for navigation links */
   }
 
   .contact-button {
-    margin-left: 10px; /* Adjust margin between contact button and navigation links */
+    margin-left: 20px; /* Adjust margin between contact button and navigation links */
+    font-size: 16px; /* Maintain font size for contact button */
   }
 }
 
