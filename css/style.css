@@ -1159,6 +1159,34 @@ nav a {
   color: white;
 }
 
+/* Media Query for larger screens */
+@media (max-width: 1200px) {
+  .contact-us-content {
+    height: auto; /* Adjust height to fit content */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .contact-us-content h2 {
+    font-size: 28px; /* Adjust font size for smaller screens */
+    margin-top: 40px; /* Adjust top margin */
+    text-align: left; /* Align text to the left for better readability */
+    padding: 0 10px; /* Add padding for text alignment */
+  }
+}
+
+.contact-us-content form {
+  grid-column: 4 / 6;
+  margin-left: 100px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 60px;
+  margin-right: 50px;
+  max-height: 550px;
+  max-width: 500px;
+}
+
 @media (max-width: 768px) {
   .contact-us-content {
     grid-template-columns: 1fr; /* Single column layout for smaller screens */
