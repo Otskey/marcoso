@@ -312,15 +312,15 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex; /* Use flexbox for navigation links */
 }
 
 nav ul li {
-  display: inline-block;
-  margin-right: 20px;
+  margin-right: 20px; /* Adjust margin between navigation links */
 }
 
 nav ul li:last-child {
-  margin-right: 0;
+  margin-right: 0; /* Remove margin from the last navigation link */
 }
 
 nav a {
@@ -338,29 +338,22 @@ nav a {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 20px; /* Adjust margin between navigation links and contact button */
   font-family: 'Playfair Display', serif;
+  white-space: nowrap; /* Prevent button text from wrapping */
 }
 
 .contact-button:hover {
   background-color: rosybrown;
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-  nav ul {
-    flex-wrap: nowrap; /* Prevent navigation links from wrapping */
-    overflow-x: auto; /* Add horizontal scrollbar if necessary */
-  }
-
+@media (max-width: 1200px) {
   nav ul li {
-    margin-right: 20px; /* Adjust margin between navigation links */
-    white-space: nowrap; /* Prevent navigation links from breaking into multiple lines */
-    font-size: 16px; /* Maintain font size for navigation links */
+    margin-right: 10px; /* Reduce margin between navigation links */
   }
 
   .contact-button {
-    margin-left: 20px; /* Adjust margin between contact button and navigation links */
-    font-size: 16px; /* Maintain font size for contact button */
+    margin-left: 10px; /* Reduce margin between navigation links and contact button */
   }
 }
 
