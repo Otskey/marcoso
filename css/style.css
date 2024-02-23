@@ -346,6 +346,16 @@ nav a {
   background-color: rosybrown;
 }
 
+@media (min-width: 769px) and (max-width: 1200px) {
+  nav ul li {
+    margin-right: 10px; /* Adjust margin between navigation links */
+  }
+
+  .contact-button {
+    margin-left: 10px; /* Adjust margin between contact button and navigation links */
+  }
+}
+
 @media (max-width: 768px) {
   /* Header adjustments with flexbox */
   header {
