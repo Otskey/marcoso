@@ -1339,6 +1339,12 @@ nav a {
   width: 100%;
   margin-top: 20px;
   grid-column: 3 / 7;
+  filter: saturate(10) brightness(2) grayscale(1);
+}
+
+/* Change the color of Leaflet marker pin */
+.leaflet-marker-icon {
+  filter: hue-rotate(300deg); /* Adjust the hue to change the color */
 }
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
