@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  let initialZoom = 3;
-  let initialPosition = [39.03717020611688, 58.897160268679954];
+  let initialZoom = 15;
+  let initialPosition = [51.51219917380306, -0.08475550242526746];
 
   let mymap = L.map('mapid', {
     minZoom: initialZoom, // Set the minimum zoom level
@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // London office
   L.marker([51.51219917380306, -0.08475550242526746]).addTo(mymap).bindPopup("MARCOSO London");
 
+  /* commenting out additional locations for now
+
   // Dubai office
   L.marker([25.0693006591998, 55.143657392430214]).addTo(mymap).bindPopup("MARCOSO Dubai");
 
@@ -22,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Bangladesh office
   L.marker([23.78305421569957, 90.39803296965732]).addTo(mymap).bindPopup("MARCOSO Bangladesh");
+
+   */
 
   // Prevent zooming out beyond initial zoom level
   mymap.on('zoom', function () {
