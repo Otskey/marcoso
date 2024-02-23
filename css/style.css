@@ -1184,8 +1184,10 @@ nav a {
   margin-top: 60px;
   margin-right: 50px;
   max-height: 550px;
+  min-width: 500px;
   max-width: 500px;
 }
+
 
 @media (max-width: 768px) {
   .contact-us-content {
