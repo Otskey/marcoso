@@ -1030,6 +1030,7 @@ nav a {
 .steel-products {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 100px;
   scroll-margin-top: 100px;
 }
 
@@ -1084,13 +1085,57 @@ nav a {
   font-weight: 700;
   font-style: normal;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  perspective: 1000px; /* Required for 3D effect */
+  transform-style: preserve-3d; /* Enables 3D position preservation */
+  transition: transform 1s cubic-bezier(0.6, 0.0, 0.4, 1), background-color 0.3s ease;
+  transform-origin: center; /* Center the rotation */
+  }
+
+.steel-product-1 img,
+.steel-product-2 img,
+.steel-product-3 img {
+  width: 300px;
+  height: 250px;
+}
+
+
+
+/* Styles for the front and back of the card */
+.steel-product-1 .card-front, .steel-product-1 .card-back,
+.steel-product-2 .card-front, .steel-product-2 .card-back,
+.steel-product-3 .card-front, .steel-product-3 .card-back {
+  /* Your existing styles... */
+  backface-visibility: hidden; /* Hide the back face of the element */
+  transform-style: preserve-3d; /* Preserve 3D */
+}
+
+.steel-product-1 .card-front,
+.steel-product-2 .card-front,
+.steel-product-3 .card-front {
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+/* Specific style for the back of the card */
+.steel-product-1 .card-back,
+.steel-product-2 .card-back,
+.steel-product-3 .card-back {
+  transform: rotateY(180deg); /* Rotate the back initially */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  margin-top: 50px;
+  align-content: center;
 }
 
 .steel-product-1:hover,
 .steel-product-2:hover,
 .steel-product-3:hover {
+  transform: rotateY(180deg); /* Spin effect */
   background-color: rgba(139, 0, 0, 0.2); /* Darker red background on hover */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: transform 1s cubic-bezier(0.6, 0.0, 0.4, 1) 0.2s, background-color 0.3s ease;
 }
 
 /* Apply font to the list */
