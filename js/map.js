@@ -2,13 +2,21 @@ document.addEventListener('DOMContentLoaded', function() {
   let initialZoom = 15;
   let initialPosition = [51.51219917380306, -0.08475550242526746];
 
+  // Ensure the map container is visible and properly initialized in the DOM
+  const mapContainer = document.getElementById('mapid');
+  if (!mapContainer) {
+    console.error('Map container not found');
+    return;
+  }
+
   let mymap = L.map('mapid', {
     minZoom: initialZoom, // Set the minimum zoom level
     maxZoom: 19
   }).setView(initialPosition, initialZoom);
 
   let cartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '© OpenStreetMap contributors, © CARTO'
+    attribution: '© OpenStreetMap contributors, © CARTO',
+    errorTileUrl: 'path/to/error-tile.png' // Path to a tile to display in case of error
   }).addTo(mymap);
 
   // London office
@@ -33,4 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
       mymap.setZoom(initialZoom);
     }
   });
+
+  mymap.on('load', function() {
+    console.log('Map fully loaded');
+    // Additional actions after map is fully loaded
+  });
+
+  // Optional: Add a slight delay to map initialization
+  setTimeout(function() {
+    mymap.invalidateSize();
+  }, 500);
 });
