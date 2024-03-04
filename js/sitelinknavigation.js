@@ -38,6 +38,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           block: 'start' // Adjust this value if needed
         });
       }
+      else if (this.getAttribute('href') === '#about-us') {
+        document.querySelector('.about-us-content').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start' // Adjust this value if needed
+        });
+      }
       else {
         target.scrollIntoView({
           behavior: 'smooth',

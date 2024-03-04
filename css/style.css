@@ -260,6 +260,7 @@ header {
   left: 0;
   width:100%;
   margin-bottom: auto;
+  z-index: 1000;
 }
 
 header img {
@@ -316,7 +317,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 20px; /* Adjust margin between navigation links */
+  margin-right:25px; /* Adjust margin between navigation links */
 }
 
 nav ul li:last-child {
@@ -468,7 +469,7 @@ nav a {
   background-image: url('../img/london.jpg');
   background-size: cover;
   height: 950px;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 @keyframes cycleWords {
@@ -740,16 +741,229 @@ nav a {
 .what-we-do p {
   font-size: 18px;
 }
+ */
+
+.about-us-content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 80px;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+  scroll-margin-top:100px;
+  background-color: darkred;
+  border-radius: 0 0 25% 25%;
+  padding-bottom: 30px;
+}
 
 
-/* who we are layout */
-
-
-
-.services .service-blurb h2  {
+.about-us .about-us-blurb h2  {
   font-family: "Roboto", sans-serif;
   font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  position: relative;
+}
+
+.about-us .about-us-blurb h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust the position of the divider */
+  left: 9%; /* Center the divider horizontally */
+  transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
+  width: 100px; /* Adjust the width of the divider */
+  height: 2px; /* Adjust the height of the divider */
+  background-color: white; /* Color of the divider */
+  border-radius: 5px; /* Optional: Add rounded corners to the divider */
+}
+.about-us p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+
+
+.about-us .about-us-1 h2,
+.about-us .about-us-2 h2,
+.about-us .about-us-3 h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
   font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+
+.about-us-blurb {
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+  padding-top: 24px;
+  position: relative;
+}
+
+.about-us-1 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.about-us-1 .material-symbols-outlined {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-2 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.about-us-2 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-3 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.about-us-3 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Services layout */
+
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, auto); /* Adjusted to provide more rows */
+  margin-bottom: 80px;
+  grid-column-gap: 1px;
+  scroll-margin-top: 100px;
+  padding-bottom: 30px;
+  background-color: #f4ede4
+}
+
+.steel-service-blurb {
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+  padding: 20px; /* Unified padding */
+  position: relative;
+  background-color: white;
+  color: black;
+  border: 2px hidden rgba(0, 0, 0, 0.1);
+  border-radius: 0 200px 200px 0px;
+  margin: 50px 15px; /* Margin added */
+  width: 600px;
+  height: 346.88px;
+  text-align: center;
+}
+
+.service-1, .service-2, .service-3 {
+  grid-column: 5 / 7;
+  padding-top: 24px;
+  position: relative;
+  display: flex; /* Use flexbox for inline alignment */
+  align-items: center; /* Align items vertically */
+}
+
+.service-1 .material-symbols-outlined,
+.service-2 .material-symbols-outlined,
+.service-3 .material-symbols-outlined {
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: darkred;
+  margin-right: 20px; /* Space between the icon and the text */
+}
+
+.shipping-service-blurb {
+  grid-column: 5 / 7;
+  padding: 20px; /* Unified padding */
+  position: relative;
+  background-color: darkred;
+  color: white;
+  border: 2px hidden rgba(0, 0, 0, 0.1);
+  border-radius: 200px 0 0 200px;
+  margin: 50px 15px; /* Margin added */
+  width: 600px;
+  height: 346.88px;
+  text-align: center;
+  margin-top: 190px;
+}
+
+.service-4 {
+  grid-column: 2 / 4;
+  grid-row: 4; /* Adjusted to place it in a separate row */
+  display: flex;
+  align-items: center; /* Vertically center contents */
+  position: relative;
+  padding-top: 24px;
+}
+
+.service-4 img {
+  width: 640px;
+  height: 450px;
+  display: flex;
+  border: 2px hidden rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+
+/* Service font Styling */
+
+.services .steel-service-blurb h2  {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.services .shipping-service-blurb h2  {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -771,102 +985,8 @@ nav a {
   font-style: normal;
 }
 
-
-.services-content {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  margin-bottom: 80px;
-  grid-row-gap: 1px;
-  grid-column-gap: 1px;
-  scroll-margin-top: 100px;
-}
-
-.services-content img {
-  grid-column: 3 / 8;
-  grid-row: 1 / 4;
-  width: 100%;
-  height: 790px;
-}
-
-.service-blurb {
-  grid-column: 2 / 4;
-  grid-row: 1 / 4;
-  padding-top: 24px;
-  position: relative;
-}
-
-.service-1 {
-  grid-column: 5 / 7;
-  padding-top: 24px;
-  position: relative;
-}
-
-.service-1 .material-symbols-outlined {
-  position: absolute;
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  font-family: 'Material Symbols Outlined';
-  font-size: 36px;
-  color: darkred;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.service-2 {
-  grid-column: 5 / 7;
-  padding-top: 24px;
-  position: relative;
-}
-
-.service-2 .material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
-  font-family: 'Material Symbols Outlined';
-  font-size: 36px;
-  color: darkred;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.service-3 {
-  grid-column: 5 / 7;
-  padding-top: 24px;
-  position: relative;
-}
-
-.service-3 .material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
-  font-family: 'Material Symbols Outlined';
-  font-size: 36px;
-  color: darkred;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Service Box Styling */
-.service-blurb {
-  border: 2px hidden rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px; /* Add some padding */
-  margin: 50px 15px; /* Add some margin */
-  width: 600px;
-  text-align: center;
-}
+
 
 
 .service-1,
@@ -876,8 +996,18 @@ nav a {
   border-radius: 10px;
   padding: 20px; /* Add some padding */
   margin: 5px 0; /* Add some margin */
-  width: 400px;
+  width: 600px;
   text-align: left;
+}
+
+.service-4 img {
+  border: 2px hidden rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Add some padding */
+  margin: 5px 0; /* Add some margin */
+  width: 600px;
+  height: 500px;
+  text-align: left;
+  margin-top: 100px;
 }
 
 /* commenting out to save
@@ -912,7 +1042,7 @@ nav a {
     max-width: 100%; /* Ensure it doesn't overflow the screen */
   }
 
-  .service-blurb,
+  .steel-service-blurb,
   .service-1,
   .service-2,
   .service-3 {
@@ -940,14 +1070,6 @@ nav a {
     width: 40px; /* Maintain icon width */
     height: 40px; /* Maintain icon height */
     margin-bottom: 10px; /* Adjust as needed */
-  }
-
-  .who-we-are h2 {
-    font-size: 28px; /* Adjust heading font size */
-  }
-
-  .who-we-are p {
-    font-size: 16px; /* Adjust paragraph font size */
   }
 }
 
@@ -1036,7 +1158,26 @@ nav a {
 
 .steel-product-blurb {
   grid-column: 2;
+  padding: 20px; /* Add some padding */
+  margin: 15px; /* Add some margin */
+  width: 310px;
+  text-align: left;
+  background-color: white;
 
+}
+
+.steel-product-blurb h2  {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.steel-product-blurb p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .steel-product-blurb img {
@@ -1058,18 +1199,6 @@ nav a {
   grid-column: 5;
 }
 
-.steel-product-blurb {
-  padding: 20px; /* Add some padding */
-  margin: 15px; /* Add some margin */
-  background-color: white;
-  width: 310px;
-  text-align: left;
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  font-style: normal;
-}
-
 .steel-product-1,
 .steel-product-2,
 .steel-product-3 {
@@ -1077,13 +1206,9 @@ nav a {
   border-radius: 10px;
   padding: 20px; /* Add some padding */
   margin: 15px; /* Add some margin */
-  background-color: rgba(139, 0, 0, 0.06);
+  background-color: #f4ede4;
   width: 310px;
   text-align: left;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  font-style: normal;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   perspective: 1000px; /* Required for 3D effect */
@@ -1103,6 +1228,23 @@ nav a {
   height: 250px;
 }
 
+.steel-product-1 h2,
+.steel-product-2 h2,
+.steel-product-3 h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.steel-product-1 p,
+.steel-product-2 p,
+.steel-product-3 p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 /* Styles for the front and back of the card */
@@ -1141,7 +1283,8 @@ nav a {
 .steel-product-3:hover {
   /* removing spin effect to allow js to take control
   transform: rotateY(180deg); /* Spin effect */
-  background-color: rgba(139, 0, 0, 0.2); /* Darker red background on hover */
+  background-color: darkred; /* Darker red background on hover */
+  color: white;
   /* commenting out - if not needed for go live remove
   transition: transform 1s cubic-bezier(0.6, 0.0, 0.4, 1) 0.2s, background-color 0.3s ease;
 
