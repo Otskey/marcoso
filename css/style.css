@@ -485,7 +485,7 @@ nav a {
 
 /* Styling for the cycling word */
 .hero h1 .word-cycle::after {
-  content: 'Steel Trading.'; /* Initial word */
+  content: 'Quality Performance'; /* Initial word */
   animation: cycleWords 4s steps(1, end) 1; /*infinite (use if you want to cycle infinite */; /* 3 seconds duration, infinite loop */
 }
 
@@ -943,8 +943,8 @@ nav a {
 }
 
 .service-4 img {
-  width: 640px;
-  height: 450px;
+  max-width: 100%;
+  max-height: 100%;
   display: flex;
   border: 2px hidden rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -1208,6 +1208,7 @@ nav a {
   margin: 15px; /* Add some margin */
   background-color: #f4ede4;
   width: 310px;
+  height: 361.88;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
