@@ -365,6 +365,12 @@ nav a {
     justify-content: space-between; /* Space out logo and hamburger menu */
     align-items: center; /* Align items vertically center */
     height: 80px; /* Adjust the header height for smaller screens */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 1000;
   }
 
   /* Adjust logo size and alignment */
@@ -379,14 +385,10 @@ nav a {
   nav {
     display: flex; /* Apply flex layout */
     align-items: center; /* Align vertically */
-    justify-content: flex-end; /* Push to the end */
   }
 
   /* Style for both icons */
   nav .material-symbols-outlined {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     font-size: 30px;
     cursor: pointer;
     z-index: 1010;
@@ -414,12 +416,11 @@ nav a {
   nav ul {
     display: none; /* Hide the menu initially on smaller screens */
     position: fixed;
-    top: 0px;
+    top: 80px; /* Adjust top position to keep it below the header */
     left: -100%; /* Start off-screen */
     width: 100%; /* Adjust width as needed */
-    height: 50vh; /* Full viewport height */
+    height: calc(100vh - 80px); /* Full viewport height minus header height */
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -430,8 +431,6 @@ nav a {
 
   nav ul.show {
     display: flex; /* Show menu when 'show' class is added */
-    flex-direction: column;
-    align-items: center;
     left: 0; /* Bring the menu into view */
   }
 
@@ -472,6 +471,7 @@ nav a {
   margin-bottom: 0px;
 }
 
+/*
 @keyframes cycleWords {
   0%, 100% { content: 'Global'; }
   14% { content: 'Shipping & Storage'; }
@@ -482,7 +482,9 @@ nav a {
   86% { content: 'General Purpose Steel'; }
 
 }
+/*
 
+ */
 /* Styling for the cycling word */
 .hero h1 .word-cycle::after {
   content: 'Quality Performance'; /* Initial word */
@@ -511,14 +513,15 @@ nav a {
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media screen and (max-width: 768px)
 {
-.hero {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-template-rows: auto auto; /* Auto-adjusting rows */
-  background-size: cover; /* Adjust background image to fit the screen */
-  height: 400px; /* Adjust height to content */
-  padding: 20px; /* Add some padding for smaller screens */
-}
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto auto; /* Auto-adjusting rows */
+    background-size: cover; /* Adjust background image to fit the screen */
+    height: 400px; /* Adjust height to content */
+    padding: 20px; /* Add some padding for smaller screens */
+    margin-top: 80px; /* Add margin to create space between header and hero */
+  }
 
 /* Adjust the font size and margins for h1 */
 .hero h1 {
@@ -769,7 +772,7 @@ nav a {
   content: "";
   position: absolute;
   bottom: -10px; /* Adjust the position of the divider */
-  left: 9%; /* Center the divider horizontally */
+  left: 10%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
   width: 100px; /* Adjust the width of the divider */
   height: 2px; /* Adjust the height of the divider */
@@ -783,8 +786,6 @@ nav a {
   font-style: normal;
   color: white;
 }
-
-
 
 .about-us .about-us-1 h2,
 .about-us .about-us-2 h2,
@@ -869,7 +870,70 @@ nav a {
   align-items: center;
 }
 
+/* about us media query */
+@media (max-width: 768px) {
+  .about-us-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Use a single column layout for smaller screens */
+    margin-bottom: 40px;
+    grid-gap: 20px; /* Increase grid gap to avoid content squeezing */
+    scroll-margin-top: 50px;
+    background-color: darkred;
+    border-radius: 0 0 0 0; /* Adjust border-radius for aesthetic fitting */
+    padding: 20px; /* Increase padding for better content encapsulation */
+  }
 
+  .about-us .about-us-blurb h2 {
+    font-size: 24px;
+    margin-bottom: 10px; /* Ensure space below headings */
+    text-decoration: none; /* Remove underline */
+    position: relative; /* Ensure relative positioning for the underline */
+    display: inline-block; /* Make the title behave like a block element */
+  }
+
+  .about-us .about-us-blurb h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 50%; /* Start the underline from the left */
+    width: 100%; /* Make the underline span the entire width */
+    height: 2px; /* Adjust the height of the underline */
+    background-color: white; /* Color of the underline */
+  }
+
+  .about-us p {
+    font-size: 16px;
+  }
+
+  .about-us .about-us-1 h2,
+  .about-us .about-us-2 h2,
+  .about-us .about-us-3 h2 {
+    font-size: 18px;
+  }
+
+  /* Adjust the layout of content areas to prevent icon overlap */
+  .about-us-blurb,
+  .about-us-1,
+  .about-us-2,
+  .about-us-3 {
+    grid-column: 1 / -1;
+    padding: 20px; /* Increase padding for clarity */
+    position: relative; /* Ensure positioning context is set */
+  }
+
+
+  .about-us-1 .material-symbols-outlined,
+  .about-us-2 .material-symbols-outlined,
+  .about-us-3 .material-symbols-outlined {
+    position: absolute;
+    left: -60px; /* Adjust left positioning to prevent overlap */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
+    font-size: 30px; /* Adjust icon font size for consistency */
+  }
+}
 
 /* Services layout */
 
@@ -1208,7 +1272,7 @@ nav a {
   margin: 15px; /* Add some margin */
   background-color: #f4ede4;
   width: 310px;
-  height: 361.88;
+  height: 361.88px;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -1538,6 +1602,12 @@ nav a {
   line-height: 0.8;
 }
 
+.our-locations-content a {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 18px;
+  line-height: 0.8;
+}
+
 .map {
   grid-column: 3 / 7;
 }
@@ -1576,6 +1646,11 @@ nav a {
   }
 
   .our-locations-content p {
+    font-size: 16px; /* Adjust font size for paragraph */
+    line-height: 1.2; /* Adjust line height for better readability */
+  }
+
+  .our-locations-content a {
     font-size: 16px; /* Adjust font size for paragraph */
     line-height: 1.2; /* Adjust line height for better readability */
   }
