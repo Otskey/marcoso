@@ -468,7 +468,7 @@ nav a {
   background-image: url('../img/london.jpg');
   background-size: cover;
   height: 950px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 /*
@@ -755,7 +755,7 @@ nav a {
   scroll-margin-top:100px;
   background-color: darkred;
   border-radius: 0 0 25% 25%;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 
@@ -789,7 +789,8 @@ nav a {
 
 .about-us .about-us-1 h2,
 .about-us .about-us-2 h2,
-.about-us .about-us-3 h2 {
+.about-us .about-us-3 h2,
+.about-us .about-us-4 h2{
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -870,6 +871,28 @@ nav a {
   align-items: center;
 }
 
+.about-us-4 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.about-us-4 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* about us media query */
 @media (max-width: 768px) {
   .about-us-content {
@@ -907,7 +930,8 @@ nav a {
 
   .about-us .about-us-1 h2,
   .about-us .about-us-2 h2,
-  .about-us .about-us-3 h2 {
+  .about-us .about-us-3 h2,
+  .about-us .about-us-4 h2{
     font-size: 18px;
   }
 
@@ -915,7 +939,8 @@ nav a {
   .about-us-blurb,
   .about-us-1,
   .about-us-2,
-  .about-us-3 {
+  .about-us-3,
+  .about-us-4 {
     grid-column: 1 / -1;
     padding: 20px; /* Increase padding for clarity */
     position: relative; /* Ensure positioning context is set */
@@ -924,7 +949,8 @@ nav a {
 
   .about-us-1 .material-symbols-outlined,
   .about-us-2 .material-symbols-outlined,
-  .about-us-3 .material-symbols-outlined {
+  .about-us-3 .material-symbols-outlined,
+  .about-us-3 .material-symbols-outlined{
     position: absolute;
     left: -60px; /* Adjust left positioning to prevent overlap */
     top: 50%;
