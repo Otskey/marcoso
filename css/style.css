@@ -261,6 +261,7 @@ header {
   width:100%;
   margin-bottom: auto;
   z-index: 1000;
+  transition: background-color 0.5s; /* Smooth transition for background color */
 }
 
 header img {
@@ -269,7 +270,11 @@ header img {
   width: 307px;
   margin-left: 20px;
   margin-top: 30px;
-  filter: hue-rotate(-30deg) brightness(50%) contrast(150%);
+}
+
+/* Navbar styling when scrolling */
+header.scrolled {
+  background-color: white; /* Change background color to white when scrolled */
 }
 
 .white-logo {
@@ -297,6 +302,7 @@ nav .material-symbols-outlined {
   display: none; /* Hide by default */
   cursor: pointer;
   font-size: 36px; /* Adjust size as needed */
+  transition: background-color 0.5s, color 0.5s /* Smooth transition for background color */
   margin-right: 20px; /* Add margin to push it to the right */;
 }
 
@@ -327,12 +333,22 @@ nav ul li:last-child {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
+  transition: color 0.5s; /* Smooth transition for font color */
 }
+
+nav.scrolled {
+  background-color: white; /* Change background color to white */
+}
+
+nav.scrolled a {
+  color: black; /* Change font color to white */
+}
+
 
 .contact-button {
   background-color: darkred;
@@ -453,23 +469,161 @@ nav a {
     margin-left: 0;
     margin-top: 20px;
   }
+
 }
 
 /*hero layout */
+
+.hero,
+.container,
+.intro,
+.content {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.hero h1 {
+  display: inline-block; /* Ensures proper alignment and animation */
+   font-family: 'Playfair Display', serif;
+  font-size: 90px;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  margin-bottom: 0;
+  margin-top: 110px;
+  margin-left: 20px;
+  color: white;
+  /* new border box style if needed
+  border: 2px black rgba(0, 0, 0, 0.1);
+  border-radius: 0 200px 0px 200px;
+  background-color: RGBA(139, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+   */
+}
+
+
+.intro h2 {
+  color: white;
+  opacity: 0;
+  font-size: 5rem;
+  animation: fadeIn 2s ease forwards;
+  font-family: 'Playfair Display', serif;
+}
+
+.intro {
+  height: 900px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.container {
+  position: relative;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transform: scale(0, 0);
+  animation: animate 1s ease-in forwards 2s;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Match the .about-us-content structure */
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Maintains the existing overflow rule */
+  padding-bottom: 50px; /* Optional, for consistency */
+}
+
+.hero-video {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  animation: animate 1s ease-in forwards 2s;
+  object-fit: cover; /* This will cover the area without losing aspect ratio */
+  z-index: -1; /* Ensure the video stays in the background */
+  filter: brightness(50%); /* Adjust brightness for better text readability */
+  grid-column: 1 / -1; /* Span all columns */
+  grid-row: 1; /* Start from the first row */
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0, 0.005);
+  }
+  50% {
+    transform: scaleY(0.005);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+
+
+
+/*
 
 .hero {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-auto-rows: minmax(auto, max-content);
-  font-family: /*"Roboto", sans-serif;*/ 'Playfair Display', serif;
+  font-family:'Playfair Display', serif;
   /* original background color
   background-color: antiquewhite;
    */
-  background-image: url('../img/london.jpg');
-  background-size: cover;
+  /* original background image for desktop
+  background-image: url('../img/london.jpg'); */
+  /*background-size: cover;
   height: 950px;
   margin-bottom: 0;
+}
+
+
+
+
+/* animation for cycling words updated
+@keyframes cycleWords {
+  0%, 100% { content: 'Quality'; }
+  50% { content: 'Performance'; }
 }
 
 /*
@@ -486,37 +640,72 @@ nav a {
 /*
 
  */
-/* Styling for the cycling word */
+/* Styling for the cycling word
 .hero h1 .word-cycle::after {
-  content: 'Quality. Performance.'; /* Initial word */
-  animation: cycleWords 4s steps(1, end) 1; /*infinite (use if you want to cycle infinite */; /* 3 seconds duration, infinite loop */
+  content: 'Quality Performance'; /* Initial word
+  animation: cycleWords 4s steps(1, end) 1; /*infinite (use if you want to cycle infinite */ /* 3 seconds duration, infinite loop
+}
+*/
+
+/* draft transition effect
+.hero-title {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.hero h1 {
-  display: inline-block; /* Ensures proper alignment and animation */
-  font-size: 90px;
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
-  margin-bottom: 0;
-  margin-top: 110px;
-  margin-left: 20px;
-  /* new border box style if needed
-  border: 2px black rgba(0, 0, 0, 0.1);
-  border-radius: 0 200px 0px 200px;
-  background-color: RGBA(139, 0, 0, 0.9);
+.hero-title .text {
+  position: absolute;
+  opacity: 0; /* Start invisible
+  transition: all 2s ease; /* Smooth transition for properties
   color: white;
-  text-align: center;
-  padding-top: 50px;
-   */
+  font-size: 90px;
 }
 
-
-.hero h2 {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
-  margin-top: 250px;
-  margin-left: 20px;
+.hero-title .top-left {
+  top: 0; /* Starting top position
+  left: 50%; /* Start from the center horizontally
+  transform: translateX(-50%); /* Center it horizontally based on its own width
+  animation: moveDown 2s forwards;
+  animation-delay: 5s;
 }
+
+.hero-title .bottom-right {
+  bottom: 0; /* Starting bottom position
+  right: 50%; /* Start from the center horizontally
+  transform: translateX(50%); /* Center it horizontally based on its own width
+  animation: moveUp 2s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes moveDown {
+  0%, 50% { /* From 0% to 50% of the animation time, keep the word in its starting position
+    top: 0;
+    opacity: 1; /* Make sure the word is visible
+    transform: translateX(-50%);
+  }
+  100% { /* At the end of the animation, move the word down
+    top: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  to {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the element
+    opacity: 1; /* Make the element fully visible
+  }
+}
+
+*/
+
 
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
