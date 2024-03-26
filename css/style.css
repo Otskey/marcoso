@@ -302,7 +302,7 @@ nav .material-symbols-outlined {
   display: none; /* Hide by default */
   cursor: pointer;
   font-size: 36px; /* Adjust size as needed */
-  transition: background-color 0.5s, color 0.5s /* Smooth transition for background color */
+  transition: background-color 0.5s, color 0.5s; /* Smooth transition for background color */
   margin-right: 20px; /* Add margin to push it to the right */;
 }
 
