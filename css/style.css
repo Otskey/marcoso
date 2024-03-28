@@ -277,6 +277,10 @@ header.scrolled {
   background-color: white; /* Change background color to white when scrolled */
 }
 
+header.scrolled nav a {
+  color: black; /* Change font color to black when scrolled */
+}
+
 .white-logo {
   color: white;
 }
@@ -343,6 +347,7 @@ nav a {
 
 nav.scrolled {
   background-color: white; /* Change background color to white */
+  color: black; /* Change font color to black */
 }
 
 nav.scrolled a {
@@ -365,6 +370,12 @@ nav.scrolled a {
   background-color: rosybrown;
 }
 
+/* Ensure the Contact Us button maintains white text color when scrolled */
+header.scrolled nav a.contact-button {
+  color: white; /* Keeps text color white even when scrolled */
+}
+
+/* media query for smaller screens */
 @media (max-width: 1200px) {
   nav ul li {
     margin-right: 10px; /* Reduce margin between navigation links */
