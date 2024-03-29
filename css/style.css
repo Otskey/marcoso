@@ -485,14 +485,6 @@ header.scrolled nav a.contact-button {
 
 /*hero layout */
 
-.hero,
-.container,
-.intro,
-.content {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .hero h1 {
   display: inline-block; /* Ensures proper alignment and animation */
    font-family: 'Playfair Display', serif;
@@ -538,7 +530,7 @@ header.scrolled nav a.contact-button {
 main {
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
