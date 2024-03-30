@@ -35,4 +35,4 @@ function createCardFlipper(card) {
   });
 }
 
-document.querySelectorAll('.steel-product-1, .steel-product-2, .steel-product-3').forEach(createCardFlipper);
+document.querySelectorAll('.steel-product-1, .steel-product-2, .steel-product-3, .steel-product-4, .steel-product-5, .steel-product-6').forEach(createCardFlipper);

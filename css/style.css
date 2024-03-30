@@ -1443,6 +1443,7 @@ main {
 .steel-products {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, auto);
   margin-bottom: 100px;
   scroll-margin-top: 100px;
 }
@@ -1480,19 +1481,40 @@ main {
 
 .steel-product-1 {
   grid-column: 3;
+  grid-row: 1;
 }
 
 .steel-product-2 {
   grid-column: 4;
+  grid-row: 1;
 }
 
 .steel-product-3 {
   grid-column: 5;
+  grid-row: 1;
+}
+
+.steel-product-4 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.steel-product-5 {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.steel-product-6 {
+  grid-column: 5;
+  grid-row: 2;
 }
 
 .steel-product-1,
 .steel-product-2,
-.steel-product-3 {
+.steel-product-3,
+.steel-product-4,
+.steel-product-5,
+.steel-product-6{
   border: 2px hidden rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px; /* Add some padding */
@@ -1515,14 +1537,20 @@ main {
 
 .steel-product-1 img,
 .steel-product-2 img,
-.steel-product-3 img {
+.steel-product-3 img,
+.steel-product-4 img,
+.steel-product-5 img,
+.steel-product-6 img{
   width: 300px;
   height: 250px;
 }
 
 .steel-product-1 h2,
 .steel-product-2 h2,
-.steel-product-3 h2 {
+.steel-product-3 h2,
+.steel-product-4 h2,
+.steel-product-5 h2,
+.steel-product-6 h2{
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -1531,7 +1559,10 @@ main {
 
 .steel-product-1 p,
 .steel-product-2 p,
-.steel-product-3 p {
+.steel-product-3 p,
+.steel-product-4 p,
+.steel-product-5 p,
+.steel-product-6 p{
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -1542,15 +1573,20 @@ main {
 /* Styles for the front and back of the card */
 .steel-product-1 .card-front, .steel-product-1 .card-back,
 .steel-product-2 .card-front, .steel-product-2 .card-back,
-.steel-product-3 .card-front, .steel-product-3 .card-back {
-  /* Your existing styles... */
+.steel-product-3 .card-front, .steel-product-3 .card-back,
+.steel-product-4 .card-front, .steel-product-4 .card-back,
+.steel-product-5 .card-front, .steel-product-5 .card-back,
+.steel-product-6 .card-front, .steel-product-6 .card-back {
   backface-visibility: hidden; /* Hide the back face of the element */
   transform-style: preserve-3d; /* Preserve 3D */
 }
 
 .steel-product-1 .card-front,
 .steel-product-2 .card-front,
-.steel-product-3 .card-front {
+.steel-product-3 .card-front,
+.steel-product-4 .card-front,
+.steel-product-5 .card-front,
+.steel-product-6 .card-front {
   backface-visibility: hidden;
   text-align: center;
   z-index: 2;
@@ -1559,7 +1595,10 @@ main {
 /* Specific style for the back of the card */
 .steel-product-1 .card-back,
 .steel-product-2 .card-back,
-.steel-product-3 .card-back {
+.steel-product-3 .card-back,
+.steel-product-4 .card-back,
+.steel-product-5 .card-back,
+.steel-product-6 .card-back{
   transform: rotateY(180deg); /* Rotate the back initially */
   position: absolute;
   top: 0;
@@ -1572,7 +1611,10 @@ main {
 
 .steel-product-1:hover,
 .steel-product-2:hover,
-.steel-product-3:hover {
+.steel-product-3:hover,
+.steel-product-4:hover,
+.steel-product-5:hover,
+.steel-product-6:hover{
   /* removing spin effect to allow js to take control
   transform: rotateY(180deg); /* Spin effect */
   background-color: darkred; /* Darker red background on hover */
@@ -1586,7 +1628,10 @@ main {
 /* Apply font to the list */
 .steel-product-1 ul,
 .steel-product-2 ul,
-.steel-product-3 ul {
+.steel-product-3 ul,
+.steel-product-4 ul,
+.steel-product-5 ul,
+.steel-product-6 ul{
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
