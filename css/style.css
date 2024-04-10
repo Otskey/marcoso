@@ -990,8 +990,7 @@ main {
 
 .about-us .about-us-1 h2,
 .about-us .about-us-2 h2,
-.about-us .about-us-3 h2,
-.about-us .about-us-4 h2{
+.about-us .about-us-3 h2 {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -1072,27 +1071,6 @@ main {
   align-items: center;
 }
 
-.about-us-4 {
-  grid-column: 2 / 5;
-  padding-top: 24px;
-  position: relative;
-  margin-left: 60px;
-}
-
-.about-us-4 .material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
-  font-family: 'Material Symbols Outlined';
-  font-size: 36px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* about us media query */
 @media (max-width: 768px) {
@@ -1131,8 +1109,7 @@ main {
 
   .about-us .about-us-1 h2,
   .about-us .about-us-2 h2,
-  .about-us .about-us-3 h2,
-  .about-us .about-us-4 h2{
+  .about-us .about-us-3 h2 {
     font-size: 18px;
   }
 
