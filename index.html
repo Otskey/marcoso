@@ -219,30 +219,42 @@
   <img src="img/aboutus.jpg" alt="About Us">
 </section>
 -->
-    <div class="steel-service-blurb">
+    <div class="service-blurb">
       <h2>How Marcoso can assist your business</h2>
       <p>We source good quality and specific grades of special steels from our internationally recognised and renowned steel producing partners to supply and service our vast international clientele base.</p>
     </div>
+      <div class="service-1" onclick="updateContent(0)">
+        <!-- <span class="material-symbols-outlined">handshake</span> -->
+        <div class="lottie-icon-5"></div>
+        <p>We provide our services to a worldwide clientele base</p>
+      </div>
+      <div class="service-1" onclick="updateContent(1)">
+        <!-- <span class="material-symbols-outlined">directions_boat</span> -->
+        <div class="lottie-icon-5"></div>
+        <p>We handle the delivery of specific quantities to our customers chosen destination.</p>
+      </div>
+      <div class="service-1" onclick="updateContent(2)">
+        <!-- <span class="material-symbols-outlined">grading</span> -->
+        <div class="lottie-icon-5"></div>
+        <p>We can tailor our services to specific customer requirements.</p>
+      </div>
+      <div class="service-1" onclick="updateContent(3)">
+        <div class="lottie-icon-5"></div>
+        <p>Leveraging our freight industry relationships, we provide competitive Sea Freight services from major UK ports to global destinations, accommodating 20 ft and 40 ft containers and various commodities.</p>
+      </div>
 
-    <div class="service-1">
-      <span class="material-symbols-outlined">handshake</span>
-      <p>We provide our services to a worldwide clientele base</p>
-    </div>
-    <div class="service-2">
-      <span class="material-symbols-outlined">directions_boat</span>
-      <p>We handle the delivery of specific quantities to our customers chosen destination.</p>
-    </div>
-    <div class="service-3">
-      <span class="material-symbols-outlined">grading</span>
-      <p>We can tailor our services to specific customer requirements.</p>
-    </div>
+    <!--
     <div class="shipping-service-blurb">
       <h2>Freight Forwarding</h2>
       <p>By having the strong relationships in the freight forwarding/shipping industry, we are able to offer Sea Freight services from most of the UK’s biggest ports to a variety of worldwide destinations. We can offer competitive rates for both 20 ft and 40 ft container shipments and we welcome other commodities.</p>
     </div>
-    <div class="service-4">
+    <div class="service-5">
       <img src="img/shipping.jpg">
-    </div>
+    </div> -->
+  </div>
+  <div class="service-img-frame">
+    <!-- Image or video will be updated here -->
+    <img src="tata.jpg" id="service-img-frame" alt="Service visual content">
   </div>
 </section>
 
@@ -459,6 +471,12 @@
 
 <!-- Animation script -->
 <script src="js/animation.js"></script>
+
+<!-- service icon animation control  -->
+<script src="js/serviceanimation.js"></script>
+
+<!-- image selector -->
+<script src="js/imageselect.js"></script>
 
 </body>
 

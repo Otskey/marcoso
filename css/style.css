@@ -1233,94 +1233,142 @@ main {
 
 /* Services layout */
 
-.services-content {
+.services {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(4, auto); /* Adjusted to provide more rows */
-  margin-bottom: 80px;
+  grid-template-rows: repeat(6, 1fr); /* Adjusted to provide more rows */
   grid-column-gap: 1px;
   scroll-margin-top: 100px;
   padding-bottom: 30px;
   background-color: #f4ede4
 }
 
-.steel-service-blurb {
-  grid-column: 2 / 4;
-  grid-row: 1 / 4;
+.services-content {
+  grid-column: 2 / 7;
+  grid-row: 1 / 6;
   padding: 20px; /* Unified padding */
   position: relative;
   background-color: white;
   color: black;
   border: 2px hidden rgba(0, 0, 0, 0.1);
-  border-radius: 0 200px 200px 0px;
-  margin: 50px 15px; /* Margin added */
-  width: 600px;
-  height: 346.88px;
+  border-radius: 20px 20px 20px 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 120px;
+  text-align: center;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-blurb {
   text-align: center;
 }
 
-.service-1, .service-2, .service-3 {
+.service-1 {
+  align-items: center; /* Align items vertically */
+  display: flex;
+  margin: 40px;
+  justify-content: flex-start;
+  gap: 20px; /* Added gap for spacing between icon and text */
+  padding: 15px; /* Padding for each service item */
+  background: rgba(255, 255, 255, 0.4); /* Subtle background for each service */
+  border-radius: 15px; /* Rounded corners for a softer look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  width: 45%; /* Responsive width */
+  height: 10%; /* Maintain your specified height */
+  cursor: pointer;
+  opacity: 0.5; /* Start with lower opacity */
+  transition: transform 0.2s ease-in-out, opacity 0.3s ease; /* Transitions for effects */
+}
+
+
+.lottie-icon-5 {
+  width: 60px;
+  height: 100px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.service-1 p {
+  margin-left: 10px;
+  max-width: calc(100% - 110px); /* Adjusts max width to factor in the icon width and its margin */
+  word-wrap: break-word;
+}
+
+.service-1:active {
+  transform: scale(1.05); /* Scale up slightly when active */
+  opacity: 1; /* Full opacity when active */
+  background: rgba(255, 255, 255, 0.8); /* Lighter background when active */
+}
+
+
+.service-img-frame {
+  grid-row: 2 / 7;
+  grid-column: 5 / 7;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+  padding: 80px;
+  background: rgba(255, 255, 255, 0);
+  width:400px;
+}
+
+.service-img-frame img {
+  width: 400px;
+  max-width: 600px;
+  height: 70%;
+  border-radius: 20px;
+  margin-top: 60px;
+}
+
+
+/*
+.service-2, .service-3 .service-4 {
   grid-column: 5 / 7;
   padding-top: 24px;
   position: relative;
-  display: flex; /* Use flexbox for inline alignment */
-  align-items: center; /* Align items vertically */
+  display: flex; /* Use flexbox for inline alignment
+  align-items: center; /* Align items vertically
 }
 
-.service-1 .material-symbols-outlined,
-.service-2 .material-symbols-outlined,
-.service-3 .material-symbols-outlined {
+.service-2 img,
+.service-3 img,
+.service-4 img {
   width: 40px;
   height: 40px;
-  font-family: 'Material Symbols Outlined';
   font-size: 36px;
   color: darkred;
-  margin-right: 20px; /* Space between the icon and the text */
+  margin-right: 20px; /* Space between the icon and the text
 }
-
+*/
+/*
 .shipping-service-blurb {
   grid-column: 5 / 7;
-  padding: 20px; /* Unified padding */
+  padding: 20px; /* Unified padding
   position: relative;
   background-color: darkred;
   color: white;
   border: 2px hidden rgba(0, 0, 0, 0.1);
   border-radius: 200px 0 0 200px;
-  margin: 50px 15px; /* Margin added */
+  margin: 50px 15px; /* Margin added
   width: 600px;
   height: 346.88px;
   text-align: center;
   margin-top: 190px;
 }
 
-.service-4 {
-  grid-column: 2 / 4;
-  grid-row: 4; /* Adjusted to place it in a separate row */
-  display: flex;
-  align-items: center; /* Vertically center contents */
-  position: relative;
-  padding-top: 24px;
-}
-
-.service-4 img {
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  border: 2px hidden rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
+*/
 
 /* Service font Styling */
 
-.services .steel-service-blurb h2  {
+.services .service-blurb h2  {
   font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: 400;
   font-style: normal;
 }
 
-.services .shipping-service-blurb h2  {
+.services .service-blurb h2  {
   font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: 400;
@@ -1338,7 +1386,8 @@ main {
 
 .services .service-1 h2,
 .services .service-2 h2,
-.services .service-3 h2 {
+.services .service-3 h2,
+.services .service-4 h2{
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -1348,27 +1397,19 @@ main {
 /* Service Box Styling */
 
 
-
+/*
 .service-1,
 .service-2,
-.service-3 {
+.service-3,
+.service-4 {
   border: 2px hidden rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 20px; /* Add some padding */
-  margin: 5px 0; /* Add some margin */
+  padding: 20px; /* Add some padding
+  margin: 5px 0; /* Add some margin
   width: 600px;
   text-align: left;
 }
-
-.service-4 img {
-  border: 2px hidden rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Add some padding */
-  margin: 5px 0; /* Add some margin */
-  width: 600px;
-  height: 500px;
-  text-align: left;
-  margin-top: 100px;
-}
+  */
 
 /* commenting out to save
 .who-we-are p {
@@ -1382,6 +1423,7 @@ main {
   height: 800px;
 }
 */
+
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 
@@ -1433,79 +1475,6 @@ main {
   }
 }
 
-/*our expertise layout
-
-.our-expertise {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin-bottom: 30px;
-  margin-left: 200px;
-}
-
-.our-expertise .our-expertise-content{
-  grid-column: 3 / 5; /* Text content in the first column
-  grid-row: 1;
-}
-
-.our-expertise h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  font-style: normal;
-  border-radius: 10px;
-  width: 310px;
-  text-align: center;
-  position: relative;
-}
-
-.our-expertise h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px; /* Adjust the position of the divider
-  left: 50%; /* Center the divider horizontally
-  transform: translateX(-50%); /* Center the divider horizontally
-  width: 100px; /* Adjust the width of the divider
-  height: 2px; /* Adjust the height of the divider
-  background-color: darkred; /* Color of the divider
-  border-radius: 5px; /* Optional: Add rounded corners to the divider
-}
-
-.our-expertise p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Media Query for smaller screens - Example: for screens narrower than 768px
-@media (max-width: 768px) {
-  .our-expertise {
-    grid-template-columns: 1fr; /* Single column layout
-    margin: 0 20px 30px 20px; /* Adjust margins to fit smaller screens
-  }
-
-  .our-expertise .our-expertise-content {
-    grid-column: 1; /* Full width of the column
-  }
-
-  .our-expertise h2 {
-    font-size: 24px; /* Slightly larger font size for heading
-    width: auto; /* Adjust width to fit content
-    margin: 0 auto 10px; /* Center the heading and adjust margin
-    text-align: center; /* Center-align the heading
-  }
-
-  .our-expertise h2::after {
-    bottom: -15px; /* Adjust position of the divider
-    width: 80px; /* Adjust width of the divider
-  }
-
-  .our-expertise p {
-    font-size: 16px; /* Adjust font size for better readability
-    text-align: justify; /* Justify the text for better alignment
-    margin-top: 10px; /* Add some space above paragraph
-  }
-}
 
 /* Our products layout */
 
