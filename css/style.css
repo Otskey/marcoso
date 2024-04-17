@@ -1295,7 +1295,7 @@ main {
   word-wrap: break-word;
 }
 
-.service-1:active {
+.service-1.active {
   transform: scale(1.05); /* Scale up slightly when active */
   opacity: 1; /* Full opacity when active */
   background: rgba(255, 255, 255, 0.8); /* Lighter background when active */

@@ -16,24 +16,39 @@ document.addEventListener('DOMContentLoaded', () => {
     animations.push(animation);
   });
 
+  // Function to toggle active state
+  function toggleActiveState(element) {
+    // Remove 'active' class from all service elements
+    document.querySelectorAll('.service-1').forEach(service => {
+      service.classList.remove('active');
+    });
+
+    // Add 'active' class to the clicked service element
+    element.classList.add('active');
+  }
+
+  // Function to control Lottie animation
+  function controlLottieAnimation(index, progress) {
+    animations.forEach((anim, animIndex) => {
+      if (animIndex === index) {
+        anim.goToAndStop(progress, true); // Go to specified progress and pause
+      } else {
+        anim.goToAndStop(0, true); // Go to start and pause for other animations
+      }
+    });
+  }
+
   // Attach click event handlers to each service item to play the corresponding animation
   document.querySelectorAll('.service-1').forEach((service, index) => {
     service.addEventListener('click', () => {
-      // Ensure only the clicked animation plays
-      animations.forEach((anim, animIndex) => {
-        if (animIndex === index) {
-          anim.goToAndPlay(0, true); // Restart and play the animation
-        } else {
-          anim.stop(); // Stop other animations
-        }
-      });
-
+      // Calculate the progress to pause at (you can adjust this as needed)
+      const pauseProgress = 0.5; // Pause at 50% progress
+      controlLottieAnimation(index, pauseProgress * animations[index].totalFrames);
+      toggleActiveState(service); // Toggle active state
       updateContent(index); // Call your existing function to handle other updates
     });
   });
 });
-
-
 // image select //
 function updateContent(index) {
   var services = document.getElementsByClassName('service-1');
