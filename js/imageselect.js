@@ -48,7 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
       updateContent(index); // Call your existing function to handle other updates
     });
   });
+
+  // Set default image upon initial load
+  updateContent(0);
 });
+
 // image select //
 function updateContent(index) {
   var services = document.getElementsByClassName('service-1');
@@ -63,20 +67,19 @@ function updateContent(index) {
   // Update the image source based on service selected
   switch (index) {
     case 0:
-      contentImage.src = 'img/cold-rolled-steel.jpg'; // Set the source to your image path
+      contentImage.src = 'img/handshake.jpg'; // Set the source to your image path
       break;
     case 1:
-      contentImage.src = 'img/galvanised-steel.jpg';
+      contentImage.src = 'img/containers.jpg';
       break;
     case 2:
-      contentImage.src = 'img/shipping.jpg';
+      contentImage.src = 'img/services.jpg';
       break;
     case 3:
-      contentImage.src = 'img/steelrolls.jpg';
+      contentImage.src = 'img/sand-container.jpg';
       break;
     default:
-      contentImage.src = 'img/tata.jpg';
+      contentImage.src = 'img/aboutus.jpg'; // Correct the file extension here
   }
 }
-
 
