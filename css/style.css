@@ -336,8 +336,18 @@ nav ul li:last-child {
 }
 
 nav a {
+   text-decoration: none;
+   color: white;
+   font-family: "Roboto", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   font-style: normal;
+   transition: color 0.5s; /* Smooth transition for font color */
+}
+
+.product-page li a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -598,119 +608,6 @@ main {
   }
 }
 
-
-
-
-
-/*
-
-.hero {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-auto-rows: minmax(auto, max-content);
-  font-family:'Playfair Display', serif;
-  /* original background color
-  background-color: antiquewhite;
-   */
-  /* original background image for desktop
-  background-image: url('../img/london.jpg'); */
-  /*background-size: cover;
-  height: 950px;
-  margin-bottom: 0;
-}
-
-
-
-
-/* animation for cycling words updated
-@keyframes cycleWords {
-  0%, 100% { content: 'Quality'; }
-  50% { content: 'Performance'; }
-}
-
-/*
-@keyframes cycleWords {
-  0%, 100% { content: 'Global'; }
-  14% { content: 'Shipping & Storage'; }
-  29% { content: 'Steel Markets'; }
-  43% { content: 'Quality Steel'; }
-  57% { content: 'Hot Rolled Coils'; }
-  71% { content: 'Cold Rolled Coils'; }
-  86% { content: 'General Purpose Steel'; }
-
-}
-/*
-
- */
-/* Styling for the cycling word
-.hero h1 .word-cycle::after {
-  content: 'Quality Performance'; /* Initial word
-  animation: cycleWords 4s steps(1, end) 1; /*infinite (use if you want to cycle infinite */ /* 3 seconds duration, infinite loop
-}
-*/
-
-/* draft transition effect
-.hero-title {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Adjust the height as needed
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.hero-title .text {
-  position: absolute;
-  opacity: 0; /* Start invisible
-  transition: all 2s ease; /* Smooth transition for properties
-  color: white;
-  font-size: 90px;
-}
-
-.hero-title .top-left {
-  top: 0; /* Starting top position
-  left: 50%; /* Start from the center horizontally
-  transform: translateX(-50%); /* Center it horizontally based on its own width
-  animation: moveDown 2s forwards;
-  animation-delay: 5s;
-}
-
-.hero-title .bottom-right {
-  bottom: 0; /* Starting bottom position
-  right: 50%; /* Start from the center horizontally
-  transform: translateX(50%); /* Center it horizontally based on its own width
-  animation: moveUp 2s forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes moveDown {
-  0%, 50% { /* From 0% to 50% of the animation time, keep the word in its starting position
-    top: 0;
-    opacity: 1; /* Make sure the word is visible
-    transform: translateX(-50%);
-  }
-  100% { /* At the end of the animation, move the word down
-    top: 50%;
-    transform: translateX(-50%);
-    opacity: 1;
-  }
-}
-
-@keyframes moveUp {
-  to {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the element
-    opacity: 1; /* Make the element fully visible
-  }
-}
-
-*/
-
-
-
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media screen and (max-width: 768px)
 {
@@ -725,227 +622,24 @@ main {
   }
 
 /* Adjust the font size and margins for h1 */
-.hero h1 {
-  font-size: 25px; /* Smaller font size for smaller screens */
-  grid-column: 1; /* Span the single column */
-  grid-row: 1; /* Place in the first row */
-  margin-top: 30px; /* Adjust top margin */
-  margin-left: 10px; /* Adjust left margin */
-  margin-bottom: 10px; /* Add bottom margin to create space between h1 and h2 */
-}
+  .hero h1 {
+    font-size: 25px; /* Smaller font size for smaller screens */
+    grid-column: 1; /* Span the single column */
+    grid-row: 1; /* Place in the first row */
+    margin-top: 30px; /* Adjust top margin */
+    margin-left: 10px; /* Adjust left margin */
+    margin-bottom: 10px; /* Add bottom margin to create space between h1 and h2 */
+  }
 
 /* Adjust the font size and margins for h2 */
-.hero h2 {
-  font-size: 10px; /* Smaller font size for smaller screens */
-  grid-column: 1; /* Span the single column */
-  grid-row: 1; /* Place in the second row */
-  margin-top: 80px; /* Adjust top margin */
-  margin-left: 10px; /* Adjust left margin */
-}
-
-/* Adjust the cycling word animation for smaller screens if necessary */
-.hero h1 .word-cycle::after {
-  /* Adjust font size, animation speed, etc., as needed */
-}
-
-/* hero form styling commenting out
-
-.hero form {
-  grid-column: 4 / 6;
-  grid-row: 1 / 4;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-top: 150px;
-  margin-right: 50px;
-  max-height: 600px;
-  max-width: 500px;
-}
-*/
-
-/* Input and Textarea Styling commenting out
-.hero input[type="text"],
-.hero input[type="email"],
-.hero select,
-.hero textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box; /* Makes sure padding doesn't affect overall width */
-}
-/*
-
-/* Label Styling commenting out
-.hero label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-*/
-
-/* Button Styling commenting out
-.hero button {
-  background-color: darkred;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
- */
-
-/* Button Hover Effect commenting out
-.hero button:hover {
-  background-color: rosybrown;
-}
-*/
-
-
-/* Helper Text commenting out
-.hero p {
-  font-size: 0.85em;
-  color: #666;
-}
-*/
-
-/*form styling
-
-/* Adjust form styling (commenting out)
-  .hero form {
-    grid-column: 1 / -1;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
- */
-
-  /* Adjust input and textarea styling (commenting out)
-  .hero input[type="text"],
-  .hero input[type="email"],
-  .hero select,
-  .hero textarea {
-    width: calc(100% - 40px);
-    margin-bottom: 15px;
-  }
-
-   */
-
-  /* Adjust button styling (commenting out)
-  .hero button {
-    width: 100%;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  .hero h2 {
+    font-size: 10px; /* Smaller font size for smaller screens */
+    grid-column: 1; /* Span the single column */
+    grid-row: 1; /* Place in the second row */
+    margin-top: 80px; /* Adjust top margin */
+    margin-left: 10px; /* Adjust left margin */
   }
 }
-
-   */
-
-/* what we do layout
-
-.what-we-do {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin-bottom: 30px;
-  margin-left: 200px;
-}
-
-.what-we-do .what-we-do-content{
-  grid-column: 3 / 5; /* Text content in the first column
-  margin-bottom: 30px;
-}
-
-/* commenting out to save
-.what-we-do h2 {
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 26px;
-  border-radius: 10px;
-  width: 310px;
-  text-align: center;
-  position: relative;
-}
-
-
-.what-we-do h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px; /* Adjust the position of the divider
-  left: 50%; /* Center the divider horizontally
-  transform: translateX(-50%); /* Center the divider horizontally
-  width: 100px; /* Adjust the width of the divider
-  height: 2px; /* Adjust the height of the divider
-  background-color: darkred; /* Color of the divider
-  border-radius: 5px; /* Optional: Add rounded corners to the divider
-
-/* commenting out to save
-.what-we-do p {
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 24px;
-}
-*/
-
-
-/* Media Query for smaller screens - Example: for screens narrower than 768px
-@media (max-width: 768px) {
-  .what-we-do {
-    grid-template-columns: 1fr; /* Use a single column layout on smaller screens
-    margin-left: 20px; /* Adjust left margin for smaller screens
-  }
-
-  .what-we-do .what-we-do-content {
-    grid-column: 1; /* Make content span the full width of the single column *
-  }
-
-  .what-we-do h2 .what-we-do p {
-    font-size: 20px; /* Optionally, adjust font sizes for smaller screens
-  }
-}
-
-.what-we-do {
-  grid-template-columns: 1fr; /* Single column layout
-  margin: 0 20px 30px 20px; /* Adjust margins to fit smaller screens
-  padding: 0 15px; /* Add padding for better spacing
-}
-
-.what-we-do .what-we-do-content {
-  grid-column: 1; /* Span content across the single column
-  margin-bottom: 20px; /* Adjust bottom margin
-}
-
-.what-we-do h2 {
-  font-size: 24px; /* Reduce font size for headings
-  text-align: center; /* Center-align the headings for better visual balance
-}
-
-.what-we-do h2::after {
-  bottom: -15px; /* Adjust position of the divider
-  width: 80px; /* Reduce width of the divider *
-}
-
-
-/* Uncomment and adjust the paragraph styles as needed */
-/*
-.what-we-do p {
-  font-size: 18px;
-}
- */
 
 .about-us-content {
   display: grid;
@@ -1652,278 +1346,7 @@ main {
 }
 
 
-/* Our products layout */
-.steel-products {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  margin-bottom: 100px;
-  scroll-margin-top: 100px;
-  position: relative; /* Ensure positioning context for pseudo-elements */
-}
 
-/*
-
-.steel-product-blurb-img {
-  grid-column: 1 / 8; /* Span full width
-  grid-row: 1 / 1;
-  background-image: url('../img/steelrolls.jpg'); /* Path to your background image
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1; /* Lower z-index so text can appear above
-  position: relative; /* Necessary for absolute positioning of the pseudo-element
-}
-
-
-
-
-.steel-product-blurb-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(139, 0, 0, 0.5); /* Dark red with 50% opacity
-  z-index: 2; /* Ensure it's above the background image but below the text content
-}
-
-*/
-
-.steel-product-blurb {
-  grid-column: 3 / 6;
-  grid-row: 1 / 1;
-  padding: 20px; /* Add some padding */
-  text-align: center;
-  background-color: white; /* May need opacity adjustment if text readability is an issue */
-  margin-top:100px;
-}
-
-
-
-.steel-product-blurb h2  {
-  font-family: "Roboto", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  font-style: normal;
-  color: darkred;
-}
-
-.steel-product-blurb p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.steel-product-blurb img {
-  grid-column: 2;
-  width: 250px;
-  height: 250px;
-}
-
-
-.steel-product-1 {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.steel-product-2 {
-  grid-column: 4;
-  grid-row: 2;
-}
-
-.steel-product-3 {
-  grid-column: 5;
-  grid-row: 2;
-}
-
-.steel-product-4 {
-  grid-column: 3;
-  grid-row: 3;
-}
-
-.steel-product-5 {
-  grid-column: 4;
-  grid-row: 3;
-}
-
-.steel-product-6 {
-  grid-column: 5;
-  grid-row: 3;
-}
-
-.steel-product-1,
-.steel-product-2,
-.steel-product-3,
-.steel-product-4,
-.steel-product-5,
-.steel-product-6{
-  border: 2px hidden rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px; /* Add some padding */
-  margin: 15px; /* Add some margin */
-  background-color: #f4ede4;
-  width: 310px;
-  height: 361.88px;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  perspective: 1000px; /* Required for 3D effect */
-  transform-style: preserve-3d; /* Enables 3D position preservation */
-  transition-duration: 0.6s;
-  transition-timing-function: ease-in-out;
-  position: relative;
-  /* commenting out original transition config to save
-  transition: transform 1s cubic-bezier(0.6, 0.0, 0.4, 1), background-color 0.3s ease;
-  transform-origin: center; /* Center the rotation */
-  }
-
-.steel-product-1 img,
-.steel-product-2 img,
-.steel-product-3 img,
-.steel-product-4 img,
-.steel-product-5 img,
-.steel-product-6 img{
-  width: 300px;
-  height: 250px;
-}
-
-.steel-product-1 h2,
-.steel-product-2 h2,
-.steel-product-3 h2,
-.steel-product-4 h2,
-.steel-product-5 h2,
-.steel-product-6 h2{
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.steel-product-1 p,
-.steel-product-2 p,
-.steel-product-3 p,
-.steel-product-4 p,
-.steel-product-5 p,
-.steel-product-6 p{
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-/* Styles for the front and back of the card */
-.steel-product-1 .card-front, .steel-product-1 .card-back,
-.steel-product-2 .card-front, .steel-product-2 .card-back,
-.steel-product-3 .card-front, .steel-product-3 .card-back,
-.steel-product-4 .card-front, .steel-product-4 .card-back,
-.steel-product-5 .card-front, .steel-product-5 .card-back,
-.steel-product-6 .card-front, .steel-product-6 .card-back {
-  backface-visibility: hidden; /* Hide the back face of the element */
-  transform-style: preserve-3d; /* Preserve 3D */
-}
-
-.steel-product-1 .card-front,
-.steel-product-2 .card-front,
-.steel-product-3 .card-front,
-.steel-product-4 .card-front,
-.steel-product-5 .card-front,
-.steel-product-6 .card-front {
-  backface-visibility: hidden;
-  text-align: center;
-  z-index: 2;
-}
-
-/* Specific style for the back of the card */
-.steel-product-1 .card-back,
-.steel-product-2 .card-back,
-.steel-product-3 .card-back,
-.steel-product-4 .card-back,
-.steel-product-5 .card-back,
-.steel-product-6 .card-back{
-  transform: rotateY(180deg); /* Rotate the back initially */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  margin-top: 50px;
-  align-content: center;
-}
-
-.steel-product-1:hover,
-.steel-product-2:hover,
-.steel-product-3:hover,
-.steel-product-4:hover,
-.steel-product-5:hover,
-.steel-product-6:hover{
-  /* removing spin effect to allow js to take control
-  transform: rotateY(180deg); /* Spin effect */
-  background-color: darkred; /* Darker red background on hover */
-  color: white;
-  /* commenting out - if not needed for go live remove
-  transition: transform 1s cubic-bezier(0.6, 0.0, 0.4, 1) 0.2s, background-color 0.3s ease;
-
-   */
-}
-
-/* Apply font to the list */
-.steel-product-1 ul,
-.steel-product-2 ul,
-.steel-product-3 ul,
-.steel-product-4 ul,
-.steel-product-5 ul,
-.steel-product-6 ul{
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-  list-style-type: square;
-}
-
-/* Media Query for smaller screens - Example: for screens narrower than 768px */
-@media (max-width: 768px) {
-  .steel-products {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    grid-gap: 15px; /* Adjust grid gap for consistent spacing */
-  }
-
-  .steel-product-blurb img,
-  .steel-product-1 img,
-  .steel-product-2 img,
-  .steel-product-3 img {
-    width: 100%; /* Full width of the column */
-    height: auto; /* Maintain aspect ratio of the images */
-    max-width: 250px; /* Limit the maximum width of the image */
-    margin: 0 auto; /* Center the images */
-    display: block;
-  }
-
-  .steel-product-blurb,
-  .steel-product-1,
-  .steel-product-2,
-  .steel-product-3 {
-    grid-column: 1; /* Span across the full width of the column */
-    margin: 10px auto; /* Center the items with automatic margin */
-    width: calc(100% - 20px); /* Full width minus the margin */
-    text-align: center;
-    padding: 15px; /* Adjust padding */
-    box-shadow: none; /* Optionally, remove box-shadow for a cleaner look */
-  }
-
-  .steel-product-1 ul,
-  .steel-product-2 ul,
-  .steel-product-3 ul {
-    grid-column: 1;
-    font-size: 16px; /* Adjust font size for smaller screens */
-    padding: 0; /* Remove padding if present */
-    margin: 0; /* Adjust margin as needed */
-    list-style-position: inside; /* Adjust list bullet position */
-  }
-}
 
 /*contact us layout */
 
@@ -2306,6 +1729,507 @@ footer {
   height: 30px;
   width: 30px;
   margin: 10px;
+}
+
+/* product page */
+
+/* Product hero layout */
+
+.products-hero {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: minmax(auto, max-content);
+  font-family: 'Playfair Display', serif;
+  /* original background color
+  background-color: antiquewhite;
+   */
+  background-image: url('../img/london.jpg');
+  background-size: cover;
+  height: 500px;
+}
+
+.products-hero h1 {
+  display: inline-block; /* Ensures proper alignment and animation */
+  font-size: 90px;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  margin-top: 110px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+.products-hero h2 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  margin-top: 250px;
+  margin-left: 20px;
+}
+
+/* Our Products section */
+
+.our-products-content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0px;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+  scroll-margin-top:100px;
+  background-color: darkred;
+  /* border-radius: 0 0 25% 25%;*/
+  padding-bottom: 50px;
+}
+
+
+.our-products .our-products-blurb h2  {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  position: relative;
+}
+
+.our-products .our-products-blurb h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust the position of the divider */
+  left: 10%; /* Center the divider horizontally */
+  transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
+  width: 100px; /* Adjust the width of the divider */
+  height: 2px; /* Adjust the height of the divider */
+  background-color: white; /* Color of the divider */
+  border-radius: 5px; /* Optional: Add rounded corners to the divider */
+}
+.our-products p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.our-products .our-products-1 h2,
+.our-products .our-products-2 h2,
+.our-products .our-products-3 h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+
+.our-products-blurb {
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+  padding-top: 24px;
+  position: relative;
+}
+
+.our-products-1 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.our-products-1 .material-symbols-outlined {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-products-2 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.our-products-2 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-products-3 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.our-products-3 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* about us media query */
+@media (max-width: 768px) {
+  .our-products-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Use a single column layout for smaller screens */
+    margin-bottom: 40px;
+    grid-gap: 20px; /* Increase grid gap to avoid content squeezing */
+    scroll-margin-top: 50px;
+    background-color: darkred;
+    border-radius: 0 0 0 0; /* Adjust border-radius for aesthetic fitting */
+    padding: 20px; /* Increase padding for better content encapsulation */
+  }
+
+  .our-products .our-products-blurb h2 {
+    font-size: 24px;
+    margin-bottom: 10px; /* Ensure space below headings */
+    text-decoration: none; /* Remove underline */
+    position: relative; /* Ensure relative positioning for the underline */
+    display: inline-block; /* Make the title behave like a block element */
+  }
+
+  .our-products .our-products-blurb h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 50%; /* Start the underline from the left */
+    width: 100%; /* Make the underline span the entire width */
+    height: 2px; /* Adjust the height of the underline */
+    background-color: white; /* Color of the underline */
+  }
+
+  .our-products p {
+    font-size: 16px;
+  }
+
+  .our-products .our-products h2,
+  .our-products .our-products h2,
+  .our-products .our-products h2 {
+    font-size: 18px;
+  }
+
+  /* Adjust the layout of content areas to prevent icon overlap */
+  .our-products-blurb,
+  .our-products-1,
+  .our-products-2,
+  .our-products-3,
+  .our-products-4 {
+    grid-column: 1 / -1;
+    padding: 20px; /* Increase padding for clarity */
+    position: relative; /* Ensure positioning context is set */
+  }
+
+
+  .our-products-1 .material-symbols-outlined,
+  .our-products-2 .material-symbols-outlined,
+  .our-products-3 .material-symbols-outlined,
+  .our-products-3 .material-symbols-outlined{
+    position: absolute;
+    left: -60px; /* Adjust left positioning to prevent overlap */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
+    font-size: 30px; /* Adjust icon font size for consistency */
+  }
+}
+
+/* Steel products layout */
+.steel-products {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-bottom: 100px;
+  scroll-margin-top: 100px;
+  position: relative; /* Ensure positioning context for pseudo-elements */
+}
+
+/*
+
+.steel-product-blurb-img {
+  grid-column: 1 / 8; /* Span full width
+  grid-row: 1 / 1;
+  background-image: url('../img/steelrolls.jpg'); /* Path to your background image
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; /* Lower z-index so text can appear above
+  position: relative; /* Necessary for absolute positioning of the pseudo-element
+}
+
+
+
+
+.steel-product-blurb-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 0, 0, 0.5); /* Dark red with 50% opacity
+  z-index: 2; /* Ensure it's above the background image but below the text content
+}
+
+*/
+
+.steel-product-blurb {
+  grid-column: 3 / 6;
+  grid-row: 1 / 1;
+  padding: 20px; /* Add some padding */
+  text-align: center;
+  background-color: white; /* May need opacity adjustment if text readability is an issue */
+  margin-top:100px;
+}
+
+
+
+.steel-product-blurb h2  {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  color: darkred;
+}
+
+.steel-product-blurb p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.steel-product-blurb img {
+  grid-column: 2;
+  width: 250px;
+  height: 250px;
+}
+
+
+.steel-product-1 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.steel-product-2 {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.steel-product-3 {
+  grid-column: 5;
+  grid-row: 2;
+}
+
+.steel-product-4 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.steel-product-5 {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.steel-product-6 {
+  grid-column: 5;
+  grid-row: 3;
+}
+
+.steel-product-1,
+.steel-product-2,
+.steel-product-3,
+.steel-product-4,
+.steel-product-5,
+.steel-product-6{
+  border: 2px hidden rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px; /* Add some padding */
+  margin: 15px; /* Add some margin */
+  background-color: #f4ede4;
+  width: 310px;
+  height: 361.88px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  perspective: 1000px; /* Required for 3D effect */
+  transform-style: preserve-3d; /* Enables 3D position preservation */
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+  position: relative;
+  /* commenting out original transition config to save
+  transition: transform 1s cubic-bezier(0.6, 0.0, 0.4, 1), background-color 0.3s ease;
+  transform-origin: center; /* Center the rotation */
+}
+
+.steel-product-1 img,
+.steel-product-2 img,
+.steel-product-3 img,
+.steel-product-4 img,
+.steel-product-5 img,
+.steel-product-6 img{
+  width: 300px;
+  height: 250px;
+}
+
+.steel-product-1 h2,
+.steel-product-2 h2,
+.steel-product-3 h2,
+.steel-product-4 h2,
+.steel-product-5 h2,
+.steel-product-6 h2{
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.steel-product-1 p,
+.steel-product-2 p,
+.steel-product-3 p,
+.steel-product-4 p,
+.steel-product-5 p,
+.steel-product-6 p{
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Styles for the front and back of the card */
+.steel-product-1 .card-front, .steel-product-1 .card-back,
+.steel-product-2 .card-front, .steel-product-2 .card-back,
+.steel-product-3 .card-front, .steel-product-3 .card-back,
+.steel-product-4 .card-front, .steel-product-4 .card-back,
+.steel-product-5 .card-front, .steel-product-5 .card-back,
+.steel-product-6 .card-front, .steel-product-6 .card-back {
+  backface-visibility: hidden; /* Hide the back face of the element */
+  transform-style: preserve-3d; /* Preserve 3D */
+}
+
+.steel-product-1 .card-front,
+.steel-product-2 .card-front,
+.steel-product-3 .card-front,
+.steel-product-4 .card-front,
+.steel-product-5 .card-front,
+.steel-product-6 .card-front {
+  backface-visibility: hidden;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Specific style for the back of the card */
+.steel-product-1 .card-back,
+.steel-product-2 .card-back,
+.steel-product-3 .card-back,
+.steel-product-4 .card-back,
+.steel-product-5 .card-back,
+.steel-product-6 .card-back{
+  transform: rotateY(180deg); /* Rotate the back initially */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  margin-top: 50px;
+  align-content: center;
+}
+
+.steel-product-1:hover,
+.steel-product-2:hover,
+.steel-product-3:hover,
+.steel-product-4:hover,
+.steel-product-5:hover,
+.steel-product-6:hover{
+  /* removing spin effect to allow js to take control
+  transform: rotateY(180deg); /* Spin effect */
+  background-color: darkred; /* Darker red background on hover */
+  color: white;
+  /* commenting out - if not needed for go live remove
+  transition: transform 1s cubic-bezier(0.6, 0.0, 0.4, 1) 0.2s, background-color 0.3s ease;
+
+   */
+}
+
+/* Apply font to the list */
+.steel-product-1 ul,
+.steel-product-2 ul,
+.steel-product-3 ul,
+.steel-product-4 ul,
+.steel-product-5 ul,
+.steel-product-6 ul{
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: square;
+}
+
+/* Media Query for smaller screens - Example: for screens narrower than 768px */
+@media (max-width: 768px) {
+  .steel-products {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    grid-gap: 15px; /* Adjust grid gap for consistent spacing */
+  }
+
+  .steel-product-blurb img,
+  .steel-product-1 img,
+  .steel-product-2 img,
+  .steel-product-3 img {
+    width: 100%; /* Full width of the column */
+    height: auto; /* Maintain aspect ratio of the images */
+    max-width: 250px; /* Limit the maximum width of the image */
+    margin: 0 auto; /* Center the images */
+    display: block;
+  }
+
+  .steel-product-blurb,
+  .steel-product-1,
+  .steel-product-2,
+  .steel-product-3 {
+    grid-column: 1; /* Span across the full width of the column */
+    margin: 10px auto; /* Center the items with automatic margin */
+    width: calc(100% - 20px); /* Full width minus the margin */
+    text-align: center;
+    padding: 15px; /* Adjust padding */
+    box-shadow: none; /* Optionally, remove box-shadow for a cleaner look */
+  }
+
+  .steel-product-1 ul,
+  .steel-product-2 ul,
+  .steel-product-3 ul {
+    grid-column: 1;
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 0; /* Remove padding if present */
+    margin: 0; /* Adjust margin as needed */
+    list-style-position: inside; /* Adjust list bullet position */
+  }
 }
 
 
