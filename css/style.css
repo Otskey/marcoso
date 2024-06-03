@@ -1354,12 +1354,10 @@ main {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  margin-bottom: 50px;
   font-family: 'Playfair Display', serif;
   background-color: darkred;
   height: 1000px;
   scroll-margin-top: 30px;
-  margin-bottom: 135px;
 }
 
 .contact-us-content h2 {
@@ -1380,7 +1378,6 @@ main {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-top: 60px;
   margin-right: 150px;
   max-height: 100%;
   max-width: 500px;
@@ -1567,7 +1564,59 @@ main {
   }
 }
 
-/*footer layout */
+/*home footer layout */
+
+footer {
+  background: white;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 20px;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: black;
+}
+
+.footer-section p, .footer-section a {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/*Product footer layout */
+
+
+
+/*
 
 footer {
   display: grid;
@@ -1606,6 +1655,9 @@ footer {
   width: 30px;
   margin: 10px;
 }
+
+*/
+
 
 /* product page */
 
