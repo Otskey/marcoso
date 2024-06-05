@@ -323,7 +323,7 @@ nav ul li:last-child {
 nav a {
    text-decoration: none;
    color: white;
-   font-family: "Roboto", sans-serif;
+   font-family: "montserrat", sans-serif;
    font-size: 16px;
    font-weight: 400;
    font-style: normal;
@@ -333,7 +333,7 @@ nav a {
 .product-page li a {
   text-decoration: none;
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -357,7 +357,7 @@ nav.scrolled a {
   border-radius: 5px;
   text-decoration: none;
   margin-left: 20px; /* Adjust margin between navigation links and contact button */
-  font-family: 'Playfair Display', serif;
+  font-family: "montserrat", sans-serif;
   white-space: nowrap; /* Prevent button text from wrapping */
 }
 
@@ -482,8 +482,9 @@ header.scrolled nav a.contact-button {
 
 .hero h1 {
   display: inline-block; /* Ensures proper alignment and animation */
-   font-family: 'Playfair Display', serif;
+  font-family: "montserrat", sans-serif;
   font-size: 90px;
+  font-weight: 400;
   grid-column: 1 / 4;
   grid-row: 1 / 2;
   margin-bottom: 0;
@@ -498,7 +499,8 @@ header.scrolled nav a.contact-button {
   opacity: 0;
   font-size: 5rem;
   animation: fadeIn 2s ease forwards;
-  font-family: 'Playfair Display', serif;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .intro {
@@ -631,7 +633,7 @@ main {
 
 
 .about-us .about-us-blurb h2  {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;;
   font-size: 32px;
   font-weight: 400;
   font-style: normal;
@@ -651,7 +653,7 @@ main {
   border-radius: 5px; /* Optional: Add rounded corners to the divider */
 }
 .about-us p {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -661,7 +663,7 @@ main {
 .about-us .about-us-1 h2,
 .about-us .about-us-2 h2,
 .about-us .about-us-3 h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;;
   font-size: 20px;
   font-weight: 700;
   font-style: normal;
@@ -864,7 +866,7 @@ main {
 .strengths-2 h2,
 .strengths-3 h2,
 .strengths-4 h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;;
   font-size: 20px;
   font-weight: 700;
   font-style: normal;
@@ -876,8 +878,8 @@ main {
 .strengths-2 p,
 .strengths-3 p,
 .strengths-4 p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-family:"montserrat", sans-serif;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   color: black;
@@ -996,23 +998,17 @@ main {
 /* Service font Styling */
 
 .services .service-blurb h2  {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
+  color: darkred;
   font-size: 32px;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.services .service-blurb h2  {
-  font-family: "Roboto", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
 .services p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-family: "montserrat", sans-serif;;
+  font-size: 16px;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -1020,7 +1016,7 @@ main {
 .services .service-2 h2,
 .services .service-3 h2,
 .services .service-4 h2{
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;;
   font-size: 20px;
   font-weight: 700;
   font-style: normal;
@@ -1077,6 +1073,7 @@ main {
 }
 
 /*Home Screen product layout */
+
 .all-products {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -1101,9 +1098,9 @@ main {
 }
 
 .product-blurb h2  {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif ;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   color: darkred;
   margin-bottom: 0;
@@ -1134,7 +1131,7 @@ main {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  font-family: 'Playfair Display', serif;
+  font-family: "montserrat", sans-serif;;
   white-space: nowrap; /* Prevent button text from wrapping */
   margin-top: 10px;
 }
@@ -1154,15 +1151,15 @@ main {
 }
 
 .hero-product-1 h2{
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
   font-style: normal;
 }
 
 .hero-product-1 p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-family: "montserrat", sans-serif;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -1172,7 +1169,7 @@ main {
   display: inline-block;
   list-style: none; /* Removes default list marker */
   padding: 10px 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 17px;
   font-weight: 400;
   background-color: #8B0000;
@@ -1209,10 +1206,11 @@ main {
   margin-left: 15%;
 }
 
-.hero-product-card {
+.hero-product-card-1,
+.hero-product-card-2 {
   padding: 20px;
   background:
-  url('../img/tata.svg') top center / 100% 50% no-repeat,
+  url('../img/factory.jpg') top center / 100% 50% no-repeat,
     linear-gradient(to bottom, Transparent 50%, darkred 50%);
 
   border-radius: 10px;
@@ -1257,7 +1255,9 @@ main {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  font-family: 'Playfair Display', serif;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   background-color: darkred;
   height: 1000px;
   scroll-margin-top: 30px;
@@ -1265,8 +1265,10 @@ main {
 
 .contact-us-content h2 {
   grid-column: 1 / 4; /* Text content in the first column */
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
+  font-family: "montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
   margin-top: 90px;
   color: white;
   margin-left: 14%;
@@ -1306,6 +1308,8 @@ main {
   font-weight: bold;
 }
 
+/* Fix button so it is the same as other buttons */
+
 /* Button Styling */
 .contact-us-content button {
   background-color: darkred;
@@ -1341,26 +1345,26 @@ main {
 }
 
 .our-locations-content h2 {
-  font-family: 'Noto Sans HK', sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 34px;
   color: white;
 }
 
 .our-locations-content h3 {
-  font-family: 'PT Serif', serif;
+  font-family: "montserrat", sans-serif;
   font-size: 24px;
   color: white;
 }
 
 .our-locations-content p {
-  font-family: 'Noto Sans HK', sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   line-height: 0.8;
   color: white;
 }
 
 .our-locations-content a {
-  font-family: 'Noto Sans HK', sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   line-height: 0.8;
   color: white;
@@ -1489,14 +1493,14 @@ footer {
 }
 
 .footer-section h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: "montserrat", sans-serif;
   margin-bottom: 10px;
   font-size: 18px;
   color: black;
 }
 
 .footer-section p, .footer-section a {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   color: black;
   text-decoration: none;
 }
