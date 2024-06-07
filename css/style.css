@@ -620,7 +620,7 @@ main {
 }
 
 /* Media Query for larger screens (laptops and desktops) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1080px) {
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two column layout */
@@ -837,7 +837,7 @@ main {
 }
 
 /* Media Query for larger screens (laptops and desktops) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1080px) {
   .about-us-content {
     grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns for larger screens */
     margin-bottom: 40px;
@@ -1108,7 +1108,7 @@ main {
 }
 
 /* Media Query for medium screens (769px to 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1080px) {
   .strengths {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two column layout */
@@ -1125,7 +1125,7 @@ main {
   .strengths-4 {
     grid-column: auto; /* Auto place columns */
     grid-row: auto; /* Automatically place rows */
-    width: 100%; /* Adjust width */
+    width: 90%; /* Adjust width */
     height: auto; /* Adjust height */
     margin: 15px; /* Adjust margin */
   }
