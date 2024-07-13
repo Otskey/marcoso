@@ -1617,6 +1617,7 @@ color: black;
   font-family: "montserrat", sans-serif;
   font-size: 24px;
   color: white;
+  font-weight: 500;
 }
 
 .our-locations-content p {
@@ -1640,8 +1641,9 @@ color: black;
 
 .map {
   grid-column: 1 / 4;
-  grid-row: 2 / 2;
+  grid-row: 2 / 3;
   position: relative;
+  margin-top: 50px;
 }
 
 .map #mapid {
@@ -1651,7 +1653,7 @@ color: black;
   height: 400px;
   width: 75%;
   grid-column: 1 / 4;
-  grid-row: 2 / 2;
+  grid-row: 2 / 3;
   filter: saturate(10) brightness(2) grayscale(1);
 }
 
