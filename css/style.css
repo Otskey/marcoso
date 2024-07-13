@@ -664,7 +664,7 @@ main {
 
 
 .about-us .about-us-blurb h2  {
-  font-family: "montserrat", sans-serif;;
+  font-family: "montserrat", sans-serif;
   font-size: 32px;
   font-weight: 400;
   font-style: normal;
@@ -676,15 +676,15 @@ main {
   content: "";
   position: absolute;
   bottom: -10px; /* Adjust the position of the divider */
-  left: 10%; /* Center the divider horizontally */
+  left: 18%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
-  width: 100px; /* Adjust the width of the divider */
+  width: 160px; /* Adjust the width of the divider */
   height: 2px; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
   border-radius: 5px; /* Optional: Add rounded corners to the divider */
 }
 .about-us p {
-  font-family: "montserrat", sans-serif;;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -694,7 +694,7 @@ main {
 .about-us .about-us-1 h2,
 .about-us .about-us-2 h2,
 .about-us .about-us-3 h2 {
-  font-family: "montserrat", sans-serif;;
+  font-family: "montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
   font-style: normal;
@@ -1108,7 +1108,7 @@ main {
 }
 
 /* Media Query for medium screens (769px to 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1080px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .strengths {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two column layout */
@@ -1125,7 +1125,7 @@ main {
   .strengths-4 {
     grid-column: auto; /* Auto place columns */
     grid-row: auto; /* Automatically place rows */
-    width: 90%; /* Adjust width */
+    width: 100%; /* Adjust width */
     height: auto; /* Adjust height */
     margin: 15px; /* Adjust margin */
   }
@@ -1258,7 +1258,7 @@ main {
 }
 
 .services p {
-  font-family: "montserrat", sans-serif;;
+  font-family: "montserrat", sans-serif;
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -1268,7 +1268,7 @@ main {
 .services .service-2 h2,
 .services .service-3 h2,
 .services .service-4 h2{
-  font-family: "montserrat", sans-serif;;
+  font-family: "montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
   font-style: normal;
@@ -1326,6 +1326,19 @@ main {
 
 /*Home Screen product layout */
 
+.products-hero h1 {
+display: inline-block; /* Ensures proper alignment and animation */
+font-family: "montserrat", sans-serif;
+font-size: 90px;
+font-weight: 400;
+grid-column: 1 / 4;
+grid-row: 1 / 2;
+margin-bottom: 0;
+margin-top: 110px;
+margin-left: 20px;
+color: black;
+}
+
 .all-products {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -1350,7 +1363,7 @@ main {
 }
 
 .product-blurb h2  {
-  font-family: "montserrat", sans-serif ;
+  font-family: "montserrat", sans-serif;
   font-size: 50px;
   font-weight: 400;
   font-style: normal;
@@ -1383,7 +1396,7 @@ main {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  font-family: "montserrat", sans-serif;;
+  font-family: "montserrat", sans-serif;
   white-space: nowrap; /* Prevent button text from wrapping */
   margin-top: 10px;
 }
@@ -1817,7 +1830,7 @@ footer {
 
 
 .our-products .our-products-blurb h2  {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 32px;
   font-weight: 400;
   font-style: normal;
@@ -1829,15 +1842,16 @@ footer {
   content: "";
   position: absolute;
   bottom: -10px; /* Adjust the position of the divider */
-  left: 10%; /* Center the divider horizontally */
+  left: 25%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
-  width: 100px; /* Adjust the width of the divider */
+  width: 210px; /* Adjust the width of the divider */
   height: 2px; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
   border-radius: 5px; /* Optional: Add rounded corners to the divider */
 }
+
 .our-products p {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -1999,7 +2013,8 @@ footer {
 .steel-products {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 100px;
   margin-bottom: 100px;
   scroll-margin-top: 100px;
   position: relative; /* Ensure positioning context for pseudo-elements */
@@ -2016,7 +2031,7 @@ footer {
 
 
 .steel-product-blurb h2  {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 32px;
   font-weight: 400;
   font-style: normal;
@@ -2024,7 +2039,7 @@ footer {
 }
 
 .steel-product-blurb p {
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -2039,32 +2054,32 @@ footer {
 
 .steel-product-1 {
   grid-column: 3;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .steel-product-2 {
   grid-column: 4;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .steel-product-3 {
   grid-column: 5;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .steel-product-4 {
   grid-column: 3;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 .steel-product-5 {
   grid-column: 4;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 .steel-product-6 {
   grid-column: 5;
-  grid-row: 3;
+  grid-row: 2 ;
 }
 
 .steel-product-1,
@@ -2106,7 +2121,7 @@ footer {
 .steel-product-4 h2,
 .steel-product-5 h2,
 .steel-product-6 h2{
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
   font-style: normal;
@@ -2118,7 +2133,7 @@ footer {
 .steel-product-4 p,
 .steel-product-5 p,
 .steel-product-6 p{
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -2181,7 +2196,7 @@ footer {
 .steel-product-4 ul,
 .steel-product-5 ul,
 .steel-product-6 ul{
-  font-family: "Roboto", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
