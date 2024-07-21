@@ -1525,6 +1525,7 @@ color: black;
 /* Input and Textarea Styling */
 .contact-us-content input[type="name"],
 .contact-us-content input[type="email"],
+.contact-us-content input[type="text"],
 .contact-us-content select,
 .contact-us-content textarea {
   width: 100%;
