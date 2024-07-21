@@ -844,6 +844,7 @@ header.scrolled nav a.contact-button {
   scroll-margin-top: 100px;
   background: linear-gradient(to bottom, #8B0000 50%, #f4ede4 50%);
   background-size: cover;
+  padding-bottom: 12vh;
  
 }
 
@@ -1023,6 +1024,7 @@ header.scrolled nav a.contact-button {
     background-size: cover;
     padding: 20px; /* Add some padding for smaller screens */
     scroll-margin-top: 50px; /* Adjust scroll margin */
+    padding-bottom: 10vh;
   }
 
   .strengths-1,
@@ -1068,6 +1070,7 @@ header.scrolled nav a.contact-button {
     background-size: cover;
     padding: 20px; /* Adjust padding for larger screens */
     scroll-margin-top: 70px; /* Adjust scroll margin */
+    padding-bottom: 10vh;
   }
 
   .strengths-1,
@@ -1108,19 +1111,19 @@ header.scrolled nav a.contact-button {
 
 /* Services layout */
 
-.services {
+/* .services {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, 1fr); /* Adjusted to provide more rows */
-  grid-column-gap: 1px;
+  grid-template-rows: repeat(6, 1fr); 
+  /* grid-column-gap: 1px;
   padding-bottom: 30px;
   background-color: #f4ede4
-}
+} */ 
 
-.services-content {
+/* .services-content {
   grid-column: 2 / 7;
   grid-row: 1 / 6;
-  padding: 20px; /* Unified padding */
+  padding: 20px; 
   position: relative;
   background-color: white;
   color: black;
@@ -1134,50 +1137,50 @@ header.scrolled nav a.contact-button {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 8px 15px rgba(0, 0, 0, 0.15);
   height: 600px;
   scroll-margin-top: 180px;
-}
-
+} */
+/* 
 .service-blurb {
   text-align: center;
 }
 
 .service-1 {
   align-items: center; /* Align items vertically */
-  display: flex;
+  /* display: flex;
   margin: 40px;
   justify-content: flex-start;
   gap: 20px; /* Added gap for spacing between icon and text */
-  padding: 15px; /* Padding for each service item */
-  background: rgba(255, 255, 255, 0.4); /* Subtle background for each service */
-  border-radius: 15px; /* Rounded corners for a softer look */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  width: 45%; /* Responsive width */
-  height: 5%; /* Maintain your specified height */
-  cursor: pointer;
-  opacity: 0.5; /* Start with lower opacity */
-  transition: transform 0.2s ease-in-out, opacity 0.3s ease; /* Transitions for effects */
-}
-
-
+  /* padding: 15px; /* Padding for each service item */
+  /* background: rgba(255, 255, 255, 0.4); /* Subtle background for each service */
+  /* border-radius: 15px; Rounded corners for a softer look */
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); Shadow for depth */
+  /* width: 45%; Responsive width */ */
+  /* height: 5%; Maintain your specified height */
+  /* cursor: pointer; */
+  /* opacity: 0.5; Start with lower opacity */
+  /* transition: transform 0.2s ease-in-out, opacity 0.3s ease; Transitions for effects */
+/* }  */
+ *
+/* 
 .lottie-icon-5 {
   width: 60px;
   height: 100px;
   transition: all 0.2s ease-in-out;
-}
-
+} */
+/* 
 
 .service-1 p {
   margin-left: 10px;
   max-width: calc(100% - 110px); /* Adjusts max width to factor in the icon width and its margin */
-  word-wrap: break-word;
-}
+  /* word-wrap: break-word;
+} */
 
-.service-1.active {
+/* .service-1.active {
   transform: scale(1.05); /* Scale up slightly when active */
-  opacity: 1; /* Full opacity when active */
-  background: rgba(255, 255, 255, 0.8); /* Lighter background when active */
-}
+  /* opacity: 1; /* Full opacity when active */
+  /* background: rgba(255, 255, 255, 0.8); Lighter background when active */ */
+/* }  */
 
-
+/* 
 .service-img-frame {
   grid-row: 2 / 7;
   grid-column: 5 / 7;
@@ -1188,19 +1191,19 @@ header.scrolled nav a.contact-button {
   background: rgba(255, 255, 255, 0);
   width:400px;
   height:600px;
-}
+} */
 
-.service-img-frame img {
+/* .service-img-frame img {
   width: 400px;
   max-width: 600px;
   height: 70%;
   border-radius: 20px;
   margin-top: 60px;
-}
+}  */
 
 /* Service font Styling */
 
-.services .service-blurb h2  {
+/* .services .service-blurb h2  {
   font-family: "montserrat", sans-serif;
   color: darkred;
   font-size: 32px;
@@ -1223,57 +1226,60 @@ header.scrolled nav a.contact-button {
   font-size: 20px;
   font-weight: 700;
   font-style: normal;
-}
+} */
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 
-@media (max-width: 768px) {
-  .services-content {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    grid-gap: 15px; /* Adjust grid gap for better spacing */
-    margin-bottom: 40px; /* Adjust bottom margin */
-  }
+/* @media (max-width: 768px) { */
+  /* .services-content { */
+    /* display: grid; */
+    /* grid-template-columns: 1fr; Single column layout */
+    /* grid-gap: 15px; Adjust grid gap for better spacing */
+    /* margin-bottom: 40px; Adjust bottom margin */
+  /* } */
 
-  .services-content img {
+  /* .services-content img {
     display:block;
     margin-left: auto;
     margin-right:auto;
     grid-column: 1; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure it doesn't overflow the screen */
-  }
+    /* height: auto; Maintain aspect ratio */
+    /* max-width: 100%; Ensure it doesn't overflow the screen */
+  /* } */ */
 
-  .steel-service-blurb,
+  /* .steel-service-blurb,
   .service-1,
   .service-2,
-  .service-3 {
-    grid-column: 1; /* Full width for each service */
-    margin: 20px 0; /* Uniform margin for top and bottom */
-    width: auto; /* Adjust width to fit container */
-    text-align: center; /* Center align the text */
-    padding: 15px; /* Adjust padding */
-  }
+  .service-3 { */
+    /* grid-column: 1; Full width for each service */
+    /* margin: 20px 0; Uniform margin for top and bottom */
+    /* width: auto; Adjust width to fit container */
+    /* text-align: center; Center align the text  */
+    /* padding: 15px; Adjust padding */
+  /* } */
 
   /* Adjust the service blocks to center content, including the icons */
-  .service-1, .service-2, .service-3 {
-    text-align: center; /* Center align the text and content */
-    position: relative; /* Ensure relative positioning */
-    padding-top: 50px; /* Add padding to top to make space for the icon */
-  }
+  /* .service-1, .service-2, .service-3 { */
+    /* text-align: center; Center align the text and content */
+    /* position: relative; Ensure relative positioning */
+    /* padding-top: 50px; Add padding to top to make space for the icon */
+  /* } */
 
-  .service-1 .material-symbols-outlined,
+  /* .service-1 .material-symbols-outlined,
   .service-2 .material-symbols-outlined,
   .service-3 .material-symbols-outlined {
     position: absolute; /* Keep the icons absolutely positioned */
-    top: 10px; /* Position icons near the top of the service block */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust horizontal centering */
-    width: 40px; /* Maintain icon width */
-    height: 40px; /* Maintain icon height */
-    margin-bottom: 10px; /* Adjust as needed */
-  }
-}
+    /* top: 10px; Position icons near the top of the service block */
+    /* left: 50%; Center horizontally */
+    /* transform: translateX(-50%); Adjust horizontal centering */
+    /* width: 40px; Maintain icon width */
+    /* height: 40px; Maintain icon height */
+    /* margin-bottom: 10px; Adjust as needed */
+  /* }
+} */ */ */
+
+
+
 
 /*Home Screen product layout */
 
@@ -1285,7 +1291,7 @@ font-weight: 400;
 grid-column: 1 / 4;
 grid-row: 1 / 2;
 margin-bottom: 0;
-margin-top: 110px;
+/* margin-top: 20vh; */
 margin-left: 20px;
 color: black;
 }
@@ -1296,6 +1302,7 @@ color: black;
   grid-template-rows: repeat(1, 1fr);
   scroll-margin-top: 100px;
   position: relative; /* Ensure positioning context for pseudo-elements */
+  background-color: #f4ede4;
 }
 
 .product-blurb {
@@ -1308,14 +1315,14 @@ color: black;
   grid-row: 1 / 1;
   padding: 20px;
   text-align: left;
-  background-color: white;
-  margin-top: 100px;
-  margin-left: 100px;
+  background-color: #f4ede4;
+  /* margin-top: 100px;
+  margin-left: 100px; */
 }
 
 .product-blurb h2  {
   font-family: "montserrat", sans-serif;
-  font-size: 50px;
+  font-size: 5vw;
   font-weight: 400;
   font-style: normal;
   color: darkred;
@@ -1323,8 +1330,8 @@ color: black;
 }
 
 .product-blurb p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.1em;
   font-weight: 400;
   font-style: normal;
 }
@@ -1338,7 +1345,7 @@ color: black;
   background-repeat: no-repeat;
   z-index: 1; /* Lower z-index so text can appear above */
   position: relative; /* Necessary for absolute positioning of the pseudo-element */
-  height: 1000px;
+  height: 100vh;
 }
 
 .view-products-button {
@@ -1350,6 +1357,7 @@ color: black;
   font-family: "montserrat", sans-serif;
   white-space: nowrap; /* Prevent button text from wrapping */
   margin-top: 10px;
+  align-self: center;
 }
 
 .view-products-button:hover {
@@ -1359,7 +1367,19 @@ color: black;
 .hero-product-1 {
   grid-column: 1;
   grid-row: 2;
+  align-self: left;
 }
+
+@media (max-width: 768px) {
+  .hero-product-1 {
+    display: none; /* Hide the hero product card on mobile */
+  }
+
+  .product-blurb-img{
+    height: 90vh;
+  }
+}
+
 
 .hero-product-1 img {
   width: 300px;
@@ -1422,18 +1442,16 @@ color: black;
   margin-left: 15%;
 }
 
-.hero-product-card-1,
-.hero-product-card-2 {
+.hero-product-card-1 {
   padding: 20px;
   background:
   url('../img/factory.jpg') top center / 100% 50% no-repeat,
     linear-gradient(to bottom, Transparent 50%, darkred 50%);
-
   border-radius: 10px;
   height:250px;
   width: 300px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  margin-top: 50%;
+  margin-top: 6%;
 }
 
 .accordion-toggle {
@@ -1505,7 +1523,7 @@ color: black;
 }
 
 /* Input and Textarea Styling */
-.contact-us-content input[type="text"],
+.contact-us-content input[type="name"],
 .contact-us-content input[type="email"],
 .contact-us-content select,
 .contact-us-content textarea {
