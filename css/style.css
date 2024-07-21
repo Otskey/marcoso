@@ -16,13 +16,14 @@ html {
   font-size: 1em;
   line-height: 1.4;
   overflow-x: hidden;
- 
 }
 
 /* margins */
 body{
   margin:0;
+  overflow-x: hidden;
 }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -598,10 +599,6 @@ header.scrolled nav a.contact-button {
     transform: translateY(0%);
   }
 }
-
-
-
-
 
 .about-us-content {
   display: grid;
@@ -1747,16 +1744,19 @@ footer {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-auto-rows: minmax(auto, max-content);
-  font-family: 'Playfair Display', serif;
+  font-family: 'montserrat', sans-serif;
   background-image: url('../img/london.jpg');
   background-size: cover;
   height: 500px;
+  width: 100%;
 }
 
 .products-hero h1 {
   display: inline-block; /* Ensures proper alignment and animation */
-  font-size: 90px;
-  grid-column: 1 / 5;
+  font-family: "montserrat", sans-serif;
+  font-size: 5vw;
+  font-weight: 400;
+  grid-column: 1 / 4;
   grid-row: 1 / 2;
   margin-top: 110px;
   margin-bottom: 0;
@@ -1777,8 +1777,8 @@ footer {
   margin-bottom: 0px;
   grid-row-gap: 1px;
   grid-column-gap: 1px;
-  scroll-margin-top:100px;
   background-color: darkred;
+  scroll-margin-top:100px;
   padding-bottom: 50px;
 }
 
@@ -1896,13 +1896,11 @@ footer {
 }
 
 
-/* about us media query */
+/* our products media query */
 @media (max-width: 768px) {
   .our-products-content {
-    display: grid;
     grid-template-columns: 1fr; /* Use a single column layout for smaller screens */
-    margin-bottom: 40px;
-    grid-gap: 20px; /* Increase grid gap to avoid content squeezing */
+    grid-gap: -5vh; /* Increase grid gap to avoid content squeezing */
     scroll-margin-top: 50px;
     background-color: darkred;
     border-radius: 0 0 0 0; /* Adjust border-radius for aesthetic fitting */
@@ -1974,15 +1972,6 @@ footer {
   position: relative; /* Ensure positioning context for pseudo-elements */
 }
 
-.steel-product-blurb {
-  grid-column: 3 / 6;
-  grid-row: 1 / 1;
-  padding: 20px; /* Add some padding */
-  text-align: center;
-  background-color: white; /* May need opacity adjustment if text readability is an issue */
-  margin-top:100px;
-}
-
 
 .steel-product-blurb h2  {
   font-family: "montserrat", sans-serif;
@@ -1997,12 +1986,6 @@ footer {
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
-}
-
-.steel-product-blurb img {
-  grid-column: 2;
-  width: 250px;
-  height: 250px;
 }
 
 
@@ -2160,41 +2143,76 @@ footer {
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media (max-width: 768px) {
   .steel-products {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    grid-gap: 15px; /* Adjust grid gap for consistent spacing */
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat (6,auto);
+    gap: 2vh; /* Add some gap between items */
+    margin-top: 1vh; /* Adjust margins for better spacing on mobile */
+    margin-bottom: 50px;
+    scroll-margin-top: 50px;
   }
 
-  .steel-product-blurb img,
-  .steel-product-1 img,
-  .steel-product-2 img,
-  .steel-product-3 img {
-    width: 100%; /* Full width of the column */
-    height: auto; /* Maintain aspect ratio of the images */
-    max-width: 250px; /* Limit the maximum width of the image */
-    margin: 0 auto; /* Center the images */
-    display: block;
+  .steel-product-blurb h2 {
+    font-size: 24px; /* Adjust font size */
   }
 
-  .steel-product-blurb,
+  .steel-product-blurb p {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .steel-product-blurb img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+  }
+
   .steel-product-1,
   .steel-product-2,
-  .steel-product-3 {
-    grid-column: 1; /* Span across the full width of the column */
-    margin: 10px auto; /* Center the items with automatic margin */
-    width: calc(100% - 20px); /* Full width minus the margin */
-    text-align: center;
-    padding: 15px; /* Adjust padding */
-    box-shadow: none; /* Optionally, remove box-shadow for a cleaner look */
+  .steel-product-3,
+  .steel-product-4,
+  .steel-product-5,
+  .steel-product-6 {
+    grid-column: 1; /* Full width */
+    grid-row: auto;
+    width: 80vw; /* Full width */
+    height: 90%; /* Auto height */  
   }
 
-  .steel-product-1 ul,
-  .steel-product-2 ul,
-  .steel-product-3 ul {
-    grid-column: 1;
-    font-size: 16px; /* Adjust font size for smaller screens */
-    padding: 0; /* Remove padding if present */
-    margin: 0; /* Adjust margin as needed */
-    list-style-position: inside; /* Adjust list bullet position */
+  .steel-product-1 img,
+  .steel-product-2 img,
+  .steel-product-3 img,
+  .steel-product-4 img,
+  .steel-product-5 img,
+  .steel-product-6 img {
+    width: 100%; /* Full width image */
+    height: 33vh; /* Maintain aspect ratio */
+  }
+
+  .steel-product-1 h2,
+  .steel-product-2 h2,
+  .steel-product-3 h2,
+  .steel-product-4 h2,
+  .steel-product-5 h2,
+  .steel-product-6 h2 {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .steel-product-1 p,
+  .steel-product-2 p,
+  .steel-product-3 p,
+  .steel-product-4 p,
+  .steel-product-5 p,
+  .steel-product-6 p {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .steel-product-1 .card-back,
+  .steel-product-2 .card-back,
+  .steel-product-3 .card-back,
+  .steel-product-4 .card-back,
+  .steel-product-5 .card-back,
+  .steel-product-6 .card-back {
+    margin-top: 20px; /* Adjust margin */
+    padding: 10px; /* Adjust padding */
   }
 }
 
