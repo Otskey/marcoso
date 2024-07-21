@@ -288,15 +288,17 @@
     <div class="map">
       <div id="mapid"></div>
     </div>
-    <form>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- PUT ACCESS KEY HERE -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> 
       <div>
         <label for="cust-name">Name *</label>
-        <input id="cust-name" name="name" required type="text" placeholder="Your name">
+        <input type="name" id="cust-name" name="name" required type="text" placeholder="Your name">
       </div>
 
       <div>
-        <label for="cust-email">Email *</label>
-        <input id="cust-email" name="email" required type="email" placeholder="Your Email">
+        <label for="cust- email">Email *</label>
+        <input type ="email" id="cust-email" name="email" required type="email" placeholder="Your Email">
       </div>
 
       <div>

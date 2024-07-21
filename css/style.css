@@ -19,6 +19,7 @@ html {
  
 }
 
+/* margins */
 body{
   margin:0;
 }
@@ -611,6 +612,7 @@ header.scrolled nav a.contact-button {
   scroll-margin-top:100px;
   background-color: darkred;
   padding-bottom: 50px;
+
 }
 
 
@@ -730,10 +732,11 @@ header.scrolled nav a.contact-button {
 @media (max-width: 768px) {
   .about-us-content {
     grid-template-columns: 1fr; /* Use a single column layout for smaller screens */
-    margin-bottom: 40px;
+    margin-bottom: -5vh;
     grid-gap: 20px; /* Increase grid gap to avoid content squeezing */
     scroll-margin-top: 50px;
     padding: 20px; /* Increase padding for better content encapsulation */
+
   }
 
   .about-us .about-us-blurb h2 {
@@ -839,31 +842,31 @@ header.scrolled nav a.contact-button {
 
 .strengths {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  margin-bottom: 0px;
   scroll-margin-top: 100px;
   background: linear-gradient(to bottom, #8B0000 50%, #f4ede4 50%);
   background-size: cover;
+ 
 }
 
 .strengths-1 {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 1;
 }
 
 .strengths-2 {
-  grid-column: 4;
+  grid-column: 2;
   grid-row: 1;
 }
 
 .strengths-3 {
-  grid-column: 6;
+  grid-column: 3;
   grid-row: 1;
 }
 
 .strengths-4 {
-  grid-column: 8;
+  grid-column: 4;
   grid-row: 1;
 }
 
@@ -877,7 +880,7 @@ header.scrolled nav a.contact-button {
   margin: 15px; /* Add some margin */
   background-color:white;
   color: black;
-  width: 310px;
+  width: 20vw;
   height: 361.88px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
