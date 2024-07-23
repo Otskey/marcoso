@@ -11,6 +11,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+
 html {
   color: #222;
   font-size: 1em;
@@ -23,6 +24,7 @@ html {
 body{
   margin:0;
 }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -1497,7 +1499,7 @@ color: black;
   font-size: 14px;
   background-color: darkred;
   height: 1000px;
-  scroll-margin-top: 30px;
+  scroll-margin-top: 30px;  
 }
 
 .contact-us-content h2 {
@@ -1513,7 +1515,7 @@ color: black;
 
 /*Contact us form styling */
 
-.contact-us-content form {
+.contactForm {
   grid-column: 5 / 8;
   grid-row: 2 / 3;
   background: #ffffff;
@@ -1528,8 +1530,10 @@ color: black;
 /* Input and Textarea Styling */
 .contact-us-content input[type="name"],
 .contact-us-content input[type="email"],
+.contact-us-content input[type="text"],
 .contact-us-content select,
 .contact-us-content textarea {
+  font-family: "montserrat", sans-serif;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -1619,7 +1623,7 @@ color: black;
 }
 
 .map #mapid {
-  position: relative;
+position: relative;
   margin-top: 40%;
   margin-left: 15%;
   height: 400px;
@@ -1635,78 +1639,56 @@ color: black;
 }
 
 @media (max-width: 768px) {
-  .contact-us-content form {
-    grid-column: 1; /* Span the form across the full width of the single column */
-    margin-left: 20px; /* Adjust left margin for smaller screens */
-    margin-right: 20px; /* Adjust right margin for smaller screens */
-    margin-top: 30px; /* Adjust top margin for smaller screens */
-    max-width: 100%; /* Allow the form to take full width of the column */
-    padding: 15px; /* Adjust padding for better spacing */
-    box-shadow: none; /* Optionally, remove box-shadow for a cleaner look */
+  .contact-us-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    height: auto;
+   
+  }
+  
+  .contact-us-content h3 {
+    grid-row: 1;
+    grid-column: 1; /* Ensure it spans the whole width */
+    margin-left: 0; /* Reset margin for mobile view */
+
+  }
+  .our-locations-content {
+    grid-column: 1 ;
+    grid-row: 3;
+    margin-left: 5vw;
+    position: relative;
+    padding-bottom: 2vh;
+    width:100%;
+    text-align: left;
   }
 
-  /* Input and Textarea Styling */
-  .contact-us-content input[type="text"],
-  .contact-us-content input[type="email"],
-  .contact-us-content select,
-  .contact-us-content textarea {
-    padding: 12px; /* Slightly larger padding for easier interaction on touch devices */
+  .contactForm {
+    grid-row: 2;
+    grid-column: 1; 
+    margin-right: 0; 
+    margin-top: 1vh;
+    width: 80%;
+    justify-self: center;
+   
   }
-
-  /* Button Styling */
-  .contact-us-content button {
-    width: 100%; /* Button takes full width of the form */
-    padding: 12px 0; /* Adjust padding for better touch interaction */
+  .map{
+    grid-row: 4;
+    padding-bottom: 5vh;
+    margin-left: 0;
+    margin-top: 0;
   }
+  .map #mapid{
+    grid-row: 4 ;
+    grid-column: 1; /* Ensure it spans the whole width */
+    margin-right: 0; /* Reset margin for mobile view */
+    margin-top: 1vh;   
+    width: 90%;
+    margin-left: 5vw;
+   
 
-  /* Adjusting font sizes if necessary */
-  .contact-us-content label,
-  .contact-us-content p {
-    font-size: 1em; /* Adjust font size for readability */
-  }
-}
-
-
-/* Media Query for smaller screens - Example: for screens narrower than 768px */
-@media (max-width: 768px) {
-  .our-locations {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    margin: 0 20px 30px 20px; /* Adjust margins to fit smaller screens */
-  }
-
-  .our-locations .our-locations-content {
-    grid-column: 1; /* Full width of the column */
-    margin-bottom: 20px; /* Adjust bottom margin for spacing */
-  }
-
-  .our-locations-content h2 {
-    font-size: 28px; /* Adjust font size for heading */
-  }
-
-  .our-locations-content h3 {
-    font-size: 22px; /* Adjust font size for subheading */
-  }
-
-  .our-locations-content p {
-    font-size: 16px; /* Adjust font size for paragraph */
-    line-height: 1.2; /* Adjust line height for better readability */
-  }
-
-  .our-locations-content a {
-    font-size: 16px; /* Adjust font size for paragraph */
-    line-height: 1.2; /* Adjust line height for better readability */
-  }
-
-  .map {
-    grid-column: 1; /* Full width of the column */
-  }
-
-  .map #mapid {
-    height: 400px; /* Adjust height of the map */
-    margin-top: 10px; /* Adjust top margin for the map */
-    margin-bottom: 20px;
   }
 }
+
 
 /*home footer layout */
 
