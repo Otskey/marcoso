@@ -261,15 +261,17 @@
     <div class="map">
       <div id="mapid"></div>
     </div>
-    <form>
+    <div class="contactForm">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="7990fe3f-3657-414c-bcad-e7f9966ecb89">
       <div>
         <label for="cust-name">Name *</label>
-        <input id="cust-name" name="name" required type="text" placeholder="Your name">
+        <input type="name" id="cust-name" name="name" required placeholder="Your name">
       </div>
 
       <div>
-        <label for="cust-email">Email *</label>
-        <input id="cust-email" name="email" required type="email" placeholder="Your Email">
+        <label for="cust- email">Email *</label>
+        <input type ="email" id="cust-email" name="email" required type="email" placeholder="Your Email">
       </div>
 
       <div>
@@ -278,12 +280,13 @@
       </div>
 
       <div>
-        <label for="cust-message">Tell us about your freight and business requirements *</label>
+        <label for="cust-message">Tell us about your requirements *</label>
         <textarea id="cust-message" name="message" rows="4" required></textarea>
       </div>
 
       <button type="submit">Submit</button>
     </form>
+  </div>
   </div>
 </section>
 
