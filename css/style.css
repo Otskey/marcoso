@@ -846,7 +846,7 @@ header.scrolled nav a.contact-button {
   background: linear-gradient(to bottom, #8B0000 50%, #f4ede4 50%);
   background-size: cover;
   padding-bottom: 12vh;
- 
+
 }
 
 .strengths-1 {
@@ -1115,16 +1115,16 @@ header.scrolled nav a.contact-button {
 /* .services {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, 1fr); 
+  grid-template-rows: repeat(6, 1fr);
   /* grid-column-gap: 1px;
   padding-bottom: 30px;
   background-color: #f4ede4
-} */ 
+} */
 
 /* .services-content {
   grid-column: 2 / 7;
   grid-row: 1 / 6;
-  padding: 20px; 
+  padding: 20px;
   position: relative;
   background-color: white;
   color: black;
@@ -1139,35 +1139,38 @@ header.scrolled nav a.contact-button {
   height: 600px;
   scroll-margin-top: 180px;
 } */
-/* 
+/*
 .service-blurb {
   text-align: center;
 }
 
+
+ /* Commenting out service
 .service-1 {
-  align-items: center; /* Align items vertically */
-  /* display: flex;
+  align-items: center; /* Align items vertically
+  display: flex;
   margin: 40px;
   justify-content: flex-start;
-  gap: 20px; /* Added gap for spacing between icon and text */
-  /* padding: 15px; /* Padding for each service item */
-  /* background: rgba(255, 255, 255, 0.4); /* Subtle background for each service */
-  /* border-radius: 15px; Rounded corners for a softer look */
-  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); Shadow for depth */
-  /* width: 45%; Responsive width */ */
-  /* height: 5%; Maintain your specified height */
-  /* cursor: pointer; */
-  /* opacity: 0.5; Start with lower opacity */
-  /* transition: transform 0.2s ease-in-out, opacity 0.3s ease; Transitions for effects */
-/* }  */
- *
-/* 
+  gap: 20px; /* Added gap for spacing between icon and text
+  padding: 15px; /* Padding for each service item
+  background: rgba(255, 255, 255, 0.4); /* Subtle background for each service
+  border-radius: 15px; /* Rounded corners for a softer look
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth
+  width: 45%; /* Responsive width
+  height: 5%; /* Maintain your specified height
+  cursor: pointer;
+  opacity: 0.5; /* Start with lower opacity
+  transition: transform 0.2s ease-in-out, opacity 0.3s ease; /*Transitions for effects
+    }
+    */
+
+/*
 .lottie-icon-5 {
   width: 60px;
   height: 100px;
   transition: all 0.2s ease-in-out;
 } */
-/* 
+/*
 
 .service-1 p {
   margin-left: 10px;
@@ -1178,10 +1181,10 @@ header.scrolled nav a.contact-button {
 /* .service-1.active {
   transform: scale(1.05); /* Scale up slightly when active */
   /* opacity: 1; /* Full opacity when active */
-  /* background: rgba(255, 255, 255, 0.8); Lighter background when active */ */
+  /* background: rgba(255, 255, 255, 0.8); Lighter background when active */
 /* }  */
 
-/* 
+/*
 .service-img-frame {
   grid-row: 2 / 7;
   grid-column: 5 / 7;
@@ -1239,14 +1242,17 @@ header.scrolled nav a.contact-button {
     /* margin-bottom: 40px; Adjust bottom margin */
   /* } */
 
-  /* .services-content img {
+
+/* commenting out
+  .services-content img {
     display:block;
     margin-left: auto;
     margin-right:auto;
-    grid-column: 1; /* Full width */
-    /* height: auto; Maintain aspect ratio */
-    /* max-width: 100%; Ensure it doesn't overflow the screen */
-  /* } */ */
+    grid-column: 1; /* Full width
+    height: auto; /* Maintain aspect ratio
+    /* max-width: 100%; /* Ensure it doesn't overflow the screen
+  }
+   /*
 
   /* .steel-service-blurb,
   .service-1,
@@ -1277,7 +1283,7 @@ header.scrolled nav a.contact-button {
     /* height: 40px; Maintain icon height */
     /* margin-bottom: 10px; Adjust as needed */
   /* }
-} */ */ */
+} */
 
 
 
@@ -1368,7 +1374,6 @@ color: black;
 .hero-product-1 {
   grid-column: 1;
   grid-row: 2;
-  align-self: left;
 }
 
 @media (max-width: 768px) {
@@ -1495,7 +1500,7 @@ color: black;
   font-size: 14px;
   background-color: darkred;
   height: 1000px;
-  scroll-margin-top: 30px;  
+  scroll-margin-top: 30px;
 }
 
 .contact-us-content h2 {
@@ -1639,9 +1644,9 @@ position: relative;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
     height: auto;
-   
+
   }
-  
+
   .contact-us-content h3 {
     grid-row: 1;
     grid-column: 1; /* Ensure it spans the whole width */
@@ -1660,12 +1665,12 @@ position: relative;
 
   .contactForm {
     grid-row: 2;
-    grid-column: 1; 
-    margin-right: 0; 
+    grid-column: 1;
+    margin-right: 0;
     margin-top: 1vh;
     width: 80%;
     justify-self: center;
-   
+
   }
   .map{
     grid-row: 4;
@@ -1677,10 +1682,10 @@ position: relative;
     grid-row: 4 ;
     grid-column: 1; /* Ensure it spans the whole width */
     margin-right: 0; /* Reset margin for mobile view */
-    margin-top: 1vh;   
+    margin-top: 1vh;
     width: 90%;
     margin-left: 5vw;
-   
+
 
   }
 }
@@ -2144,7 +2149,7 @@ footer {
   .steel-products {
     display: grid;
     grid-template-columns: 1fr; /* Single column layout */
-    grid-template-rows: repeat (6,auto);
+    grid-template-rows: repeat(6,auto);
     gap: 2vh; /* Add some gap between items */
     margin-top: 1vh; /* Adjust margins for better spacing on mobile */
     margin-bottom: 50px;
@@ -2173,7 +2178,7 @@ footer {
     grid-column: 1; /* Full width */
     grid-row: auto;
     width: 80vw; /* Full width */
-    height: 90%; /* Auto height */  
+    height: 90%; /* Auto height */
   }
 
   .steel-product-1 img,
@@ -2212,6 +2217,315 @@ footer {
   .steel-product-6 .card-back {
     margin-top: 20px; /* Adjust margin */
     padding: 10px; /* Adjust padding */
+  }
+}
+
+/* services page styling */
+
+/* services hero layout */
+
+.services-hero {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: minmax(auto, max-content);
+  font-family: 'montserrat', sans-serif;
+  background-image: url('../img/london.jpg');
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+}
+
+.services-hero h1 {
+  display: inline-block; /* Ensures proper alignment and animation */
+  font-family: "montserrat", sans-serif;
+  font-size: 5vw;
+  font-weight: 400;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  margin-top: 110px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+.services-hero h2 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  margin-top: 250px;
+  margin-left: 20px;
+}
+
+/* Our Products section */
+
+.our-services-content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0px;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+  background-color: darkred;
+  scroll-margin-top:100px;
+  padding-bottom: 50px;
+}
+
+
+.our-services .our-services-blurb h2  {
+  font-family: "montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  position: relative;
+}
+
+.our-services .our-services-blurb h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust the position of the divider */
+  left: 25%; /* Center the divider horizontally */
+  transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
+  width: 210px; /* Adjust the width of the divider */
+  height: 2px; /* Adjust the height of the divider */
+  background-color: white; /* Color of the divider */
+  border-radius: 5px; /* Optional: Add rounded corners to the divider */
+}
+
+.our-services p {
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.our-services .our-services-1 h2,
+.our-services .our-services-2 h2,
+.our-services .our-services-3 h2 {
+  font-family: "montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+
+.our-services-blurb {
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+  padding-top: 24px;
+  position: relative;
+}
+
+.our-services-1 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.our-services-1 .material-symbols-outlined {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-services-2 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.our-services-2 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-services-3 {
+  grid-column: 2 / 5;
+  padding-top: 24px;
+  position: relative;
+  margin-left: 60px;
+}
+
+.our-services-3 .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  width: 40px;
+  height: 40px;
+  font-family: 'Material Symbols Outlined';
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* our products media query */
+@media (max-width: 768px) {
+  .our-services-content {
+    grid-template-columns: 1fr; /* Use a single column layout for smaller screens */
+    grid-gap: -5vh; /* Increase grid gap to avoid content squeezing */
+    scroll-margin-top: 50px;
+    background-color: darkred;
+    border-radius: 0 0 0 0; /* Adjust border-radius for aesthetic fitting */
+    padding: 20px; /* Increase padding for better content encapsulation */
+  }
+
+  .our-services .our-services-blurb h2 {
+    font-size: 24px;
+    margin-bottom: 10px; /* Ensure space below headings */
+    text-decoration: none; /* Remove underline */
+    position: relative; /* Ensure relative positioning for the underline */
+    display: inline-block; /* Make the title behave like a block element */
+  }
+
+  .our-services .our-services-blurb h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 50%; /* Start the underline from the left */
+    width: 100%; /* Make the underline span the entire width */
+    height: 2px; /* Adjust the height of the underline */
+    background-color: white; /* Color of the underline */
+  }
+
+  .our-services p {
+    font-size: 16px;
+  }
+
+  .our-services .our-services h2,
+  .our-services .our-services h2,
+  .our-services .our-services h2 {
+    font-size: 18px;
+  }
+
+  /* Adjust the layout of content areas to prevent icon overlap */
+  .our-services-blurb,
+  .our-services-1,
+  .our-services-2,
+  .our-services-3,
+  .our-services-4 {
+    grid-column: 1 / -1;
+    padding: 20px; /* Increase padding for clarity */
+    position: relative; /* Ensure positioning context is set */
+  }
+
+
+  .our-services-1 .material-symbols-outlined,
+  .our-services-2 .material-symbols-outlined,
+  .our-services-3 .material-symbols-outlined,
+  .our-services-3 .material-symbols-outlined{
+    position: absolute;
+    left: -60px; /* Adjust left positioning to prevent overlap */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 30px; /* Adjust icon size */
+    height: 30px; /* Adjust icon size */
+    font-size: 30px; /* Adjust icon font size for consistency */
+  }
+}
+
+/* services hero layout */
+
+.services-hero h1 {
+  display: inline-block; /* Ensures proper alignment and animation */
+  font-family: "montserrat", sans-serif;
+  font-size: 90px;
+  font-weight: 400;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  margin-bottom: 0;
+  /* margin-top: 20vh; */
+  margin-left: 20px;
+  color: black;
+}
+
+.all-services {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  scroll-margin-top: 100px;
+  position: relative; /* Ensure positioning context for pseudo-elements */
+  background-color: #f4ede4;
+}
+
+.services-blurb {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns items to the start of the container */
+  gap: 10px; /* Adjust this value to control the space between items */
+  align-items: start; /* Align items to the start of the flex container */
+  grid-column: 4 / 8;
+  grid-row: 1 / 1;
+  padding: 20px;
+  text-align: left;
+  background-color: #f4ede4;
+  /* margin-top: 100px;
+  margin-left: 100px; */
+}
+
+.services-blurb h2  {
+  font-family: "montserrat", sans-serif;
+  font-size: 5vw;
+  font-weight: 400;
+  font-style: normal;
+  color: darkred;
+  margin-bottom: 0;
+}
+
+.services-blurb p {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.services-blurb-img {
+  grid-column: 1 / 4; /* Span full width */
+  grid-row: 1 / 2;
+  background-image: url('../img/shipping.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; /* Lower z-index so text can appear above */
+  position: relative; /* Necessary for absolute positioning of the pseudo-element */
+  height: 100vh;
+}
+
+
+.hero-services-1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-product-1 {
+    display: none; /* Hide the hero product card on mobile */
+  }
+
+  .product-blurb-img{
+    height: 90vh;
   }
 }
 
