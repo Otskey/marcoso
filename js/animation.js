@@ -31,33 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   ];
 
-  // Initialize new Lottie animation for the dropdown
-  const dropdownAnimation = lottie.loadAnimation({
-    container: document.getElementById('lottie-animation-6'), // Ensure this element exists in your HTML
-    renderer: 'svg',
-    loop: false,
-    autoplay: false,
-    path: '../animations/dropdown.json' // Your JSON file for dropdown
-  });
-
-// Calculate the halfway frame once the animation data is loaded
-  let halfwayFrame = 0;
-  dropdownAnimation.addEventListener('data_ready', () => {
-    halfwayFrame = Math.floor(dropdownAnimation.totalFrames / 2);
-  });
-
-// Attach the toggle event to `<details>`
-  const details = document.querySelector('.hero-product-1 details');
-  details.addEventListener('toggle', function() {
-    if (details.open) {
-      // Play the animation until halfway then pause
-      dropdownAnimation.playSegments([0, halfwayFrame], true);
-    } else {
-      // If closed, reset the animation to the start
-      dropdownAnimation.goToAndStop(0, true);
-    }
-  });
-
   let currentIndex = 0; // Track the current index for sequential playback
 
   // Function to check if the element is in the viewport
@@ -78,12 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
       animation.play();
       animation.addEventListener('complete', () => {
         currentIndex++;
-        if (currentIndex === 2) { // Conditional delay between second and third animations
+        // Check if the current animation is the second one (index 1) and prepare to start the third (index 2)
+        if (currentIndex === 2) { // Since arrays are 0-based, 1 is the second animation, and the next one is 2
           setTimeout(() => {
             if (currentIndex < animations.length) {
               playInSequence(); // Play the third animation after a delay
             }
-          }, 500); // Adjusted delay
+          }, 0); // 500 milliseconds delay, adjust as necessary
         } else {
           if (currentIndex < animations.length) {
             playInSequence(); // Immediately proceed to the next animation for others
