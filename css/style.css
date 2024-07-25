@@ -928,92 +928,7 @@ header.scrolled nav a.contact-button {
   color: black; /* Change text color on hover */
 }
 
-/* Base styles for the strengths section */
-.strengths {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  margin-bottom: 0px;
-  scroll-margin-top: 100px;
-  background: linear-gradient(to bottom, #8B0000 50%, #f4ede4 50%);
-  background-size: cover;
-}
 
-.strengths-1 {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.strengths-2 {
-  grid-column: 4;
-  grid-row: 1;
-}
-
-.strengths-3 {
-  grid-column: 6;
-  grid-row: 1;
-}
-
-.strengths-4 {
-  grid-column: 8;
-  grid-row: 1;
-}
-
-.strengths-1,
-.strengths-2,
-.strengths-3,
-.strengths-4 {
-  border: 2px solid ghostwhite;
-  border-radius: 10px;
-  padding: 20px; /* Add some padding */
-  margin: 15px; /* Add some margin */
-  background-color: white;
-  color: black;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  position: relative;
-}
-
-.strengths-1 h2,
-.strengths-2 h2,
-.strengths-3 h2,
-.strengths-4 h2 {
-  font-family: "montserrat", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  font-style: normal;
-  color: black;
-  margin-top: 30%;
-}
-
-.strengths-1 p,
-.strengths-2 p,
-.strengths-3 p,
-.strengths-4 p {
-  font-family: "montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  color: black;
-}
-
-.lottie-icon {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  margin-top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.strengths-1:hover,
-.strengths-2:hover,
-.strengths-3:hover,
-.strengths-4:hover {
-  background-color: ghostwhite; /* Change background color on hover */
-  color: black; /* Change text color on hover */
-}
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
 @media screen and (max-width: 768px) {
@@ -1061,51 +976,43 @@ header.scrolled nav a.contact-button {
   }
 }
 
-/* Media Query for medium screens (769px to 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .strengths {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two column layout */
-    grid-template-rows: repeat(2, auto); /* Two rows for four cards */
-    background: linear-gradient(to bottom, #8B0000 50%, #f4ede4 50%);
-    background-size: cover;
-    padding: 20px; /* Adjust padding for larger screens */
-    scroll-margin-top: 70px; /* Adjust scroll margin */
-    padding-bottom: 10vh;
-  }
+/* Media Query for medium screens (769px to 1200px) */
+  @media (min-width: 769px) and (max-width: 1400px) {
+    .strengths {
+      grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
+    }
 
-  .strengths-1,
-  .strengths-2,
-  .strengths-3,
-  .strengths-4 {
-    grid-column: auto; /* Auto place columns */
-    grid-row: auto; /* Automatically place rows */
-    width: 100%; /* Adjust width */
-    height: auto; /* Adjust height */
-    margin: 15px; /* Adjust margin */
-  }
+    .strengths-1,
+    .strengths-2,
+    .strengths-3,
+    .strengths-4 {
+      width: 15vw; /* Adjust width to fit within the screen */
+      height: 37vh;
+      margin: 2vw; /* Adjust margin for medium screens */
+      padding: 2rem; /* Adjust padding for medium screens */
+      max-width: 100%;
+    }
 
-  .strengths-1 h2,
-  .strengths-2 h2,
-  .strengths-3 h2,
-  .strengths-4 h2 {
-    font-size: 20px; /* Adjusted font size for larger screens */
-    margin-top: 15%; /* Adjust top margin */
-  }
+    .strengths-1 h2,
+    .strengths-2 h2,
+    .strengths-3 h2,
+    .strengths-4 h2 {
+      font-size: 1rem; /* Slightly reduce font size */
+      margin-top: 30%; /* Adjust margin top */
+    }
 
-  .strengths-1 p,
-  .strengths-2 p,
-  .strengths-3 p,
-  .strengths-4 p {
-    font-size: 16px; /* Adjusted font size for larger screens */
-  }
+    .strengths-1 p,
+    .strengths-2 p,
+    .strengths-3 p,
+    .strengths-4 p {
+      font-size: calc(0.4vw + 0.4vh + 0.4rem); /* Adjust font size based on viewport units */
+    }
 
-  .lottie-icon {
-    width: 90px; /* Adjust icon size */
-    height: 90px; /* Adjust icon size */
-    margin-top: 15%; /* Adjust top margin */
+    .lottie-icon {
+      width: 8vh; /* Slightly reduce icon size */
+      height: 8vh;
+    }
   }
-}
 
 
 
@@ -1355,20 +1262,21 @@ color: black;
   height: 100vh;
 }
 
-.view-products-button {
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Space between the buttons */
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.view-products-button, .view-services-button {
   background-color: darkred;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  font-family: "montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   white-space: nowrap; /* Prevent button text from wrapping */
-  margin-top: 10px;
-  align-self: center;
-}
-
-.view-products-button:hover {
-  background-color: rosybrown;
 }
 
 .hero-product-1 {
@@ -1383,6 +1291,14 @@ color: black;
 
   .product-blurb-img{
     height: 90vh;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Space between the buttons */
+    margin-top: 10px; /* Adjust as needed */
   }
 }
 
@@ -1512,6 +1428,19 @@ color: black;
   margin-top: 90px;
   color: white;
   margin-left: 14%;
+  position: relative; /* Ensure the h2 element is the reference for the ::after element */
+}
+
+.contact-us-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust the position of the divider */
+  left: 15%; /* Center the divider horizontally */
+  transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
+  width: 210px; /* Adjust the width of the divider */
+  height: 2px; /* Adjust the height of the divider */
+  background-color: white; /* Color of the divider */
+  border-radius: 5px; /* Optional: Add rounded corners to the divider */
 }
 
 /*Contact us form styling */
@@ -1751,7 +1680,7 @@ footer {
   font-family: 'montserrat', sans-serif;
   background-image: url('../img/london.jpg');
   background-size: cover;
-  height: 500px;
+  height: 75vh;
   width: 100%;
 }
 
@@ -1773,7 +1702,6 @@ footer {
   margin-left: 20px;
 }
 
-/* Our Products section */
 
 .our-products-content {
   display: grid;
@@ -1782,12 +1710,11 @@ footer {
   grid-row-gap: 1px;
   grid-column-gap: 1px;
   background-color: darkred;
-  scroll-margin-top:100px;
+  scroll-margin-top: 100px;
   padding-bottom: 50px;
 }
 
-
-.our-products .our-products-blurb h2  {
+.our-products .our-products-blurb h2 {
   font-family: "montserrat", sans-serif;
   font-size: 32px;
   font-weight: 400;
@@ -1818,7 +1745,8 @@ footer {
 
 .our-products .our-products-1 h2,
 .our-products .our-products-2 h2,
-.our-products .our-products-3 h2 {
+.our-products .our-products-3 h2,
+.our-products .our-products-4 h2 {
   font-family: "montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -1833,18 +1761,22 @@ footer {
   position: relative;
 }
 
-.our-products-1 {
+.our-products-1,
+.our-products-2,
+.our-products-3,
+.our-products-4 {
+  display: flex;
+  align-items: center;
   grid-column: 2 / 5;
   padding-top: 24px;
   position: relative;
   margin-left: 60px;
 }
 
-.our-products-1 .material-symbols-outlined {
-  position: absolute;
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
+.our-products-1 .material-symbols-outlined,
+.our-products-2 .material-symbols-outlined,
+.our-products-3 .material-symbols-outlined,
+.our-products-4 .material-symbols-outlined {
   width: 40px;
   height: 40px;
   font-family: 'Material Symbols Outlined';
@@ -1853,50 +1785,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.our-products-2 {
-  grid-column: 2 / 5;
-  padding-top: 24px;
-  position: relative;
-  margin-left: 60px;
-}
-
-.our-products-2 .material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
-  font-family: 'Material Symbols Outlined';
-  font-size: 36px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.our-products-3 {
-  grid-column: 2 / 5;
-  padding-top: 24px;
-  position: relative;
-  margin-left: 60px;
-}
-
-.our-products-3 .material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
-  font-family: 'Material Symbols Outlined';
-  font-size: 36px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-right: 20px; /* Space between the icon and the text */
 }
 
 
@@ -1954,7 +1843,8 @@ footer {
   .our-products-1 .material-symbols-outlined,
   .our-products-2 .material-symbols-outlined,
   .our-products-3 .material-symbols-outlined,
-  .our-products-3 .material-symbols-outlined{
+  .our-products-3 .material-symbols-outlined,
+  .our-products-4 .material-symbols-outlined {
     position: absolute;
     left: -60px; /* Adjust left positioning to prevent overlap */
     top: 50%;
@@ -2451,7 +2341,7 @@ footer {
 .services-hero h1 {
   display: inline-block; /* Ensures proper alignment and animation */
   font-family: "montserrat", sans-serif;
-  font-size: 90px;
+  font-size: 5vw;
   font-weight: 400;
   grid-column: 1 / 4;
   grid-row: 1 / 2;
