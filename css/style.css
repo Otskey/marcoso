@@ -2122,7 +2122,7 @@ footer {
   font-family: 'montserrat', sans-serif;
   background-image: url('../img/london.jpg');
   background-size: cover;
-  height: 500px;
+  height: 75vh;
   width: 100%;
 }
 
@@ -2144,7 +2144,7 @@ footer {
   margin-left: 20px;
 }
 
-/* Our Products section */
+/* Our services blurb section */
 
 .our-services-content {
   display: grid;
