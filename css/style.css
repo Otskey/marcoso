@@ -2120,8 +2120,10 @@ footer {
   grid-template-rows: repeat(3, 1fr);
   grid-auto-rows: minmax(auto, max-content);
   font-family: 'montserrat', sans-serif;
-  background-image: url('../img/london.jpg');
-  background-size: cover;
+  background-image: url('../img/services-hero-2.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 75vh;
   width: 100%;
 }
@@ -2271,7 +2273,7 @@ footer {
 }
 
 
-/* our products media query */
+/* our services media query */
 @media (max-width: 768px) {
   .our-services-content {
     grid-template-columns: 1fr; /* Use a single column layout for smaller screens */
