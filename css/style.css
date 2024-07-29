@@ -1435,9 +1435,9 @@ color: black;
   content: "";
   position: absolute;
   bottom: -10px; /* Adjust the position of the divider */
-  left: 15%; /* Center the divider horizontally */
+  left: 17%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
-  width: 210px; /* Adjust the width of the divider */
+  width: 10vw; /* Adjust the width of the divider */
   height: 2px; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
   border-radius: 5px; /* Optional: Add rounded corners to the divider */
@@ -2173,9 +2173,9 @@ footer {
   content: "";
   position: absolute;
   bottom: -10px; /* Adjust the position of the divider */
-  left: 25%; /* Center the divider horizontally */
+  left: 34%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
-  width: 210px; /* Adjust the width of the divider */
+  width: 17vw; /* Adjust the width of the divider */
   height: 2px; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
   border-radius: 5px; /* Optional: Add rounded corners to the divider */
