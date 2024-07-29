@@ -1680,7 +1680,7 @@ footer {
   font-family: 'montserrat', sans-serif;
   background-image: url('../img/london.jpg');
   background-size: cover;
-  height: 75vh;
+  height: 85vh;
   width: 100%;
 }
 
@@ -2121,10 +2121,10 @@ footer {
   grid-auto-rows: minmax(auto, max-content);
   font-family: 'montserrat', sans-serif;
   background-image: url('../img/services-hero-2.jpg');
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 75vh;
+  height: 80vh; /* Use viewport height for full screen */
   width: 100%;
 }
 
@@ -2275,6 +2275,9 @@ footer {
 
 /* our services media query */
 @media (max-width: 768px) {
+  .services-hero {
+    height: 75vh; /* Smaller height for mobile screens */
+  }
   .our-services-content {
     grid-template-columns: 1fr; /* Use a single column layout for smaller screens */
     grid-gap: -5vh; /* Increase grid gap to avoid content squeezing */
