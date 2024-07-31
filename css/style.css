@@ -625,12 +625,11 @@ header.scrolled nav a.contact-button {
   content: "";
   position: absolute;
   bottom: -0.625rem; /* Adjust the position of the divider */
-  left: 50%;
-  transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
+  left: 0.8em; /* Position relative to the h2 text */
   width: 10rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
-  border-radius: 0.3125rem; /* Optional: Add rounded corners to the divider */
+  border-radius: 0.3125rem;
 }
 
 .about-us p {
@@ -652,7 +651,7 @@ header.scrolled nav a.contact-button {
 }
 
 .about-us-blurb {
-  grid-column: 2 / 4;
+  grid-column: 2 / 5;
   grid-row: 1 / 4;
   padding-top: 1.5rem;
   position: relative;
@@ -725,6 +724,7 @@ header.scrolled nav a.contact-button {
 }
 
 
+
 /* about us media query */
 @media (max-width: 768px) {
   .about-us-content {
@@ -748,7 +748,7 @@ header.scrolled nav a.contact-button {
     content: "";
     position: absolute;
     bottom: -2px; /* Position the underline below the text */
-    left: 66%; /* Start the underline from the left */
+    left: 20%; /* Start the underline from the left */
     width: 100%; /* Make the underline span the entire width */
     height: 2px; /* Adjust the height of the underline */
     background-color: white; /* Color of the underline */
@@ -778,7 +778,7 @@ header.scrolled nav a.contact-button {
   .about-us-2 .material-symbols-outlined,
   .about-us-3 .material-symbols-outlined {
     position: absolute;
-    left: -40px; /* Adjust left positioning to prevent overlap */
+    left: -30px; /* Adjust left positioning to prevent overlap */
     top: 50%;
     transform: translateY(-50%); /* Center vertically */
     width: 30px; /* Adjust icon size */
@@ -1691,8 +1691,7 @@ footer {
   content: "";
   position: absolute;
   bottom: -0.625rem; /* Adjust the position of the divider */
-  left: 12.5%; /* Center the divider horizontally */
-  transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
+  left: 1em; /* Position relative to the h2 text */
   width: 13rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
@@ -1776,11 +1775,12 @@ footer {
   .our-products .our-products-blurb h2::after {
     content: "";
     position: absolute;
-    bottom: -2px; /* Position the underline below the text */
-    left: 62%; /* Start the underline from the left */
-    width: 100%; /* Make the underline span the entire width */
-    height: 2px; /* Adjust the height of the underline */
-    background-color: white; /* Color of the underline */
+    bottom: -0.625rem; /* Adjust the position of the divider */
+    left: 0.8em; /* Position relative to the h2 text */
+    width: 10rem; /* Adjust the width of the divider */
+    height: 0.125rem; /* Adjust the height of the divider */
+    background-color: white; /* Color of the divider */
+    border-radius: 0.3125rem;
   }
 
   .our-products p {
@@ -2138,12 +2138,11 @@ footer {
   content: "";
   position: absolute;
   bottom: -0.625rem; /* Adjust the position of the divider */
-  left: 22%; /* Center the divider horizontally */
-  transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
+  left: 0.8em; /* Position relative to the h2 text */
   width: 20rem; /* Adjust the width of the divider */
-  height: 2px; /* Adjust the height of the divider */
+  height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
-  border-radius: 0.3125rem; /* Optional: Add rounded corners to the divider */
+  border-radius: 0.3125rem;
 }
 
 .our-services p {
@@ -2264,8 +2263,8 @@ footer {
     content: "";
     position: absolute;
     bottom: -2px; /* Position the underline below the text */
-    left: 57%; /* Start the underline from the left */
-    width: 100%; /* Make the underline span the entire width */
+    left: 7%; /* Start the underline from the left */
+    width: 16rem; /* Make the underline span the entire width */
     height: 2px; /* Adjust the height of the underline */
     background-color: white; /* Color of the underline */
   }
@@ -2297,7 +2296,7 @@ footer {
   .our-services-3 .material-symbols-outlined,
   .our-services-3 .material-symbols-outlined{
     position: absolute;
-    left: -60px; /* Adjust left positioning to prevent overlap */
+    left: -30px; /* Adjust left positioning to prevent overlap */
     top: 50%;
     transform: translateY(-50%); /* Center vertically */
     width: 30px; /* Adjust icon size */
