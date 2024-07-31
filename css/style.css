@@ -1521,6 +1521,55 @@ position: relative;
   filter: hue-rotate(300deg); /* Adjust the hue to change the color */
 }
 
+/* Media query for screen sizes between 769px and 1465px */
+@media (min-width: 769px) and (max-width: 1465px) {
+
+  .our-locations-content {
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
+    margin-left: 15%;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .contact-us-content {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, auto);
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .contact-us-content h2 {
+    grid-column: 1 / 4; /* Ensure the heading spans the necessary columns */
+    margin-left: 10%; /* Adjust margin to fit smaller screens */
+  }
+
+  .contactForm {
+    grid-column: 5 / 8; /* Ensure the form spans the necessary columns */
+    margin-right: 5%; /* Adjust margin to fit smaller screens */
+    max-width: 75%; /* Ensure form fits within available space */
+    max-height: 80%;
+    grid-row: 2 / 4;
+  }
+
+  .our-locations-content {
+    grid-column: 1 / 4; /* Ensure the content spans the necessary columns */
+    margin-left: 10%; /* Adjust margin to fit smaller screens */
+  }
+
+  .map {
+    grid-column: 1 / 4; /* Ensure the map spans the necessary columns */
+    grid-row: 3 / 4; /* Move the map to its own row */
+    margin-top: 0; /* Remove unnecessary margin */
+  }
+
+  .map #mapid {
+    margin-top: 1%; /* Adjust margin to fit smaller screens */
+    margin-left: 10%; /* Adjust margin to fit smaller screens */
+    width: 80%; /* Adjust width to fit smaller screens */
+    margin-bottom: 20%;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-us-content {
     grid-template-columns: 1fr;
