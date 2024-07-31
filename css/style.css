@@ -1387,13 +1387,12 @@ color: black;
 .contact-us-content h2::after {
   content: "";
   position: absolute;
-  bottom: -10px; /* Adjust the position of the divider */
-  left: 17%; /* Center the divider horizontally */
-  transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
-  width: 10vw; /* Adjust the width of the divider */
-  height: 2px; /* Adjust the height of the divider */
+  bottom: -0.625rem; /* Adjust the position of the divider */
+  left: 0.8em; /* Position relative to the h2 text */
+  width: 12rem; /* Adjust the width of the divider */
+  height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
-  border-radius: 5px; /* Optional: Add rounded corners to the divider */
+  border-radius: 0.3125rem;
 }
 
 /*Contact us form styling */
