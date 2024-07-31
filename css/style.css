@@ -634,6 +634,7 @@ header.scrolled nav a.contact-button {
   background-color: white; /* Color of the divider */
   border-radius: 5px; /* Optional: Add rounded corners to the divider */
 }
+
 .about-us p {
   font-family: "montserrat", sans-serif;
   font-size: 18px;
@@ -749,7 +750,7 @@ header.scrolled nav a.contact-button {
     content: "";
     position: absolute;
     bottom: -2px; /* Position the underline below the text */
-    left: 50%; /* Start the underline from the left */
+    left: 66%; /* Start the underline from the left */
     width: 100%; /* Make the underline span the entire width */
     height: 2px; /* Adjust the height of the underline */
     background-color: white; /* Color of the underline */
@@ -789,13 +790,23 @@ header.scrolled nav a.contact-button {
 }
 
 /* Media Query for larger screens (laptops and desktops) */
-@media (min-width: 769px) and (max-width: 1080px) {
+@media (min-width: 769px) and (max-width: 1085px) {
   .about-us-content {
     grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns for larger screens */
     margin-bottom: 40px;
     grid-gap: 10px; /* Adjust grid gap */
     scroll-margin-top: 50px;
     padding: 20px; /* Adjust padding */
+  }
+
+  .about-us .about-us-blurb h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 70%; /* Start the underline from the left */
+    width: 100%; /* Make the underline span the entire width */
+    height: 2px; /* Adjust the height of the underline */
+    background-color: white; /* Color of the underline */
   }
 
   .about-us .about-us-blurb h2 {
@@ -1573,7 +1584,18 @@ position: relative;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
     height: auto;
+  }
 
+  .contact-us-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust the position of the divider */
+    left: 36%; /* Center the divider horizontally */
+    transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
+    width: 50vw; /* Adjust the width of the divider */
+    height: 2px; /* Adjust the height of the divider */
+    background-color: white; /* Color of the divider */
+    border-radius: 5px; /* Optional: Add rounded corners to the divider */
   }
 
   .contact-us-content h3 {
@@ -1727,7 +1749,7 @@ footer {
   content: "";
   position: absolute;
   bottom: -10px; /* Adjust the position of the divider */
-  left: 25%; /* Center the divider horizontally */
+  left: 12.5%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
   width: 210px; /* Adjust the width of the divider */
   height: 2px; /* Adjust the height of the divider */
@@ -1755,7 +1777,7 @@ footer {
 }
 
 .our-products-blurb {
-  grid-column: 2 / 4;
+  grid-column: 2 / 6;
   grid-row: 1 / 4;
   padding-top: 24px;
   position: relative;
@@ -1812,7 +1834,7 @@ footer {
     content: "";
     position: absolute;
     bottom: -2px; /* Position the underline below the text */
-    left: 50%; /* Start the underline from the left */
+    left: 62%; /* Start the underline from the left */
     width: 100%; /* Make the underline span the entire width */
     height: 2px; /* Adjust the height of the underline */
     background-color: white; /* Color of the underline */
@@ -2173,7 +2195,7 @@ footer {
   content: "";
   position: absolute;
   bottom: -10px; /* Adjust the position of the divider */
-  left: 34%; /* Center the divider horizontally */
+  left: 22.5%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
   width: 17vw; /* Adjust the width of the divider */
   height: 2px; /* Adjust the height of the divider */
@@ -2200,7 +2222,7 @@ footer {
 }
 
 .our-services-blurb {
-  grid-column: 2 / 4;
+  grid-column: 2 / 5;
   grid-row: 1 / 4;
   padding-top: 24px;
   position: relative;
@@ -2299,7 +2321,7 @@ footer {
     content: "";
     position: absolute;
     bottom: -2px; /* Position the underline below the text */
-    left: 50%; /* Start the underline from the left */
+    left: 57%; /* Start the underline from the left */
     width: 100%; /* Make the underline span the entire width */
     height: 2px; /* Adjust the height of the underline */
     background-color: white; /* Color of the underline */
