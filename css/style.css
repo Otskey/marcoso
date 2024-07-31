@@ -604,19 +604,17 @@ header.scrolled nav a.contact-button {
 .about-us-content {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  margin-bottom: 0px;
-  grid-row-gap: 1px;
-  grid-column-gap: 1px;
-  scroll-margin-top:100px;
+  margin-bottom: 0;
+  grid-row-gap: 0.1rem;
+  grid-column-gap: 0.1rem;
+  scroll-margin-top: 10vh;
   background-color: darkred;
-  padding-bottom: 50px;
-
+  padding-bottom: 5rem;
 }
 
-
-.about-us .about-us-blurb h2  {
+.about-us .about-us-blurb h2 {
   font-family: "montserrat", sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -626,18 +624,18 @@ header.scrolled nav a.contact-button {
 .about-us .about-us-blurb h2::after {
   content: "";
   position: absolute;
-  bottom: -10px; /* Adjust the position of the divider */
-  left: 18%; /* Center the divider horizontally */
+  bottom: -0.625rem; /* Adjust the position of the divider */
+  left: 50%;
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
-  width: 160px; /* Adjust the width of the divider */
-  height: 2px; /* Adjust the height of the divider */
+  width: 10rem; /* Adjust the width of the divider */
+  height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
-  border-radius: 5px; /* Optional: Add rounded corners to the divider */
+  border-radius: 0.3125rem; /* Optional: Add rounded corners to the divider */
 }
 
 .about-us p {
   font-family: "montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -647,7 +645,7 @@ header.scrolled nav a.contact-button {
 .about-us .about-us-2 h2,
 .about-us .about-us-3 h2 {
   font-family: "montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   font-style: normal;
   color: white;
@@ -656,26 +654,26 @@ header.scrolled nav a.contact-button {
 .about-us-blurb {
   grid-column: 2 / 4;
   grid-row: 1 / 4;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
 }
 
 .about-us-1 {
   grid-column: 2 / 5;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
-  margin-left: 60px;
+  margin-left: 5%;
 }
 
 .about-us-1 .material-symbols-outlined {
   position: absolute;
-  left: -60px;
+  left: -3rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   font-family: 'Material Symbols Outlined';
-  font-size: 36px;
+  font-size: 2.25rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -684,20 +682,20 @@ header.scrolled nav a.contact-button {
 
 .about-us-2 {
   grid-column: 2 / 5;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
-  margin-left: 60px;
+  margin-left: 5%;
 }
 
 .about-us-2 .material-symbols-outlined {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
+  left: -3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   font-family: 'Material Symbols Outlined';
-  font-size: 36px;
+  font-size: 2.25rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -706,20 +704,20 @@ header.scrolled nav a.contact-button {
 
 .about-us-3 {
   grid-column: 2 / 5;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
-  margin-left: 60px;
+  margin-left: 5%;
 }
 
 .about-us-3 .material-symbols-outlined {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
+  left: -3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   font-family: 'Material Symbols Outlined';
-  font-size: 36px;
+  font-size: 2.25rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -789,63 +787,7 @@ header.scrolled nav a.contact-button {
   }
 }
 
-/* Media Query for larger screens (laptops and desktops) */
-@media (min-width: 769px) and (max-width: 1085px) {
-  .about-us-content {
-    grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns for larger screens */
-    margin-bottom: 40px;
-    grid-gap: 10px; /* Adjust grid gap */
-    scroll-margin-top: 50px;
-    padding: 20px; /* Adjust padding */
-  }
 
-  .about-us .about-us-blurb h2::after {
-    content: "";
-    position: absolute;
-    bottom: -2px; /* Position the underline below the text */
-    left: 70%; /* Start the underline from the left */
-    width: 100%; /* Make the underline span the entire width */
-    height: 2px; /* Adjust the height of the underline */
-    background-color: white; /* Color of the underline */
-  }
-
-  .about-us .about-us-blurb h2 {
-    font-size: 28px;
-    margin-bottom: 15px; /* Ensure space below headings */
-  }
-
-  .about-us p {
-    font-size: 16px;
-  }
-
-  .about-us .about-us-1 h2,
-  .about-us .about-us-2 h2,
-  .about-us .about-us-3 h2 {
-    font-size: 18px;
-  }
-
-  .about-us-blurb {
-    grid-column: 1 / 5; /* Adjust the column span for larger screens */
-  }
-
-  .about-us-1,
-  .about-us-2,
-  .about-us-3 {
-    grid-column: 1 / 5; /* Adjust the column span for larger screens */
-  }
-
-  .about-us-1 .material-symbols-outlined,
-  .about-us-2 .material-symbols-outlined,
-  .about-us-3 .material-symbols-outlined {
-    position: absolute;
-    left: -50px; /* Adjust left positioning to prevent overlap */
-    top: 50%;
-    transform: translateY(-50%); /* Center vertically */
-    width: 35px; /* Adjust icon size */
-    height: 35px; /* Adjust icon size */
-    font-size: 35px; /* Adjust icon font size for consistency */
-  }
-}
 
 /* Strengths layout */
 
@@ -1728,17 +1670,17 @@ footer {
 .our-products-content {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  margin-bottom: 0px;
-  grid-row-gap: 1px;
-  grid-column-gap: 1px;
+  margin-bottom: 0;
+  grid-row-gap: 0.1rem;
+  grid-column-gap: 0.1rem;
+  scroll-margin-top: 10vh;
   background-color: darkred;
-  scroll-margin-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
 }
 
 .our-products .our-products-blurb h2 {
   font-family: "montserrat", sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -1748,18 +1690,18 @@ footer {
 .our-products .our-products-blurb h2::after {
   content: "";
   position: absolute;
-  bottom: -10px; /* Adjust the position of the divider */
+  bottom: -0.625rem; /* Adjust the position of the divider */
   left: 12.5%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
-  width: 210px; /* Adjust the width of the divider */
-  height: 2px; /* Adjust the height of the divider */
+  width: 13rem; /* Adjust the width of the divider */
+  height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
-  border-radius: 5px; /* Optional: Add rounded corners to the divider */
+  border-radius: 0.3125rem; /* Optional: Add rounded corners to the divider */
 }
 
 .our-products p {
   font-family: "montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -1770,7 +1712,7 @@ footer {
 .our-products .our-products-3 h2,
 .our-products .our-products-4 h2 {
   font-family: "montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   font-style: normal;
   color: white;
@@ -1779,7 +1721,7 @@ footer {
 .our-products-blurb {
   grid-column: 2 / 6;
   grid-row: 1 / 4;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
 }
 
@@ -1790,28 +1732,29 @@ footer {
   display: flex;
   align-items: center;
   grid-column: 2 / 5;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
-  margin-left: 60px;
+  margin-left: 5%;
 }
 
 .our-products-1 .material-symbols-outlined,
 .our-products-2 .material-symbols-outlined,
 .our-products-3 .material-symbols-outlined,
 .our-products-4 .material-symbols-outlined {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   font-family: 'Material Symbols Outlined';
-  font-size: 36px;
+  font-size: 2.5rem;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px; /* Space between the icon and the text */
+  margin-right: 5%; /* Space between the icon and the text */
 }
 
 
 /* our products media query */
+
 @media (max-width: 768px) {
   .our-products-content {
     grid-template-columns: 1fr; /* Use a single column layout for smaller screens */
@@ -1868,7 +1811,7 @@ footer {
   .our-products-3 .material-symbols-outlined,
   .our-products-4 .material-symbols-outlined {
     position: absolute;
-    left: -60px; /* Adjust left positioning to prevent overlap */
+    left: -30px; /* Adjust left positioning to prevent overlap */
     top: 50%;
     transform: translateY(-50%); /* Center vertically */
     width: 30px; /* Adjust icon size */
@@ -2173,18 +2116,18 @@ footer {
 .our-services-content {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  margin-bottom: 0px;
-  grid-row-gap: 1px;
-  grid-column-gap: 1px;
+  margin-bottom: 0;
+  grid-row-gap: 0.1rem;
+  grid-column-gap: 0.1rem;
+  scroll-margin-top: 10vh;
   background-color: darkred;
-  scroll-margin-top:100px;
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
 }
 
 
 .our-services .our-services-blurb h2  {
   font-family: "montserrat", sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -2194,18 +2137,18 @@ footer {
 .our-services .our-services-blurb h2::after {
   content: "";
   position: absolute;
-  bottom: -10px; /* Adjust the position of the divider */
-  left: 22.5%; /* Center the divider horizontally */
+  bottom: -0.625rem; /* Adjust the position of the divider */
+  left: 22%; /* Center the divider horizontally */
   transform: translateX(-50%); /* Ensure the divider is centered with respect to the h2 element */
-  width: 17vw; /* Adjust the width of the divider */
+  width: 20rem; /* Adjust the width of the divider */
   height: 2px; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
-  border-radius: 5px; /* Optional: Add rounded corners to the divider */
+  border-radius: 0.3125rem; /* Optional: Add rounded corners to the divider */
 }
 
 .our-services p {
   font-family: "montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -2215,7 +2158,7 @@ footer {
 .our-services .our-services-2 h2,
 .our-services .our-services-3 h2 {
   font-family: "montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   font-style: normal;
   color: white;
@@ -2224,26 +2167,26 @@ footer {
 .our-services-blurb {
   grid-column: 2 / 5;
   grid-row: 1 / 4;
-  padding-top: 24px;
+  padding-top: 1.25rem;
   position: relative;
 }
 
 .our-services-1 {
   grid-column: 2 / 5;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
-  margin-left: 60px;
+  margin-left: 5%;;
 }
 
 .our-services-1 .material-symbols-outlined {
   position: absolute;
-  left: -60px;
+  left: -3rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   font-family: 'Material Symbols Outlined';
-  font-size: 36px;
+  font-size: 2.25rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -2252,20 +2195,20 @@ footer {
 
 .our-services-2 {
   grid-column: 2 / 5;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
-  margin-left: 60px;
+  margin-left: 5%;
 }
 
 .our-services-2 .material-symbols-outlined {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
+  left: -3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   font-family: 'Material Symbols Outlined';
-  font-size: 36px;
+  font-size: 2.25rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -2274,9 +2217,9 @@ footer {
 
 .our-services-3 {
   grid-column: 2 / 5;
-  padding-top: 24px;
+  padding-top: 1.5rem;
   position: relative;
-  margin-left: 60px;
+  margin-left: 5%;;
 }
 
 .our-services-3 .material-symbols-outlined {
