@@ -1463,6 +1463,7 @@ color: black;
   grid-row: 2 / 2;
   margin-left: 15%;
   position: relative;
+  z-index: 1;
 }
 
 .our-locations-content h2 {
