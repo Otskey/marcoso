@@ -601,6 +601,10 @@ header.scrolled nav a.contact-button {
   }
 }
 
+#about-us {
+  scroll-margin-top: 10vh;
+}
+
 .about-us-content {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
