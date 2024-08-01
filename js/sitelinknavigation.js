@@ -7,19 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     if (target) {
       // Check if the target is the contact us section
-      if (this.getAttribute('href') === '#services') {
-        document.querySelector('.services-content').scrollIntoView({
-          behavior: 'smooth',
-          block: 'start' // Adjust this value if needed
-        });
-      }
-      else if (this.getAttribute('href') === '#products') {
-        document.querySelector('.steel-products').scrollIntoView({
-          behavior: 'smooth',
-          block: 'start' // Adjust this value if needed
-        });
-      }
-      else if (this.getAttribute('href') === '#contact-us') {
+      if (this.getAttribute('href') === '#contact-us') {
         document.querySelector('.contact-us-content').scrollIntoView({
           behavior: 'smooth',
           block: 'start' // Adjust this value if needed
@@ -53,3 +41,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
+
