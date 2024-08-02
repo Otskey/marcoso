@@ -6,13 +6,14 @@ function createCardFlipper(card) {
     if (!isAnimating) {
       isAnimating = true;
       card.style.transform = 'rotateY(180deg)'; // Trigger the flip
-
-      setTimeout(() => {
-        isAnimating = false;
-        if (!mouseOverCard) {
-          card.style.transform = 'rotateY(0deg)'; // Flip back if mouse has left the card
-        }
-      }, 600); // Animation duration
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          isAnimating = false;
+          if (!mouseOverCard) {
+            card.style.transform = 'rotateY(0deg)'; // Flip back if mouse has left the card
+          }
+        }, 600); // Animation duration
+      });
     }
   }
 
@@ -22,17 +23,23 @@ function createCardFlipper(card) {
     }
   }
 
-  card.addEventListener('mouseenter', () => {
+  function handleMouseEnter() {
     mouseOverCard = true;
     flipCard();
-  });
+  }
 
-  card.addEventListener('mouseleave', () => {
+  function handleMouseLeave() {
     mouseOverCard = false;
     if (!isAnimating) {
       unflipCard();
     }
-  });
+  }
+
+  card.addEventListener('mouseenter', handleMouseEnter);
+  card.addEventListener('mouseleave', handleMouseLeave);
 }
 
-document.querySelectorAll('.steel-product-1, .steel-product-2, .steel-product-3, .steel-product-4, .steel-product-5, .steel-product-6').forEach(createCardFlipper);
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll('.steel-product-1, .steel-product-2, .steel-product-3, .steel-product-4, .steel-product-5, .steel-product-6');
+  cards.forEach(createCardFlipper);
+});
