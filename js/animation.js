@@ -6,28 +6,28 @@ document.addEventListener('DOMContentLoaded', () => {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: './lottie/sourcing.json'
+      path: '/lottie/sourcing.json'
     }),
     lottie.loadAnimation({
       container: document.getElementById('lottie-animation-2'),
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: './lottie/communication.json'
+      path: '/lottie/communication.json'
     }),
     lottie.loadAnimation({
       container: document.getElementById('lottie-animation-3'),
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: './lottie/growth.json'
+      path: '/lottie/growth.json'
     }),
     lottie.loadAnimation({
       container: document.getElementById('lottie-animation-4'),
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: './lottie/presence.json'
+      path: '/lottie/presence.json'
     })
   ];
 
