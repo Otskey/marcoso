@@ -1676,7 +1676,7 @@ header.scrolled nav a.contact-button {
 }
 
 /* Media Query for medium screens (769px to 1200px) */
-  @media (min-width: 769px) and (max-width: 1400px) {
+  @media (min-width: 769px) and (max-width: 1200px) {
     .strengths {
       grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
     }
@@ -1696,7 +1696,7 @@ header.scrolled nav a.contact-button {
     .strengths-2 h2,
     .strengths-3 h2,
     .strengths-4 h2 {
-      font-size: 1rem; /* Slightly reduce font size */
+      font-size: 0.8rem; /* Slightly reduce font size */
       margin-top: 30%; /* Adjust margin top */
     }
 
@@ -1704,12 +1704,12 @@ header.scrolled nav a.contact-button {
     .strengths-2 p,
     .strengths-3 p,
     .strengths-4 p {
-      font-size: calc(0.4vw + 0.4vh + 0.4rem); /* Adjust font size based on viewport units */
+      font-size: calc(0.3vw + 0.3vh + 0.3rem); /* Adjust font size based on viewport units */
     }
 
     .lottie-icon {
-      width: 8vh; /* Slightly reduce icon size */
-      height: 8vh;
+      width: 5vh; /* Slightly reduce icon size */
+      height: 5vh;
     }
   }
 
