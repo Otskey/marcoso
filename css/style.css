@@ -623,12 +623,13 @@ header.scrolled nav a.contact-button {
   font-style: normal;
   color: white;
   position: relative;
+  margin-bottom: 1.4rem;
 }
 
 .about-us .about-us-blurb h2::after {
   content: "";
   position: absolute;
-  bottom: -0.625rem; /* Adjust the position of the divider */
+  bottom: -0.500rem; /* Adjust the position of the divider */
   left: 0.8em; /* Position relative to the h2 text */
   width: 10rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
@@ -657,66 +658,26 @@ header.scrolled nav a.contact-button {
 .about-us-blurb {
   grid-column: 2 / 5;
   grid-row: 1 / 4;
-  padding-top: 1.5rem;
+  padding-top: 3.5rem;
   position: relative;
 }
 
-.about-us-1 {
-  grid-column: 2 / 5;
-  padding-top: 1.5rem;
-  position: relative;
-  margin-left: 5%;
-}
-
-.about-us-1 .material-symbols-outlined {
-  position: absolute;
-  left: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
-  font-family: 'Material Symbols Outlined';
-  font-size: 2.25rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-us-2 {
-  grid-column: 2 / 5;
-  padding-top: 1.5rem;
-  position: relative;
-  margin-left: 5%;
-}
-
-.about-us-2 .material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -3rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  font-family: 'Material Symbols Outlined';
-  font-size: 2.25rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+.about-us-1,
+.about-us-2,
 .about-us-3 {
   grid-column: 2 / 5;
-  padding-top: 1.5rem;
+  padding-top: 3rem;
   position: relative;
   margin-left: 5%;
 }
 
+.about-us-1 .material-symbols-outlined,
+.about-us-2 .material-symbols-outlined,
 .about-us-3 .material-symbols-outlined {
   position: absolute;
+  left: -3rem;
   top: 50%;
   transform: translateY(-50%);
-  left: -3rem;
   width: 2.5rem;
   height: 2.5rem;
   font-family: 'Material Symbols Outlined';
@@ -803,6 +764,7 @@ header.scrolled nav a.contact-button {
   background: linear-gradient(to bottom, #8B0000 50%, #f4ede4 50%);
   background-size: cover;
   padding-bottom: 12vh;
+  padding-left: 2vw;
 
 }
 
@@ -906,9 +868,10 @@ header.scrolled nav a.contact-button {
   .strengths-4 {
     grid-column: 1; /* Span the single column */
     grid-row: auto; /* Automatically place rows */
-    width: 90%; /* Adjust width */
+    width: 95%; /* Adjust width */
     height: auto; /* Adjust height */
     margin: 10px 0; /* Add some vertical margin */
+    justify-self: center;
   }
 
   .strengths-1 h2,
@@ -1392,12 +1355,13 @@ color: black;
   color: white;
   margin-left: 14%;
   position: relative; /* Ensure the h2 element is the reference for the ::after element */
+  margin-bottom: 1.4rem;
 }
 
 .contact-us-content h2::after {
   content: "";
   position: absolute;
-  bottom: -0.625rem; /* Adjust the position of the divider */
+  bottom: -0.500rem; /* Adjust the position of the divider */
   left: 0.8em; /* Position relative to the h2 text */
   width: 12rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
@@ -1416,7 +1380,7 @@ color: black;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-right: 150px;
   max-height: 100%;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 /* Input and Textarea Styling */
@@ -1492,7 +1456,7 @@ color: black;
 .our-locations-content p {
   font-family: "montserrat", sans-serif;
   font-size: 18px;
-  line-height: 0.8;
+  line-height: 1.5;
   color: white;
 }
 
@@ -1610,9 +1574,11 @@ position: relative;
     grid-row: 3;
     margin-left: 5vw;
     position: relative;
+    padding-top: 2vh;
     padding-bottom: 2vh;
-    width:100%;
+    width:90%;
     text-align: left;
+    line-height: 3.5;
   }
 
   .contactForm {
@@ -1620,7 +1586,7 @@ position: relative;
     grid-column: 1;
     margin-right: 0;
     margin-top: 1vh;
-    width: 80%;
+    width: 90%;
     justify-self: center;
 
   }
@@ -1671,14 +1637,28 @@ footer {
   color: black;
 }
 
-.footer-section p, .footer-section a {
+.footer-section p {
   font-family: "montserrat", sans-serif;
   color: black;
   text-decoration: none;
 }
 
+
 .footer-section a:hover {
   text-decoration: underline;
+}
+
+.footer-section.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center the content horizontally */
+}
+
+.footer-section.social img {
+  width: auto; /* Adjust the size of the icon as needed */
+  height: auto;
+  margin-top: 10px; /* Add some margin if needed */
 }
 
 .footer-bottom {
@@ -1743,7 +1723,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   margin-bottom: 0;
-  grid-row-gap: 0.1rem;
+  grid-row-gap: 0.6rem;
   grid-column-gap: 0.1rem;
   scroll-margin-top: 10vh;
   background-color: darkred;
@@ -1757,12 +1737,13 @@ footer {
   font-style: normal;
   color: white;
   position: relative;
+  margin-bottom: 1.4rem;
 }
 
 .our-products .our-products-blurb h2::after {
   content: "";
   position: absolute;
-  bottom: -0.625rem; /* Adjust the position of the divider */
+  bottom: -0.500rem; /* Adjust the position of the divider */
   left: 1em; /* Position relative to the h2 text */
   width: 13rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
@@ -1792,7 +1773,7 @@ footer {
 .our-products-blurb {
   grid-column: 2 / 6;
   grid-row: 1 / 4;
-  padding-top: 1.5rem;
+  padding-top: 3.5rem;
   position: relative;
 }
 
@@ -1803,7 +1784,7 @@ footer {
   display: flex;
   align-items: center;
   grid-column: 2 / 5;
-  padding-top: 1.5rem;
+  padding-top: 3rem;
   position: relative;
   margin-left: 5%;
 }
@@ -1892,7 +1873,10 @@ footer {
   }
 }
 
-/* Steel products layout */
+/*
+
+Steel products layout
+
 .steel-products {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -1900,7 +1884,7 @@ footer {
   margin-top: 100px;
   margin-bottom: 100px;
   scroll-margin-top: 100px;
-  position: relative; /* Ensure positioning context for pseudo-elements */
+  position: relative; /* Ensure positioning context for pseudo-elements
 }
 
 
@@ -1958,8 +1942,8 @@ footer {
 .steel-product-6{
   border: 2px hidden rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 20px; /* Add some padding */
-  margin: 15px; /* Add some margin */
+  padding: 20px; /* Add some padding
+  margin: 15px; /* Add some margin
   background-color: #f4ede4;
   width: 310px;
   height: 361.88px;
@@ -1967,7 +1951,7 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   perspective: 1000px; /* Required for 3D effect */
-  transform-style: preserve-3d; /* Enables 3D position preservation */
+  transform-style: preserve-3d; /* Enables 3D position preservation
   transition-duration: 0.6s;
   transition-timing-function: ease-in-out;
   position: relative;
@@ -2008,15 +1992,15 @@ footer {
 }
 
 
-/* Styles for the front and back of the card */
+/* Styles for the front and back of the card
 .steel-product-1 .card-front, .steel-product-1 .card-back,
 .steel-product-2 .card-front, .steel-product-2 .card-back,
 .steel-product-3 .card-front, .steel-product-3 .card-back,
 .steel-product-4 .card-front, .steel-product-4 .card-back,
 .steel-product-5 .card-front, .steel-product-5 .card-back,
 .steel-product-6 .card-front, .steel-product-6 .card-back {
-  backface-visibility: hidden; /* Hide the back face of the element */
-  transform-style: preserve-3d; /* Preserve 3D */
+  backface-visibility: hidden; /* Hide the back face of the element
+  transform-style: preserve-3d; /* Preserve 3D
 }
 
 .steel-product-1 .card-front,
@@ -2030,14 +2014,14 @@ footer {
   z-index: 2;
 }
 
-/* Specific style for the back of the card */
+/* Specific style for the back of the card
 .steel-product-1 .card-back,
 .steel-product-2 .card-back,
 .steel-product-3 .card-back,
 .steel-product-4 .card-back,
 .steel-product-5 .card-back,
 .steel-product-6 .card-back{
-  transform: rotateY(180deg); /* Rotate the back initially */
+  transform: rotateY(180deg); /* Rotate the back initially
   position: absolute;
   top: 0;
   left: 0;
@@ -2053,7 +2037,7 @@ footer {
 .steel-product-4:hover,
 .steel-product-5:hover,
 .steel-product-6:hover{
-  background-color: darkred; /* Darker red background on hover */
+  background-color: darkred; /* Darker red background on hover
   color: white;
 }
 
@@ -2071,29 +2055,29 @@ footer {
   list-style-type: square;
 }
 
-/* Media Query for smaller screens - Example: for screens narrower than 768px */
+/* Media Query for smaller screens - Example: for screens narrower than 768px
 @media (max-width: 768px) {
   .steel-products {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-columns: 1fr; /* Single column layout
     grid-template-rows: repeat(6,auto);
     gap: 2vh; /* Add some gap between items */
-    margin-top: 1vh; /* Adjust margins for better spacing on mobile */
+    margin-top: 1vh; /* Adjust margins for better spacing on mobile
     margin-bottom: 50px;
     scroll-margin-top: 50px;
   }
 
   .steel-product-blurb h2 {
-    font-size: 24px; /* Adjust font size */
+    font-size: 24px; /* Adjust font size
   }
 
   .steel-product-blurb p {
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px; /* Adjust font size
   }
 
   .steel-product-blurb img {
-    width: 100%; /* Full width image */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Full width image
+    height: auto; /* Maintain aspect ratio
   }
 
   .steel-product-1,
@@ -2102,9 +2086,9 @@ footer {
   .steel-product-4,
   .steel-product-5,
   .steel-product-6 {
-    grid-column: 1; /* Full width */
+    grid-column: 1; /* Full width
     grid-row: auto;
-    width: 80vw; /* Full width */
+    width: 80vw; /* Full width
     height: 90%; /* Auto height */
   }
 
@@ -2114,8 +2098,8 @@ footer {
   .steel-product-4 img,
   .steel-product-5 img,
   .steel-product-6 img {
-    width: 100%; /* Full width image */
-    height: 33vh; /* Maintain aspect ratio */
+    width: 100%; /* Full width image
+    height: 33vh; /* Maintain aspect ratio
   }
 
   .steel-product-1 h2,
@@ -2124,7 +2108,7 @@ footer {
   .steel-product-4 h2,
   .steel-product-5 h2,
   .steel-product-6 h2 {
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px; /* Adjust font size
   }
 
   .steel-product-1 p,
@@ -2133,7 +2117,7 @@ footer {
   .steel-product-4 p,
   .steel-product-5 p,
   .steel-product-6 p {
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px; /* Adjust font size
   }
 
   .steel-product-1 .card-back,
@@ -2142,10 +2126,12 @@ footer {
   .steel-product-4 .card-back,
   .steel-product-5 .card-back,
   .steel-product-6 .card-back {
-    margin-top: 20px; /* Adjust margin */
-    padding: 10px; /* Adjust padding */
+    margin-top: 20px; /* Adjust margin
+    padding: 10px; /* Adjust padding
   }
 }
+
+*/
 
 /* services page styling */
 
@@ -2216,12 +2202,13 @@ footer {
   font-style: normal;
   color: white;
   position: relative;
+  margin-bottom: 1.4rem;
 }
 
 .our-services .our-services-blurb h2::after {
   content: "";
   position: absolute;
-  bottom: -0.625rem; /* Adjust the position of the divider */
+  bottom: -0.500rem; /* Adjust the position of the divider */
   left: 0.8em; /* Position relative to the h2 text */
   width: 20rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
@@ -2250,44 +2237,24 @@ footer {
 .our-services-blurb {
   grid-column: 2 / 6;
   grid-row: 1 / 4;
-  padding-top: 1.25rem;
+  padding-top: 3.5rem;
   position: relative;
 }
 
-.our-services-1 {
-  grid-column: 2 / 5;
-  padding-top: 1.5rem;
-  position: relative;
-  margin-left: 5%;;
-}
-
-.our-services-1 .material-symbols-outlined {
-  position: absolute;
-  left: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
-  font-family: 'Material Symbols Outlined';
-  font-size: 2.25rem;
-  color: white;
+.our-services-1,
+.our-services-2,
+.our-services-3 {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.our-services-2 {
   grid-column: 2 / 5;
-  padding-top: 1.5rem;
+  padding-top: 3rem;
   position: relative;
   margin-left: 5%;
 }
 
-.our-services-2 .material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -3rem;
+.our-services-1 .material-symbols-outlined,
+.our-services-2 .material-symbols-outlined,
+.our-services-3 .material-symbols-outlined {
   width: 2.5rem;
   height: 2.5rem;
   font-family: 'Material Symbols Outlined';
@@ -2296,30 +2263,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 5%; /* Space between the icon and the text */
 }
-
-.our-services-3 {
-  grid-column: 2 / 5;
-  padding-top: 1.5rem;
-  position: relative;
-  margin-left: 5%;;
-}
-
-.our-services-3 .material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -60px;
-  width: 40px;
-  height: 40px;
-  font-family: 'Material Symbols Outlined';
-  font-size: 36px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 
 /* our services media query */
 @media (max-width: 768px) {

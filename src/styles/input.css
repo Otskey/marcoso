@@ -1,0 +1,29 @@
+/* src/styles/main.css */
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+/* For webkit browsers (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+/* For Edge, Internet Explorer */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.scroll-snap {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.scroll-snap > div {
+  scroll-snap-align: start;
+}
