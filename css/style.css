@@ -1950,7 +1950,7 @@ Steel products layout
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  perspective: 1000px; /* Required for 3D effect */
+  perspective: 1000px; /* Required for 3D effect
   transform-style: preserve-3d; /* Enables 3D position preservation
   transition-duration: 0.6s;
   transition-timing-function: ease-in-out;
@@ -2041,7 +2041,7 @@ Steel products layout
   color: white;
 }
 
-/* Apply font to the list */
+/* Apply font to the list
 .steel-product-1 ul,
 .steel-product-2 ul,
 .steel-product-3 ul,
@@ -2061,7 +2061,7 @@ Steel products layout
     display: grid;
     grid-template-columns: 1fr; /* Single column layout
     grid-template-rows: repeat(6,auto);
-    gap: 2vh; /* Add some gap between items */
+    gap: 2vh; /* Add some gap between items
     margin-top: 1vh; /* Adjust margins for better spacing on mobile
     margin-bottom: 50px;
     scroll-margin-top: 50px;
@@ -2089,7 +2089,7 @@ Steel products layout
     grid-column: 1; /* Full width
     grid-row: auto;
     width: 80vw; /* Full width
-    height: 90%; /* Auto height */
+    height: 90%; /* Auto height
   }
 
   .steel-product-1 img,
