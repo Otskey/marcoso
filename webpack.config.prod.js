@@ -46,8 +46,8 @@ module.exports = merge(common, {
     new CopyPlugin({
       patterns: [
         { from: 'img', to: 'img' },
-        { from: 'js/vendor', to: 'js/vendor' },
-        { from: './animations', to: 'lottie' },  // Add this line for Lottie JSON files
+        { from: 'animations', to: 'animations' },
+        { from: 'assets', to: 'assets' },
         // Add any other assets to be copied to dist
       ],
     }),
