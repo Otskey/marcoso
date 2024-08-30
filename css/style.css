@@ -348,6 +348,17 @@ nav a {
   transition: color 0.5s; /* Smooth transition for font color */
 }
 
+.services-page li a {
+  text-decoration: none;
+  color: white;
+  font-family: "montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  transition: color 0.5s; /* Smooth transition for font color */
+}
+
+
 nav.scrolled {
   background-color: white; /* Change background color to white */
   color: black; /* Change font color to black */
@@ -1660,10 +1671,25 @@ footer {
   grid-template-rows: repeat(3, 1fr);
   grid-auto-rows: minmax(auto, max-content);
   font-family: 'montserrat', sans-serif;
-  height: 85vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
+
+.services-hero-video {
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  object-fit: cover; /* This will cover the area without losing aspect ratio */
+  z-index: -1; /* Ensure the video stays in the background */
+  filter: brightness(50%); /* Adjust brightness for better text readability */
+  grid-column: 1 / -1; /* Span all columns */
+  grid-row: 1; /* Start from the first row */
+  margin-bottom: -10%;
+}
+
+/*
 
 .services-hero img {
   grid-column: 1 / 6;
@@ -1675,9 +1701,11 @@ footer {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1); /* Adjust the scale value as needed */
+  transform: translate(-50%, -50%) scale(1); /* Adjust the scale value as needed
   z-index: -1;
 }
+
+*/
 
 .services-hero h1 {
   display: inline-block; /* Ensures proper alignment and animation */
@@ -1690,7 +1718,9 @@ footer {
   margin-bottom: 0;
   margin-left: 20px;
   z-index: 1;
+  color: white;
 }
+
 .services-hero h2 {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
@@ -1863,7 +1893,7 @@ footer {
   margin-bottom: 0;
   /* margin-top: 20vh; */
   margin-left: 20px;
-  color: black;
+  color: white;
 }
 
 .all-services {
@@ -1927,9 +1957,17 @@ footer {
     display: none; /* Hide the hero product card on mobile */
   }
 
-  .product-blurb-img{
+  .services-hero-video {
+    object-fit: cover; /* Contain the video within the viewport */
+    height: 100vh; /* Adjust height to maintain aspect ratio */
+    width: 100vw; /* Keep full width */
+    margin-bottom: 0; /* Ensure no overflow on small screens */
+  }
+
+}
+
+  .product-blurb-img {
     height: 90vh;
   }
-}
 
 
