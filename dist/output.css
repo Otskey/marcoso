@@ -1151,7 +1151,7 @@ nav a {
 
 .product-page li a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-family: "montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1663,14 +1663,16 @@ header.scrolled nav a.contact-button {
   transform: translate(-50%, -50%);
 }
 
+/*
 .strengths-1:hover,
 .strengths-2:hover,
 .strengths-3:hover,
 .strengths-4:hover {
-  background-color: ghostwhite; /* Change background color on hover */
-  color: black; /* Change text color on hover */
+  background-color: ghostwhite; /* Change background color on hover
+  color: black; /* Change text color on hover
 }
 
+*/
 
 
 /* Media Query for smaller screens - Example: for screens narrower than 768px */
@@ -1770,7 +1772,7 @@ grid-row: 1 / 2;
 margin-bottom: 0;
 /* margin-top: 20vh; */
 margin-left: 20px;
-color: black;
+color: white;
 }
 
 .all-products {
@@ -2281,25 +2283,44 @@ footer {
   grid-template-rows: repeat(3, 1fr);
   grid-auto-rows: minmax(auto, max-content);
   font-family: 'montserrat', sans-serif;
-  height: 85vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
+.products-hero-video {
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover; /* This will cover the area without losing aspect ratio */
+  z-index: -1; /* Ensure the video stays in the background */
+  filter: brightness(50%); /* Adjust brightness for better text readability */
+  grid-column: 1 / -1; /* Span all columns */
+  grid-row: 1; /* Start from the first row */
+  margin-bottom: -10%;
+}
+
+/*
+
 .products-hero img {
   grid-column: 1 / 6;
   grid-row: 1 / 4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 120%;
   display: flex;
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1); /* Adjust the scale value as needed */
+  transform: translate(-50%, -50%) scale(1); /* Adjust the scale value as needed
   z-index: -1;
 }
+
+*/
+
+
 .products-hero h1 {
   display: inline-block; /* Ensures proper alignment and animation */
   font-family: "montserrat", sans-serif;
@@ -2502,24 +2523,6 @@ footer {
   grid-row: 1; /* Start from the first row */
   margin-bottom: -10%;
 }
-
-/*
-
-.services-hero img {
-  grid-column: 1 / 6;
-  grid-row: 1 / 4;
-  object-fit: cover;
-  width: 100%;
-  height: 120%;
-  display: flex;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1); /* Adjust the scale value as needed
-  z-index: -1;
-}
-
-*/
 
 .services-hero h1 {
   display: inline-block; /* Ensures proper alignment and animation */

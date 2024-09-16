@@ -22,11 +22,11 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- card flip control -->
-  <link rel="preload" href="js/cardflipcontrol.js" as="script">
-
   <!-- <link rel="manifest" href="site.webmanifest"> -->
   <meta name="theme-color" content="#fafafa">
+
+  <!-- Lottie library -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js" ></script>
 
   <!-- Google icons -->
 
@@ -44,7 +44,7 @@
 
   <!-- arrow right icon -->
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" as="style" onload="this.rel='stylesheet'">
 
   <!-- Google Fonts -->
 
@@ -61,6 +61,7 @@
 
   <!-- Leaflet JavaScript with async attribute -->
   <script defer src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
 
 </head>
 <!-- Google tag (gtag.js) -->
@@ -94,7 +95,10 @@
 </header>
 <section id="products-hero" class="products-hero">
   <h1>Products</h1>
-  <img src="img/london.jpg">
+  <video autoplay loop muted playsinline class="products-hero-video">
+    <source src="img/productsintro.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </section>
 
 <section id="our-products" class="our-products">
