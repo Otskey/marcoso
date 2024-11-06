@@ -1760,7 +1760,7 @@ footer {
   position: absolute;
   bottom: -0.500rem; /* Adjust the position of the divider */
   left: 0.8em; /* Position relative to the h2 text */
-  width: 40rem; /* Adjust the width of the divider */
+  width: 20rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
   border-radius: 0.3125rem;
