@@ -19,12 +19,18 @@ git clone https://github.com/Otskey/marcoso.git
 cd marcoso
 ```
 
-Ensure you're using the correct Node.js version by using nvm:
+Ensure you're using the correct Node.js version:
+
+```bash
+node -v
+```
+working version is 18.20.4, if you experience issues install via nvm:
 
 ```bash
 nvm install 18.20.4
 nvm use 18.20.4
 ```
+
 
 After cloning the repository & changing to the correct version of node, install the required dependencies:
 

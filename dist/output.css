@@ -653,9 +653,6 @@ video {
   .font-montserrat {
   font-family: Montserrat, sans-serif;
 }
-  .text-\[5vw\] {
-  font-size: 5vw;
-}
   .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -666,12 +663,6 @@ video {
 }
   .font-medium {
   font-weight: 500;
-}
-  .font-semibold {
-  font-weight: 600;
-}
-  .not-italic {
-  font-style: normal;
 }
   .text-gray-500 {
   --tw-text-opacity: 1;
@@ -743,19 +734,6 @@ video {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -801,11 +779,6 @@ video {
 
   .lg\:pt-16 {
     padding-top: 4rem;
-  }
-
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 }
 
@@ -2366,8 +2339,8 @@ footer {
   content: "";
   position: absolute;
   bottom: -0.500rem; /* Adjust the position of the divider */
-  left: 1em; /* Position relative to the h2 text */
-  width: 13rem; /* Adjust the width of the divider */
+  left: 0.8em; /* Position relative to the h2 text */
+  width: 4rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
   border-radius: 0.3125rem; /* Optional: Add rounded corners to the divider */
@@ -2574,7 +2547,7 @@ footer {
   position: absolute;
   bottom: -0.500rem; /* Adjust the position of the divider */
   left: 0.8em; /* Position relative to the h2 text */
-  width: 20rem; /* Adjust the width of the divider */
+  width: 40rem; /* Adjust the width of the divider */
   height: 0.125rem; /* Adjust the height of the divider */
   background-color: white; /* Color of the divider */
   border-radius: 0.3125rem;
