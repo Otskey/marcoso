@@ -27,5 +27,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.2",
     "webpack-merge": "^5.9.0"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.9"
   }
 }

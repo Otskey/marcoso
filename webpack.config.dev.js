@@ -4,6 +4,8 @@ const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
+
 
 module.exports = merge(common, {
   mode: 'development',
@@ -39,7 +41,7 @@ module.exports = merge(common, {
           'css-loader',
           'postcss-loader',
         ],
-      },
+      }
     ],
   },
   plugins: [
@@ -58,6 +60,14 @@ module.exports = merge(common, {
       template: './services.html',  // Source template file
       inject: 'body',
     }),
-    new webpack.HotModuleReplacementPlugin(),  // Enable HMR globally
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: 'img', to: 'img' },
+        { from: 'animations', to: 'animations' },
+        { from: 'assets', to: 'assets' },
+        // Add any other assets to be copied to dist
+      ],
+    }),  // Enable HMR globally
   ],
 });

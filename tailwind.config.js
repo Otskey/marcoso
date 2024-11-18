@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     './products.html',
-    '../index.html',
+    './index.html',
     './services.html',
     "./src/**/*.{html,js}",
   ],
@@ -13,6 +13,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 

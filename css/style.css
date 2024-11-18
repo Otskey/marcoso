@@ -381,7 +381,7 @@ nav.scrolled a {
 }
 
 .contact-button:hover {
-  background-color: rosybrown;
+  background-color: #bc8f8f;
 }
 
 /* Ensure the Contact Us button maintains white text color when scrolled */
@@ -775,7 +775,7 @@ header.scrolled nav a.contact-button {
   scroll-margin-top: 100px;
   background: linear-gradient(to bottom, #8B0000 50%, #f4ede4 50%);
   background-size: cover;
-  padding-bottom: 12vh;
+  padding-bottom: 0vh;
   padding-left: 2vw;
 
 }
